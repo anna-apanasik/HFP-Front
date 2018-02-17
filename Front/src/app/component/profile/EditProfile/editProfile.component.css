@@ -1,0 +1,38 @@
+input{
+  max-width: 500px;
+}
+input.ng-touched.ng-invalid {border:solid red 2px;}
+input.ng-touched.ng-valid {border:solid green 2px;}
+
+.form-group {
+  position: relative;
+  margin: 10px 25px;
+}
+
+.panel-default{
+  background: cornsilk;
+  padding: 5px 5px;
+}
+.pos{
+  position: relative;
+  left: 28%;
+}
+
+.alert {
+  margin-top: 0;
+  margin-bottom: 5px;
+  padding: 3px;
+}
+
+.label-style {
+  margin-top: 5px;
+}
+
+.form-control {
+  margin: 3px 0 3px;
+  padding-bottom: 5px;
+}
+
+.form-group-label {
+  margin: 10px 25px;
+}
