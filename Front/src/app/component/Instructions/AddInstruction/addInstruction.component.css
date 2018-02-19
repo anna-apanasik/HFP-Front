@@ -1,0 +1,8 @@
+input.ng-touched.ng-invalid {border:solid red 2px;}
+
+.instruction {
+  margin: 20px 40px;
+  text-align: center;
+}
+
+

@@ -35,7 +35,7 @@
   "newNick": "New nick name",
   "newemail": "New email",
   "newpassword": "New password",
-  "NameProject": "Name project",
+  "NameInstruction": "Name of instruction",
   "DescriptionProject": "Description project",
   "ChooseDate": "Select the end date for fundraising",
   "RequerMoney":"Enter the required amount",
@@ -85,5 +85,11 @@
   "Description":"Description",
   "UnConfirm":"Unconfirm",
   "Confirm":"Confirm",
-  "Instructions": "My Instructions"
+  "Instructions": "My Instructions",
+  "AddStep": "Add step",
+  "Enter": "Enter ...",
+  "TitleOfStep": "Title of step",
+  "Step": "Step",
+  "StepDescription": "Step description",
+  "SelectTopic": "Select topic"
 }

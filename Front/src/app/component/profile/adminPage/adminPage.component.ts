@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Project} from "../../../model/project";
+import {Project} from "../../../model/Instruction";
 import {User} from "../../../model/user";
 import {UserService} from "../../../service/userService";
 import {variable} from "@angular/compiler/src/output/output_ast";

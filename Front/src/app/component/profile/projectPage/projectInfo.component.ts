@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {Project} from "../../../model/project";
+import {Project} from "../../../model/Instruction";
 import {Router} from "@angular/router";
 import {Http} from "@angular/http";
 import {ProjectService} from "../../../service/projectService";

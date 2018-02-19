@@ -53,6 +53,7 @@ import {PayProjectComponent} from "./ViewProjectComponent/PayProject/payProject.
 import { TagInputModule } from 'ngx-chips';
 import {BlockAccountComponent} from "./Error/BlockedAccount/blockAccount.component";
 import {AddInstructionComponent} from "./Instructions/AddInstruction/addInstruction.component";
+import {ViewStepComponent} from "./Instructions/Step/viewStep.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -80,6 +81,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     AddInstructionComponent,
     ErrorAccesComponent,
     ViewProjectComponent,
+    ViewStepComponent,
     ProjectListComponent,
     SearcheResultComponent,
     ContanerForProjectComponent,
