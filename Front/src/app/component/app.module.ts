@@ -36,7 +36,6 @@ import {DatePickerModule} from "ng2-datepicker";
 import {SuccesRegistrationComponent} from "./succesfulRegistration/succesRegistration.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-import {OverlayContainer} from "@angular/cdk/typings/overlay";
 import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.component";
 import {ProjectInfoComponent} from "./profile/projectPage/projectInfo.component";
 import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
@@ -52,8 +51,9 @@ import {MessageComponent} from "./profile/MessagePage/Message.component";
 import {PayProjectComponent} from "./ViewProjectComponent/PayProject/payProject.component";
 import { TagInputModule } from 'ngx-chips';
 import {BlockAccountComponent} from "./Error/BlockedAccount/blockAccount.component";
-import {AddInstructionComponent} from "./Instructions/AddInstruction/addInstruction.component";
-import {ViewStepComponent} from "./Instructions/Step/viewStep.component";
+import {EditorStepComponent} from "./Instructions/Editor/editorStep.component";
+import {ListStepComponent} from "./Instructions/List/listStep.component";
+import {InstructionComponent} from "./Instructions/instruction.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -78,16 +78,17 @@ export function HttpLoaderFactory(http: HttpClient) {
     ConfirmProfileComponent,
     ProjectInfoComponent,
     AdminPageComponent,
-    AddInstructionComponent,
+    EditorStepComponent,
     ErrorAccesComponent,
     ViewProjectComponent,
-    ViewStepComponent,
+    ListStepComponent,
     ProjectListComponent,
     SearcheResultComponent,
     ContanerForProjectComponent,
     MessageComponent,
     PayProjectComponent,
-    BlockAccountComponent
+    BlockAccountComponent,
+    InstructionComponent
   ],
   imports: [
     BrowserModule,

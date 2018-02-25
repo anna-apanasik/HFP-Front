@@ -1,0 +1,50 @@
+<div class="instruction">
+
+  <div *ngIf="isDisabledButtonAdd" style="text-align: center; font-size: 18px; width: 80%">
+    <div style="display: inline-flex;">
+      <span class="badge badge-info" style="padding: 8px 10px 10px 10px"> {{'Step' | translate}} {{ position }}</span>
+      <input type="text" [(ngModel)]="newStep.nameOfStep" name="nameOfStep" class="name-of-step"
+             id="name-of-step" #nameOfStep="ngModel"
+             placeholder="{{'TitleOfStep'|translate}}" style="width: 85%; margin: 0 5px; padding-left: 8px" required>
+    </div>
+    <textarea class="description" [(ngModel)]="newStep.textInStep" id="text-area-component" name="stepDescription"
+              placeholder="{{'StepDescription'|translate}}" #stepDescription="ngModel" required></textarea>
+
+    <input [disabled]="nameOfStep.invalid || stepDescription.invalid" type="submit"
+           style=""
+           name="btn-add-instruction" id="btn-save-step" (click)="saveStep(newStep)"
+           class="btn btn-info btn-block" value="{{'Save'| translate}}">
+
+    <input [disabled]="nameOfInstruction.invalid || isDisabledButtonAdd" type="submit"
+           style="width: 15%; margin: 25px 5px 0 5px; height: 70%;"
+           name="btn-add-instruction" id="btn-add-instruction" (click)="addItem()"
+           class="btn btn-info btn-block" value="{{'AddStep'| translate}} + ">
+
+  </div>
+
+  <!--<div class="container" style="padding-left: 180px">-->
+    <!--<div class="panel-group">-->
+      <!--<div *ngFor="let currentStep of steps">-->
+       <!--<app-view-step  [step] = "currentStep"></app-view-step>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</div>-->
+
+  <!--<div clazss="row steps_container">
+    <div *ngFor="let step of steps; let i = index">
+      <div class="col-md-4" title="{{'Step' | translate}} {{ i + 1}}">
+        <div class="panel panel-muted ">
+          <div class="panel-body">
+            <a class="text-muted" style="font-size: 30px;float: left; "><b>{{ i + 1 }} </b></a>
+            <div class="col-xs-10">
+              <div class="text" style="font-size: 13px;">
+                {{ step.nameOfStep }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+</div>

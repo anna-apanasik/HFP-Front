@@ -9,12 +9,12 @@ import {Section} from "../../../model/Section";
 
 
 @Component({
-  selector: 'app-instruction',
-  templateUrl: './addInstruction.component.html',
-  styleUrls: ['./addInstruction.component.css']
+  selector: 'app-editor-step',
+  templateUrl: './editorStep.component.html',
+  styleUrls: ['./editorStep.component.css']
 })
 
-export class AddInstructionComponent {
+export class EditorStepComponent {
   protected project: Instruction = new Instruction;
   user: User;
   tags: string[];

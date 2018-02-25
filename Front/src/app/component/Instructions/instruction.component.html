@@ -1,0 +1,26 @@
+<div style="width: 80%">
+  <div class="form-group row nameOfInstruction" style="display: inline-flex; width: 80%">
+    <div class="form-group" style="width: 100%; margin: 0 5px;">
+      <label style="font-size: 16px">{{'NameInstruction'|translate}}</label>
+      <input type="text" [(ngModel)]="project.title" name="nameOfInstruction" class="name-of-instruction"
+             id="name-of-instruction" #nameOfInstruction="ngModel"
+             placeholder="{{'Enter'|translate}}" style="width: 100%; height: 60%; padding-left: 8px" required>
+    </div>
+    <!--TODO validate for select list (disable button)-->
+    <div class="form-group" style="width: 25%; margin: 0 5px;">
+      <label for="selectTopic" style="font-size: 16px">{{'SelectTopic' | translate }}</label>
+      <select class="form-control" id="selectTopic" [(ngModel)]="currentTopic" #topic="ngModel">
+        <option *ngFor="let topic of topics" [ngValue]="topic">
+          {{ topic.title }}
+        </option>
+      </select>
+    </div>
+  </div>
+
+  <tag-input [(ngModel)]='tags' [editable]='true' style="position:relative; max-width: 1400px; left: 20px;"
+             (onTagEdited)="onTagEdited($event)" [ngModelOptions]="{standalone: true}"></tag-input>
+</div>
+
+<app-editor-step></app-editor-step>
+
+<!--<app-list-step></app-list-step>-->
