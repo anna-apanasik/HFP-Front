@@ -23,12 +23,8 @@ export class InstructionComponent {
   tags: string[];
   position: number = 0;
   isDisabledButtonAdd: boolean = false;
-
-  steps: Step[] = [];
-  //   new Step(1,'Step 1', 'first step'),
-  //   new Step(2,'Step 2', 'second step'),
-  //   new Step(3,'Step 3', 'thrid step')
-  // ];
+  instruction: Instruction;
+  steps: Step[];
 
   currentTopic: Section = new Section();
   sections: Section[] = [new Section(1, 'IT'), new Section(2, 'Books')];
@@ -37,6 +33,7 @@ export class InstructionComponent {
               protected authGuard: AuthGuard) {
     // this.project.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505210950/azufvfotm2nypj55ebnm.png';
     this.user = JSON.parse(localStorage.getItem("currentUser"));
+    this.instruction = new Instruction();
   }
 
   ngOnInit() {
