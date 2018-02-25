@@ -16,10 +16,10 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DBConfiguration {
     private String DRIVER = "com.mysql.jdbc.Driver";
 
-    private String PASSWORD = "Enjoythemoment";
+    private String PASSWORD = "Dima021297";
 
 
-    private String URL="jdbc:mysql://localhost:3306/Craut_project?characterEncoding=UTF-8";
+    private String URL="jdbc:mysql://localhost:3306/craut_project?characterEncoding=UTF-8";
 
 
     private String USERNAME = "root";
