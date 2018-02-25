@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2dba6d51-355a-4460-8637-2e512993ec27" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.angular-cli.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.editorconfig" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/craut.project.front.iml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/app.e2e-spec.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/app.po.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/e2e/tsconfig.e2e.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/protractor.conf.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/Error/BlockedAccount/blockAccount.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/Error/BlockedAccount/blockAccount.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/Error/BlockedAccount/blockAccount.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/Error/errorAcces/errorAcces.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/Error/errorAcces/errorAcces.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/Error/errorAcces/errorAcces.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/login.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/login.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/login.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/SearcheResult/searcheResult.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/SearcheResult/searcheResult.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/SearcheResult/searcheResult.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectComponent/PayProject/payProject.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectComponent/PayProject/payProject.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectComponent/PayProject/payProject.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectComponent/viewProject.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectComponent/viewProject.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectComponent/viewProject.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectList/OneProjectFromList/contanerForProject.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectList/OneProjectFromList/contanerForProject.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectList/OneProjectFromList/contanerForProject.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectList/projectList.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectList/projectList.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/ViewProjectList/projectList.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/app.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/app.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/app.component.spec.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/app.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/app.module.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/app.routing.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/createProject/projectPage.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/createProject/projectPage.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/createProject/projectPage.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/header/header.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/header/header.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/header/header.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/header/index.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/imageArea/image.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/imageArea/image.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/imageArea/image.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/logout/logout.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/logout/logout.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/logout/logout.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/InfoProfile/infoProfile.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/InfoProfile/infoProfile.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/InfoProfile/infoProfile.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/MessagePage/Message.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/MessagePage/Message.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/MessagePage/Message.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/adminPage/adminPage.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/adminPage/adminPage.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/adminPage/adminPage.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/confirmProfile/confirmProfile.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/confirmProfile/confirmProfile.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/confirmProfile/confirmProfile.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/menuProfile/menuProfile.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/menuProfile/menuProfile.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/menuProfile/menuProfile.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/profile.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/profile.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/profile.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/projectPage/projectInfo.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/projectPage/projectInfo.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/profile/projectPage/projectInfo.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/succesfulRegistration/seccesRegistration.component.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/succesfulRegistration/succesRegistration.component.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/component/succesfulRegistration/succesRegistration.component.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/MessageRequestDto.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/ProjectAndTagsRequestDto.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/ProjectRequestDto.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/comments.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/project.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/tags.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/model/user.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/AuthentificationService.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/HeaderService.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/coreService.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/guards/auth.guards.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/guards/index.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/index.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/projectService.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/userService.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/app/service/validationData.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/assets/.gitkeep" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/ru.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/authUserFactory.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/favicon.ico" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/polyfills.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/styles.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/tsconfig.app.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/tsconfig.spec.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/typings.d.ts" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/tslint.json" afterPath="" />
+    </list>
+    <ignored path="$PROJECT_DIR$/dist/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>8080</find>
+      <find>Firstname</find>
+      <find>alert</find>
+      <find>margin-bottom:</find>
+      <find>Некоррек</find>
+      <find>ng</find>
+      <find>app-register-page</find>
+      <find>ng-invalid</find>
+      <find>email</find>
+      <find>navbar</find>
+      <find>setti</find>
+      <find>pos</find>
+      <find>ru</find>
+      <find>ViewProject</find>
+      <find>app-project-pag</find>
+      <find>ProjectPageComponent</find>
+    </findStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$/src/app</dir>
+      <dir>$PROJECT_DIR$/src</dir>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/app/service/coreService.ts" />
+        <option value="$PROJECT_DIR$/src/index.html" />
+        <option value="$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.css" />
+        <option value="$PROJECT_DIR$/src/app/service/validationData.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/LoginPage/login.component.css" />
+        <option value="$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.html" />
+        <option value="$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.html" />
+        <option value="$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.css" />
+        <option value="$PROJECT_DIR$/src/app/component/header/header.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/header/header.component.css" />
+        <option value="$PROJECT_DIR$/src/app/component/header/header.component.html" />
+        <option value="$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.html" />
+        <option value="$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.css" />
+        <option value="$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.css" />
+        <option value="$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.html" />
+        <option value="$PROJECT_DIR$/src/assets/i18n/en.json" />
+        <option value="$PROJECT_DIR$/src/assets/i18n/ru.json" />
+        <option value="$PROJECT_DIR$/src/app/component/createProject/projectPage.component.css" />
+        <option value="$PROJECT_DIR$/src/app/component/createProject/projectPage.component.html" />
+        <option value="$PROJECT_DIR$/src/app/component/profile/menuProfile/menuProfile.component.html" />
+        <option value="$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstructioncomponent.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/app.module.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstruction.component.css" />
+        <option value="$PROJECT_DIR$/src/app/component/createProject/projectPage.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstruction.component.ts" />
+        <option value="$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstruction.component.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="createProject" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="Instructions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="Instructions" type="462c0819:PsiDirectoryNode" />
+              <item name="AddInstruction" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="component" type="462c0819:PsiDirectoryNode" />
+              <item name="LoginPage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Front " type="b2602c69:ProjectViewProjectNode" />
+              <item name="Front " type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="i18n" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="SearchEverywhereHistoryKey" value="adres&#9;null&#9;null&#10;port&#9;null&#9;null" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/component/Instructions/AddInstruction" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration name="HFP" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2dba6d51-355a-4460-8637-2e512993ec27" name="Default" comment="" />
+      <created>1518084920512</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1518084920512</updated>
+      <workItem from="1518084922315" duration="2722000" />
+      <workItem from="1518204547788" duration="2089000" />
+      <workItem from="1518365086258" duration="1588000" />
+      <workItem from="1518449321159" duration="9188000" />
+      <workItem from="1518543692784" duration="11352000" />
+      <workItem from="1518875958771" duration="3723000" />
+      <workItem from="1518886315272" duration="423000" />
+    </task>
+    <task id="LOCAL-00001" summary="HFP-1 - login and register modal window (styles)">
+      <created>1518543876282</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1518543876282</updated>
+    </task>
+    <task id="LOCAL-00002" summary="HFP-1 - login modal and header navbar (styles)">
+      <created>1518549806539</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518549806540</updated>
+    </task>
+    <task id="LOCAL-00003" summary="HFP-1 - edit page (styles)">
+      <created>1518554316496</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1518554316496</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="31085000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31882352" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="HFP-1 - login and register modal window (styles)" />
+    <MESSAGE value="HFP-1 - login modal and header navbar (styles)" />
+    <MESSAGE value="HFP-1 - edit page (styles)" />
+    <option name="LAST_COMMIT_MESSAGE" value="HFP-1 - edit page (styles)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main.ts" />
+    <entry file="file://$PROJECT_DIR$/src/index.html" />
+    <entry file="file://$PROJECT_DIR$/src/environments/environment.prod.ts" />
+    <entry file="file://$PROJECT_DIR$/package-lock.json" />
+    <entry file="file://$PROJECT_DIR$/src/app/service/coreService.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/header/index.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/applications.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/forms/src/directives/abstract_control_directive.d.ts" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/forms/src/model.d.ts" />
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/login.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/login.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/service/validationData.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/InfoProfile/infoProfile.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/profile.component.ts" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.es6.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="15691" column="4" lean-forward="false" selection-start-line="15691" selection-start-column="4" selection-end-line="15691" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/component/header/header.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/login/loginpage.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/header/header.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/CloudinaryImageComponent/CloudinaryComponent.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/RegisterPage/register.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/EditProfile/editProfile.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/header/header.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/assets/i18n/en.json" />
+    <entry file="file://$PROJECT_DIR$/src/assets/i18n/ru.json" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/projectPage/projectInfo.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/projectPage/projectInfo.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/profile.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/createProject/projectPage.component.css" />
+    <entry file="file://$PROJECT_DIR$/node_modules/@angular/core/src/metadata/directives.d.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/app.component.spec.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/app.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/app.routing.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/adminPage/adminPage.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/menuProfile/menuProfile.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/profile/menuProfile/menuProfile.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/app.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstruction.component.css" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstruction.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/createProject/projectPage.component.html" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/LoginPage/login.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/app.module.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/createProject/projectPage.component.ts" />
+    <entry file="file://$PROJECT_DIR$/src/app/component/Instructions/AddInstruction/addInstruction.component.ts" />
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Front</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

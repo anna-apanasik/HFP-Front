@@ -8,12 +8,15 @@ import {Step} from "../../../model/Step";
 })
 
 export class ListStepComponent {
-  @Input() public step: Step;
+  @Input()
+  public step: Step;
+  @Input() steps: Step[];
 
-constructor(step: Step) {
+constructor(steps: Step[]) {
   console.log('constr');
+  console.log(this.steps);
   console.log(this.step)
-  this.step = step;
+  this.steps = steps;
 
 }
 }

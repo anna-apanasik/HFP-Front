@@ -54,6 +54,7 @@ import {BlockAccountComponent} from "./Error/BlockedAccount/blockAccount.compone
 import {EditorStepComponent} from "./Instructions/Editor/editorStep.component";
 import {ListStepComponent} from "./Instructions/List/listStep.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
+import {InstructionService} from "../service/InstructionService";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -122,7 +123,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     AuthenticationService,
     ValidationData,
     ProjectService,
-    HeaderService
+    HeaderService,
+    InstructionService
   ],
   bootstrap: [ AppComponent]
 })

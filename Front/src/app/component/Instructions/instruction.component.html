@@ -10,17 +10,24 @@
     <div class="form-group" style="width: 25%; margin: 0 5px;">
       <label for="selectTopic" style="font-size: 16px">{{'SelectTopic' | translate }}</label>
       <select class="form-control" id="selectTopic" [(ngModel)]="currentTopic" #topic="ngModel">
-        <option *ngFor="let topic of topics" [ngValue]="topic">
-          {{ topic.title }}
+        <option *ngFor="let section of sections" [ngValue]="topic">
+          {{ section.title }}
         </option>
       </select>
     </div>
+
+    <button class="btn btn-success">{{ 'SAVE' | translate }}</button>
+    <button class="btn btn-danger">
+      <span class="glyphicon glyphicon-trash"></span>
+    </button>
+
   </div>
 
   <tag-input [(ngModel)]='tags' [editable]='true' style="position:relative; max-width: 1400px; left: 20px;"
              (onTagEdited)="onTagEdited($event)" [ngModelOptions]="{standalone: true}"></tag-input>
 </div>
 
+<!--
 <app-editor-step></app-editor-step>
-
-<!--<app-list-step></app-list-step>-->
+-->
+<app-list-step [steps]="steps"></app-list-step>
