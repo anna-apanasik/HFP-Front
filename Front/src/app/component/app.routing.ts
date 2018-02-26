@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import {profileComponent} from "./profile/profile.component";
 import {ProjectPageComponent} from "./createProject/projectPage.component";
-import {SuccesRegistrationComponent} from "./succesfulRegistration/succesRegistration.component";
+import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
 import {ViewProjectComponent} from "./ViewProjectComponent/viewProject.component";
 import {ProjectListComponent} from "./ViewProjectList/projectList.component";
 import {SearcheResultComponent} from "./SearcheResult/searcheResult.component";
@@ -15,7 +15,8 @@ import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.c
 import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
 
 const appRoutes: Routes = [
-  {path:'succesRegistration',component: SuccesRegistrationComponent},
+  /* TODO change route for success registration in back (old route: succesRegistration) */
+  {path:'success-registration',component: SuccessRegistrationComponent},
   {path: 'project', component: ProjectPageComponent},
   { path: 'profile',
     component: profileComponent,
