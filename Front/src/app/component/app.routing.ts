@@ -20,7 +20,7 @@ const appRoutes: Routes = [
   { path: 'profile',
     component: profileComponent,
     children: [
-      { path: 'info', component: InfoProfileComponent },
+      { path: '', component: InfoProfileComponent },
       { path: 'edit-profile', component: EditProfileComponent },
       { path: 'create-instruction', component: InstructionComponent },
       { path: 'message-confirm', component: MessageComponent },
