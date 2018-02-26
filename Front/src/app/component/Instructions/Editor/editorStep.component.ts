@@ -1,4 +1,4 @@
-import {Component} from "@angular/core";
+import {Component, Input} from "@angular/core";
 import {selector} from "rxjs/operator/publish";
 import {Instruction} from "../../../model/Instruction";
 import {User} from "../../../model/user";
@@ -16,11 +16,11 @@ import {Section} from "../../../model/Section";
 
 export class EditorStepComponent {
   protected project: Instruction = new Instruction;
+  @Input() step: Step = new Step();
   user: User;
   tags: string[];
   position: number = 0;
   isDisabledButtonAdd: boolean = false;
-  steps: Step[] = [];
   newStep: Step = new Step();
   currentTopic: Section = new Section();
   topics: Section[] = [new Section(1,'IT'), new Section(2,'Books')];
@@ -43,10 +43,9 @@ export class EditorStepComponent {
 
   saveStep(step) {
     this.isDisabledButtonAdd = this.changeStatus(this.isDisabledButtonAdd);
-    this.steps.push(step);
+    //this.steps.push(step);
     console.log(this.newStep)
     console.log(step)
-    console.log(this.steps)
     //this.newStep.clearStep();
   }
 

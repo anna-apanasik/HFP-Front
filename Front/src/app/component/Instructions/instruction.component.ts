@@ -15,6 +15,7 @@ import {InstructionService} from "../../service/InstructionService";
 @Component({
   selector: 'app-instruction',
   templateUrl: './instruction.component.html',
+  styleUrls: ['./instruction.component.css'],
 })
 
 export class InstructionComponent {

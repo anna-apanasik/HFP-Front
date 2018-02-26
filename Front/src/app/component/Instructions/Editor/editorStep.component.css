@@ -1,8 +1,38 @@
 input.ng-touched.ng-invalid {border:solid red 2px;}
 
-.instruction {
-  margin: 20px 40px;
-  text-align: center;
+.wrapper-step {
+  margin-top: 15px;
 }
+
+.header-step {
+  margin: 10px;
+}
+
+.header-step input {
+  margin-left: 15px;
+  min-width: 300px;
+  border: 2px solid rgb(220, 228, 236);
+  border-radius: 3px;
+  font-size: 18px;
+}
+
+.step textarea {
+  border: 2px solid rgb(220, 228, 236);
+  border-radius: 3px;
+  margin: 10px auto 0 auto;
+  width: 100%;
+  min-height: 150px;
+}
+
+.step-button {
+  text-align: right;
+  font-size: 15px;
+}
+
+.step-button a {
+  margin: 10px 10px 5px 0;
+}
+
+
 
 
