@@ -1,42 +1,27 @@
-<ul class="nav nav-tabs tab" style="position: fixed; z-index:1049;">
-  <li class="active"><a data-toggle="tab" href="#panel1">{{'Profile'|translate}}</a></li>
-  <li><a data-toggle="tab" href="#panel2">{{'EditProfile'|translate}}</a></li>
-  <li><a data-toggle="tab" href="#message" *ngIf="user.role == 'ROLE_ADMIN'">{{'MessageConfirm'|translate}}</a></li>
-  <li><a data-toggle="tab" href="#confirm" *ngIf="user.role == 'ROLE_USER'">{{'ConfirmProfile'|translate}}</a></li>
-  <li><a data-toggle="tab" href="#createInstruction" *ngIf="user.role == 'ROLE_VER'">{{'CreateInstruction'|translate}}</a></li>
-  <li><a data-toggle="tab" href="#instructions" *ngIf="user.role == 'ROLE_VER'">{{'Instructions'|translate}}</a></li>
-  <li><a data-toggle="tab" href="#admin" *ngIf="user.role == 'ROLE_ADMIN'">{{'Admin'|translate}}</a></li>
-</ul>
-
-<div class="tab-content">
-  <div id="panel1" class="tab-pane fade in active">
-    <app-info-profile></app-info-profile>
-  </div>
-
-  <div id="panel2" class="tab-pane fade">
-    <app-edit-profile></app-edit-profile>
-  </div>
-
-  <div id="confirm" class="tab-pane fade">
-    <app-confirm-profile></app-confirm-profile>
-  </div>
-
-  <div id="createInstruction" class="tab-pane fade">
-    <app-instruction></app-instruction>
-  </div>
-
-  <div id="instructions" class="tab-pane fade">
-    <!--<app-project-page></app-project-page>-->
-
-    <!--<app-info-project></app-info-project>-->
-  </div>
-
-  <div id="admin" class="tab-pane fade">
-    <app-adminPage></app-adminPage>
-  </div>
-
-  <div id="message" class="tab-pane fade">
-    <app-message-component></app-message-component>
-  </div>
-
+<div class="profile">
+  <ul class="nav nav-tabs tab">
+    <li><a [routerLink]="['/profile/info']" routerLinkActive="active">{{'Profile'|translate}}</a></li>
+    <li>
+      <a [routerLink]="['/profile/edit-profile']"
+         routerLinkActive="active"> {{ 'EditProfile'|translate }} </a>
+    </li>
+    <li>
+      <a [routerLink]="['/profile/create-instruction']"
+         routerLinkActive="active"
+         *ngIf="user.role == 'ROLE_VER'"> {{'CreateInstruction'|translate}} </a>
+    </li>
+    <li><a [routerLink]="['/profile/message-confirm']"
+            routerLinkActive="active"
+            *ngIf="user.role == 'ROLE_ADMIN'"> {{'MessageConfirm'|translate}} </a>
+    </li>
+    <li><a [routerLink]="['/profile/confirm-profile']"
+           routerLinkActive="active"
+           *ngIf="user.role == 'ROLE_USER'">{{'ConfirmProfile'|translate}}</a>
+    </li>
+    <li><a [routerLink]="['/profile/admin']"
+           routerLinkActive="active"
+           *ngIf="user.role == 'ROLE_ADMIN'">{{'Admin'|translate}}</a>
+    </li>
+  </ul>
+  <router-outlet></router-outlet>
 </div>

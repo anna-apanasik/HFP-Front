@@ -7,16 +7,32 @@ import {ViewProjectComponent} from "./ViewProjectComponent/viewProject.component
 import {ProjectListComponent} from "./ViewProjectList/projectList.component";
 import {SearcheResultComponent} from "./SearcheResult/searcheResult.component";
 import {PayProjectComponent} from "./ViewProjectComponent/PayProject/payProject.component";
+import {InfoProfileComponent} from "./profile/InfoProfile/infoProfile.component";
+import {EditProfileComponent} from "./profile/EditProfile/editProfile.component";
+import {InstructionComponent} from "./Instructions/instruction.component";
+import {MessageComponent} from "./profile/MessagePage/Message.component";
+import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.component";
+import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
 
 const appRoutes: Routes = [
   {path:'succesRegistration',component: SuccesRegistrationComponent},
   {path: 'project', component: ProjectPageComponent},
-  {path: 'profile', component: profileComponent},
+  { path: 'profile',
+    component: profileComponent,
+    children: [
+      { path: 'info', component: InfoProfileComponent },
+      { path: 'edit-profile', component: EditProfileComponent },
+      { path: 'create-instruction', component: InstructionComponent },
+      { path: 'message-confirm', component: MessageComponent },
+      { path: 'confirm-profile', component: ConfirmProfileComponent },
+      { path: 'admin', component: AdminPageComponent }
+    ]
+  },
   {path: 'transferMoney', component: PayProjectComponent},
   {path: 'view/project/:idproject', component: ViewProjectComponent},
   {path: 'searcheResults/:request', component: SearcheResultComponent},
   {path: '', component: ProjectListComponent},
-  { path: '**', redirectTo: '/' }
+  {path: '**', redirectTo: '/' }
 ];
 
 export const appRouting: any[]=[];

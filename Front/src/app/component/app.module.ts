@@ -124,7 +124,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ValidationData,
     ProjectService,
     HeaderService,
-    InstructionService
+    InstructionService,
+    appRouting
   ],
   bootstrap: [ AppComponent]
 })
