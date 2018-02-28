@@ -1,6 +1,5 @@
-import {animate, Component, state, style, transition, trigger} from '@angular/core';
-import {LoginPageComponent} from "./login/loginpage.component";
-import {NgForm} from "@angular/forms";
+import {Component} from '@angular/core';
+import {LoginPageComponent} from "./Login/loginpage.component";
 
 @Component({
   selector: 'app-login',

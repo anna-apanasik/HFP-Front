@@ -10,7 +10,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import {DropdownModule} from 'ngx-dropdown';
 import {Form, FormsModule} from '@angular/forms';
 import {LoginComponent} from './LoginPage/login.component';
-import {LoginPageComponent} from './LoginPage/login/loginpage.component';
+import {LoginPageComponent} from './LoginPage/Login/loginpage.component';
 import {RegisterComponent} from './LoginPage/RegisterPage/register.component';
 import {AuthHttp} from 'angular2-jwt';
 import {Http, RequestOptions} from '@angular/http';
@@ -33,7 +33,6 @@ import { FileUploadModule } from 'ng2-file-upload';
 import {CloudinaryComponent} from "./CloudinaryImageComponent/CloudinaryComponent";
 import {ProjectPageComponent} from "./createProject/projectPage.component";
 import {DatePickerModule} from "ng2-datepicker";
-import {SuccesRegistrationComponent} from "./succesfulRegistration/succesRegistration.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
 import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.component";
@@ -54,6 +53,7 @@ import {BlockAccountComponent} from "./Error/BlockedAccount/blockAccount.compone
 import {EditorStepComponent} from "./Instructions/Editor/editorStep.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
 import {InstructionService} from "../service/InstructionService";
+import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -74,7 +74,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ImageComponent,
     CloudinaryComponent,
     ProjectPageComponent,
-    SuccesRegistrationComponent,
+    SuccessRegistrationComponent,
     ConfirmProfileComponent,
     ProjectInfoComponent,
     AdminPageComponent,
