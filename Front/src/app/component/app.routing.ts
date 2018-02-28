@@ -22,7 +22,7 @@ const appRoutes: Routes = [
     children: [
       { path: '', component: InfoProfileComponent },
       { path: 'edit-profile', component: EditProfileComponent },
-      { path: 'create-instruction', component: InstructionComponent },
+      { path: 'instruction/:id', component: InstructionComponent },
       { path: 'message-confirm', component: MessageComponent },
       { path: 'confirm-profile', component: ConfirmProfileComponent },
       { path: 'admin', component: AdminPageComponent }

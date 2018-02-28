@@ -23,4 +23,8 @@ export class Step {
     this.text = '';
     this.image = [];
   }
+
+  public setPosition(position: number) {
+    this.position = position;
+  }
 }

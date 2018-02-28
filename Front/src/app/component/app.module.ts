@@ -52,7 +52,6 @@ import {PayProjectComponent} from "./ViewProjectComponent/PayProject/payProject.
 import { TagInputModule } from 'ngx-chips';
 import {BlockAccountComponent} from "./Error/BlockedAccount/blockAccount.component";
 import {EditorStepComponent} from "./Instructions/Editor/editorStep.component";
-import {ListStepComponent} from "./Instructions/List/listStep.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
 import {InstructionService} from "../service/InstructionService";
 
@@ -82,7 +81,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     EditorStepComponent,
     ErrorAccesComponent,
     ViewProjectComponent,
-    ListStepComponent,
     ProjectListComponent,
     SearcheResultComponent,
     ContanerForProjectComponent,

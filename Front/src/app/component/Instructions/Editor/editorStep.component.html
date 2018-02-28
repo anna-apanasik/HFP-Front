@@ -1,50 +1,53 @@
 <div class="wrapper-step">
     <div class="step">
-        <div class="header-step">
-            <span class="badge badge-info"
-                  style="padding: 8px 10px 10px 10px">
-              {{'Step' | translate}} {{ position }}
-            </span>
-            <input type="text"
-                   [(ngModel)]="step.name"
-                   name="nameOfStep"
-                   class="name-of-step"
-                   id="name-of-step"
-                   #nameOfStep="ngModel"
-                   placeholder="{{'TitleOfStep'|translate}}"
-                   required>
+        <div *ngIf="edit">
+            <div class="header-step">
+                <input type="text"
+                       [(ngModel)]="step.name"
+                       id="name-of-step"
+                       #nameOfStep="ngModel"
+                       placeholder="{{'TitleOfStep'|translate}}"
+                       required>
+            </div>
+
+            <div class="textarea">
+                <textarea class="description"
+                          [(ngModel)]="step.text"
+                          id="text-area-component"
+                          name="stepDescription"
+                          placeholder="{{'StepDescription'|translate}}"
+                          #stepDescription="ngModel"
+                          required>
+                </textarea>
+            </div>
         </div>
-        <div class="textarea">
-            <textarea class="description"
-                      [(ngModel)]="newStep.text"
-                      id="text-area-component"
-                      name="stepDescription"
-                      placeholder="{{'StepDescription'|translate}}"
-                      #stepDescription="ngModel"
-                      required>
-            </textarea>
+        <div *ngIf="!edit">
+            <div class="header-step">
+                    <span class="badge badge-info"
+                          style="padding: 8px 10px 10px 10px">
+                      {{'Step' | translate}} {{ step.position }}
+                    </span>
+                <span>{{step.name}}</span>
+            </div>
+            <div class="textarea">
+                    <p> {{ step.text }} </p>
+            </div>
         </div>
         <div class="step-button">
-          <a href="">Сохранить шаг</a>
-          <a href="">Удалить шаг</a>
+            <button  *ngIf="edit"
+                     (click)="addStep(step)"
+                      class="btn btn-success">
+              {{ 'SAVE' | translate }}
+            </button>
+            <button  *ngIf="step.position !== 0 && !edit"
+                     (click)="edit()"
+                     class="btn btn-success"
+                      >
+             Редактировать
+            </button>
+            <button class="btn btn-danger" (click)="remove()">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
         </div>
-        <!--<input [disabled]="name.invalid || stepDescription.invalid"-->
-               <!--type="submit"-->
-               <!--style=""-->
-               <!--name="btn-add-instruction"-->
-               <!--id="btn-save-step"-->
-               <!--(click)="saveStep(newStep)"-->
-               <!--class="btn btn-info btn-block"-->
-               <!--value="{{'Save'| translate}}">-->
-    <!---->
-        <!--<input [disabled]="nameOfInstruction.invalid || isDisabledButtonAdd"-->
-               <!--type="submit"-->
-               <!--style="width: 15%; margin: 25px 5px 0 5px; height: 70%;"-->
-               <!--name="btn-add-instruction"-->
-               <!--id="btn-add-instruction"-->
-               <!--(click)="addItem()"-->
-               <!--class="btn btn-info btn-block"-->
-               <!--value="{{'AddStep'| translate}} + ">-->
-
     </div>
 </div>

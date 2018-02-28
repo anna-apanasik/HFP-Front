@@ -1,7 +1,7 @@
 import {Injectable} from "@angular/core";
 import {CoreService} from "./coreService";
-import {AuthHttp} from "angular2-jwt";
-import {Http} from "@angular/http";
+import {AuthConfigConsts, AuthHttp} from "angular2-jwt";
+import {Http, Headers} from "@angular/http";
 import {Instruction} from "../model/Instruction";
 
 @Injectable()
@@ -23,8 +23,12 @@ export class InstructionService extends CoreService {
     return this.authHttp.get(`${this.webService}getInstruction`, id).map(res => res.json());
   }
 
-  createInstruction() {
-    return this.authHttp.post(`${this.webService}createInstruction`, Instruction).map(res => res.json());
+  createInstruction(instruction: Instruction) {
+    let headers = new Headers();
+    headers.append('Content-Type', 'application/json');
+    headers.append('Authorization', localStorage.getItem(AuthConfigConsts.DEFAULT_TOKEN_NAME));
+
+    return this.authHttp.post(`${this.webService}createInstruction`, instruction, {headers}).map(res => res.json());
   }
 
   updateInstruction() {
