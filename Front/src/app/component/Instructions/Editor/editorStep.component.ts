@@ -19,6 +19,7 @@ export class EditorStepComponent {
   @Input() step: Step = new Step();
   @Input() edit: boolean;
   @Output() newStepEvent = new EventEmitter();
+  @Output() deleteStepEvent = new EventEmitter();
   user: User;
   tags: string[];
   position: number = 0;
@@ -34,9 +35,13 @@ export class EditorStepComponent {
 
   addStep(step) {
     let copy = Object.assign({},step);
-    console.log(copy);
     this.newStepEvent.emit(copy);
     step.clearStep();
+  }
+
+  deleteStep(step) {
+    let copy = Object.assign({},step);
+    this.deleteStepEvent.emit(copy);
   }
 
   changeStatus(status: boolean) {

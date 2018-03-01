@@ -31,8 +31,8 @@ export class InstructionService extends CoreService {
     return this.authHttp.post(`${this.webService}createInstruction`, instruction, {headers}).map(res => res.json());
   }
 
-  updateInstruction() {
-    return this.authHttp.put(`${this.webService}updateInstruction`, Instruction).map(res => res.json());
+  updateInstruction(instruction: Instruction) {
+    return this.authHttp.put(`${this.webService}updateInstruction`, instruction).map(res => res.json());
   }
 
 

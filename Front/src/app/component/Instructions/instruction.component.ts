@@ -7,6 +7,8 @@ import {AuthGuard} from "../../service/guards/auth.guards";
 import {EditorStepComponent} from "./Editor/editorStep.component";
 import {InstructionService} from "../../service/InstructionService";
 import {ActivatedRoute, Params} from "@angular/router";
+import {AuthConfigConsts} from "angular2-jwt";
+import {UserService} from "../../service/userService";
 
 @Component({
   selector: 'app-instruction',
@@ -38,22 +40,32 @@ export class InstructionComponent implements OnInit{
     this.activatedRoute.params.subscribe((params: Params) => {
       this.instruction.id = params['id'];
     });
+    this.instruction.userId = this.user.id;
     this.getSection();
     this.loadInstruction();
   }
 
   saveInstruction() {
+    if(this.instruction.id.toString() == 'create') {
+      this.instruction.id = 0;
+      this.instruction.steps = this.steps;
+      console.log(this.instruction)
+      this.instructionService.createInstruction(this.instruction).subscribe(resp => console.log(resp))
+      return;
+    }
 
-    this.instruction.steps = this.steps;
-    //this.instruction.section = this.currentSection;
-    this.instructionService.createInstruction(this.instruction).subscribe(resp => console.log(resp))
+    //this.instructionService.updateInstruction(this.instruction).subscribe(resp => console.log(resp));
     //console.log(this.instruction);
   }
 
-  public receiveStep(data) {
+  public receiveNewStep(data) {
     data.position = this.steps.length + 1;
     this.steps.push(data);
-    console.log(this.steps)
+  }
+
+  public deleteStep(data) {
+    this.steps = this.steps.filter(item => item.position != data.position)
+    this.steps.map((item,i)=> item.position = i +1)
   }
 
   loadInstruction() {

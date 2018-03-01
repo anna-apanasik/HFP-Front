@@ -26,6 +26,7 @@
         <div class="form-group buttons">
             <button class="btn btn-success"
                     (click)="saveInstruction(instruction)"
+                    [disabled]="steps.length == 0 || !instruction.title || !instruction.section"
               >{{ 'SAVE' | translate }}</button>
             <button class="btn btn-danger">
               <span class="glyphicon glyphicon-trash"></span>
@@ -40,9 +41,11 @@
 </div>
 <div class="container">
   <div *ngFor="let item of steps">
-    <app-editor-step [step]="item" [edit]="false"></app-editor-step>
+    <app-editor-step [step]="item" [edit]="false" (deleteStepEvent)="deleteStep($event,data)"></app-editor-step>
   </div>
-  <app-editor-step  [edit]="true" (newStepEvent)="receiveStep($event,data)"></app-editor-step>
+  <app-editor-step  [edit]="true"
+                    (newStepEvent)="receiveNewStep($event,data)">
+  </app-editor-step>
 </div>
 
 
