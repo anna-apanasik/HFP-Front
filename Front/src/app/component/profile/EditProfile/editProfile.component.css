@@ -1,8 +1,8 @@
 input{
   max-width: 500px;
 }
-input.ng-touched.ng-invalid {border:solid red 2px;}
-input.ng-touched.ng-valid {border:solid green 2px;}
+input.ng-dirty.ng-invalid {border:solid red 2px;}
+input.ng-dirty.ng-valid {border:solid green 2px;}
 
 .form-group {
   position: relative;
@@ -13,15 +13,12 @@ input.ng-touched.ng-valid {border:solid green 2px;}
   background: cornsilk;
   padding: 5px 5px;
 }
-.pos{
-  position: relative;
-  left: 28%;
-}
 
 .alert {
   margin-top: 0;
   margin-bottom: 5px;
   padding: 3px;
+  color: red
 }
 
 .label-style {
