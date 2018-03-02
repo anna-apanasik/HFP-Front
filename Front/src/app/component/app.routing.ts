@@ -1,18 +1,18 @@
 import { Routes, RouterModule } from '@angular/router';
 
-import {profileComponent} from "./profile/profile.component";
+import {profileComponent} from "./Profile/profile.component";
 import {ProjectPageComponent} from "./createProject/projectPage.component";
 import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
 import {ViewProjectComponent} from "./ViewProjectComponent/viewProject.component";
 import {ProjectListComponent} from "./ViewProjectList/projectList.component";
 import {SearcheResultComponent} from "./SearcheResult/searcheResult.component";
 import {PayProjectComponent} from "./ViewProjectComponent/PayProject/payProject.component";
-import {InfoProfileComponent} from "./profile/InfoProfile/infoProfile.component";
-import {EditProfileComponent} from "./profile/EditProfile/editProfile.component";
+import {InfoProfileComponent} from "./Profile/InfoProfile/infoProfile.component";
+import {EditProfileComponent} from "./Profile/EditProfile/editProfile.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
-import {MessageComponent} from "./profile/MessagePage/Message.component";
-import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.component";
-import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
+import {MessageComponent} from "./Profile/MessagePage/Message.component";
+import {ConfirmProfileComponent} from "./Profile/confirmProfile/confirmProfile.component";
+import {AdminPageComponent} from "./Profile/adminPage/adminPage.component";
 
 const appRoutes: Routes = [
   /* TODO change route for success registration in back (old route: succesRegistration) */
