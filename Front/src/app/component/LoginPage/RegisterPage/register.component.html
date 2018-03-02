@@ -9,7 +9,8 @@
            class="form-control"
            value=""
            placeholder="{{'FirstName'|translate}}"
-           #firstname="ngModel" required>
+           #firstname="ngModel"
+           required>
 
     <span class="form"> {{ 'LastName'|translate }} </span>
     <input type="text"
@@ -19,7 +20,8 @@
            class="form-control"
            value=""
            placeholder="{{'LastName'|translate}}"
-           #lastname="ngModel" required>
+           #lastname="ngModel"
+           required>
 
     <span class="form"> {{ 'email'|translate }} </span>
     <input type="text"
@@ -35,17 +37,17 @@
       {{'IncorrectEmail'|translate}}
     </div>
 
-    <span class="form"> {{ 'LOGIN'|translate }} </span>
+    <span class="form"> {{ 'Login'|translate }} </span>
     <input type="text"
            [(ngModel)]="user.userName"
            name="user-login"
            id="user-login"
            class="form-control"
            value=""
-           placeholder="{{'LOGIN'|translate}}"
+           placeholder="{{'Login'|translate}}"
            #userLogin="ngModel"
            required pattern="^[A-Za-z]+$">
-    <div *ngIf="userLogin.invalid && (userLogin.touched || userLogin.dirty)" class="alert">
+    <div *ngIf="userLogin.invalid && userLogin.touched" class="alert">
       {{ 'IncorrectNick'| translate }}
     </div>
 
@@ -75,7 +77,7 @@
     <div *ngIf="confirmPassword.invalid && (confirmPassword.touched || confirmPassword.dirty)"
          class="alert"> {{ 'IncorrectPassword'| translate }}
     </div>
-    <div *ngIf="(confirmPassword.touched || confirmPassword.pristine) && checkPasswordConfirm()"
+    <div *ngIf="!checkConfirmPassword() && (confirmPassword.touched || confirmPassword.dirty)"
          class="alert"> {{ 'ErrorConfirm'| translate }}
     </div>
 
@@ -83,7 +85,10 @@
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
           <input
-            [disabled]="firstname.invalid || lastname.invalid ||email.invalid || userLogin.invalid || password.invalid || confirmPassword.invalid"
+            [disabled]="firstname.invalid || lastname.invalid ||
+                        email.invalid || userLogin.invalid ||
+                        password.invalid || confirmPassword.invalid ||
+                        !checkConfirmPassword()"
             type="submit"
             name="register-submit"
             id="login-submit"
