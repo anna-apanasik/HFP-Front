@@ -92,6 +92,7 @@
   "TitleOfStep": "Title of step",
   "Step": "Step",
   "StepDescription": "Step description",
-  "SelectTopic": "Select topic"
-
+  "SelectTopic": "Select topic",
+  "Edit": "Edit",
+  "DeleteProfile": "Are you sure you want to delete your profile?"
 }

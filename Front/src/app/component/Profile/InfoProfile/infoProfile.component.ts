@@ -1,7 +1,5 @@
 import { Component} from "@angular/core";
-import {UserService} from "../../../service/userService";
 import {User} from "../../../model/user";
-import {error} from "util";
 
 @Component({
   selector: 'app-info-profile',
@@ -15,6 +13,5 @@ export class InfoProfileComponent {
   constructor()
   {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
-    console.log(this.user);
   }
 }

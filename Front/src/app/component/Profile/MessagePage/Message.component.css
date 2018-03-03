@@ -5,7 +5,7 @@
   left:50px;
   text-align: left;
   border-collapse: collapse;
-  background:  cornsilk;
+  background:  rgba(111, 112, 123, 0.45);
   margin: 10px;
 }
 .table_dark th {

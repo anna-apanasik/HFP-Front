@@ -41,9 +41,9 @@
             </button>
             <button  *ngIf="step.position !== 0 && !edit"
                      (click)="edit = !edit"
-                     class="btn btn-success"
+                     class="btn btn-warning"
                       >
-             Редактировать
+              {{'Edit'| translate}}
             </button>
             <button class="btn btn-danger" (click)="deleteStep(step)">
               <span class="glyphicon glyphicon-trash"></span>

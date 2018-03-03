@@ -1,21 +1,38 @@
-<!--<div class="col-lg-3 col-md-3 hidden-sm hidden-xs" id="photo">-->
 <div class="container">
-  <div class="col-sm-6 col-sm-offset-3">
-    <div class="panel" style="width: 500px">
-      <div class="media">
+  <div class="col-sm-6 profile-info">
+    <ul class="list-group">
+      <li class="profile-photo list-group-item list-group-item-secondary ">
         <img id="default-img" *ngIf="!user.image"
              src="http://res.cloudinary.com/crowbanding/image/upload/c_lfill,h_300,q_100,r_0,w_200/a_0/sy6afdedllqhpbh8zebq.jpg"/>
         <div>
           <img id="cloud-img" class="user-image" style="width: 500px" *ngIf="user.image" src='{{user.image}}'/>
         </div>
-        <div id="info-user">
-          <h1 class="panel-title pull-left" style="font-size:30px;">{{user.firstName}}
-            <small>{{user.userName}}</small>
-            {{user.lastName}}
-          </h1>
-
-        </div>
-      </div>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label>{{ 'Login' | translate }} : {{ user.userName }}</label>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label> {{ 'email' | translate }} : {{ user.email }}</label>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label>{{'FirstName' | translate }} : {{ user.userName }}</label>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label> {{ 'LastName' | translate }} : {{ user.lastName }}</label>
+      </li>
+    </ul>
+    <div align="center">
+      <button class="btn btn-warning profile-edit-button" [routerLink]="['/profile/edit-profile']">
+        {{'Edit'| translate}}
+      </button>
+      <button class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#openDeleteProfile">
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
     </div>
   </div>
+</div>
+<div id="openDeleteProfile" class="modal fade" aria-hidden="true" aria-labelledby="openDeleteProfile" tabindex="-1" role="dialog">
+  <app-delete-profile></app-delete-profile>
 </div>

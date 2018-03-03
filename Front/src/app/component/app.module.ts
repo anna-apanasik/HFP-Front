@@ -55,6 +55,7 @@ import {InstructionComponent} from "./Instructions/instruction.component";
 import {InstructionService} from "../service/InstructionService";
 import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
 import {StepService} from "../service/StepService";
+import {DeleteProfileComponent} from "./Profile/DeleteProfile/deleteProfile.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -88,7 +89,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     MessageComponent,
     PayProjectComponent,
     BlockAccountComponent,
-    InstructionComponent
+    InstructionComponent,
+    DeleteProfileComponent
   ],
   imports: [
     BrowserModule,
