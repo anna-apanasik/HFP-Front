@@ -10,6 +10,7 @@
   "inpsearche":"start enter request...",
   "REGISTER":"Registration",
   "LOGIN":"Login",
+  "Login": "Login",
   "REMEMBER_ME":"Remember me",
   "email": "Email",
   "password": "Password",
@@ -32,9 +33,9 @@
   "SAVE":"Save",
   "newFirstName":"New first name",
   "newLastName": "New last name",
-  "newNick": "New nick name",
   "newemail": "New email",
   "newpassword": "New password",
+  "NewLogin": "New login",
   "NameInstruction": "Name of instruction",
   "DescriptionProject": "Description project",
   "ChooseDate": "Select the end date for fundraising",
@@ -92,4 +93,5 @@
   "Step": "Step",
   "StepDescription": "Step description",
   "SelectTopic": "Select topic"
+
 }

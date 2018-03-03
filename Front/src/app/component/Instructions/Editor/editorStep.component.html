@@ -40,7 +40,7 @@
               {{ 'SAVE' | translate }}
             </button>
             <button  *ngIf="step.position !== 0 && !edit"
-                     (click)="edit()"
+                     (click)="edit = !edit"
                      class="btn btn-success"
                       >
              Редактировать

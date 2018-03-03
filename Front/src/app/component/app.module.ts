@@ -22,11 +22,11 @@ import {appRouting, routing} from "./app.routing";
 // import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 import {CommonModule} from "@angular/common";
 import {logoutComponent} from "./logout/logout.component";
-import {profileComponent} from "./profile/profile.component";
+import {profileComponent} from "./Profile/profile.component";
 import {RouterModule, Router, Routes} from "@angular/router";
-import {appMenuProfileComponent} from "./profile/MenuProfile/menuProfile.component";
-import {EditProfileComponent} from "./profile/EditProfile/editProfile.component";
-import {InfoProfileComponent} from "./profile/InfoProfile/infoProfile.component";
+import {appMenuProfileComponent} from "./Profile/MenuProfile/menuProfile.component";
+import {EditProfileComponent} from "./Profile/EditProfile/editProfile.component";
+import {InfoProfileComponent} from "./Profile/InfoProfile/infoProfile.component";
 import {ImageComponent} from "./imageArea/image.component";
 import {Ng2CloudinaryModule} from "ng2-cloudinary";
 import { FileUploadModule } from 'ng2-file-upload';
@@ -35,9 +35,9 @@ import {ProjectPageComponent} from "./createProject/projectPage.component";
 import {DatePickerModule} from "ng2-datepicker";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-import {ConfirmProfileComponent} from "./profile/СonfirmProfile/confirmProfile.component";
-import {ProjectInfoComponent} from "./profile/projectPage/projectInfo.component";
-import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
+import {ConfirmProfileComponent} from "./Profile/СonfirmProfile/confirmProfile.component";
+import {ProjectInfoComponent} from "./Profile/projectPage/projectInfo.component";
+import {AdminPageComponent} from "./Profile/adminPage/adminPage.component";
 import {ErrorAccesComponent} from "./Error/errorAcces/errorAcces.component";
 import {ValidationData} from "../service/validationData";
 import {ViewProjectComponent} from "./ViewProjectComponent/viewProject.component";
@@ -46,7 +46,7 @@ import {ProjectListComponent} from "./ViewProjectList/projectList.component";
 import {HeaderService} from "../service/HeaderService";
 import {SearcheResultComponent} from "./SearcheResult/searcheResult.component";
 import {ContanerForProjectComponent} from "./ViewProjectList/OneProjectFromList/contanerForProject.component";
-import {MessageComponent} from "./profile/MessagePage/Message.component";
+import {MessageComponent} from "./Profile/MessagePage/Message.component";
 import {PayProjectComponent} from "./ViewProjectComponent/PayProject/payProject.component";
 import { TagInputModule } from 'ngx-chips';
 import {BlockAccountComponent} from "./Error/BlockedAccount/blockAccount.component";
@@ -54,6 +54,7 @@ import {EditorStepComponent} from "./Instructions/Editor/editorStep.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
 import {InstructionService} from "../service/InstructionService";
 import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
+import {StepService} from "../service/StepService";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -123,6 +124,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectService,
     HeaderService,
     InstructionService,
+    StepService,
     appRouting
   ],
   bootstrap: [ AppComponent]

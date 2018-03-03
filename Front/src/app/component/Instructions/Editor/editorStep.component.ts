@@ -36,7 +36,11 @@ export class EditorStepComponent {
   addStep(step) {
     let copy = Object.assign({},step);
     this.newStepEvent.emit(copy);
-    step.clearStep();
+    if(step.id) {
+      this.edit = !this.edit;
+    }
+
+    this.step.clearStep();
   }
 
   deleteStep(step) {
