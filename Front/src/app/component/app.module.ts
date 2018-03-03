@@ -24,7 +24,7 @@ import {CommonModule} from "@angular/common";
 import {logoutComponent} from "./logout/logout.component";
 import {profileComponent} from "./profile/profile.component";
 import {RouterModule, Router, Routes} from "@angular/router";
-import {appMenuProfileComponent} from "./profile/menuProfile/menuProfile.component";
+import {appMenuProfileComponent} from "./profile/MenuProfile/menuProfile.component";
 import {EditProfileComponent} from "./profile/EditProfile/editProfile.component";
 import {InfoProfileComponent} from "./profile/InfoProfile/infoProfile.component";
 import {ImageComponent} from "./imageArea/image.component";

@@ -15,7 +15,6 @@ import {ConfirmProfileComponent} from "./profile/СonfirmProfile/confirmProfile.
 import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
 
 const appRoutes: Routes = [
-  /* TODO change route for success registration in back (old route: succesRegistration) */
   {path:'success-registration',component: SuccessRegistrationComponent},
   {path: 'project', component: ProjectPageComponent},
   { path: 'profile',
