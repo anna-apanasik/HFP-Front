@@ -35,7 +35,7 @@ import {ProjectPageComponent} from "./createProject/projectPage.component";
 import {DatePickerModule} from "ng2-datepicker";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.component";
+import {ConfirmProfileComponent} from "./profile/СonfirmProfile/confirmProfile.component";
 import {ProjectInfoComponent} from "./profile/projectPage/projectInfo.component";
 import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
 import {ErrorAccesComponent} from "./Error/errorAcces/errorAcces.component";

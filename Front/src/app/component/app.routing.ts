@@ -11,7 +11,7 @@ import {InfoProfileComponent} from "./profile/InfoProfile/infoProfile.component"
 import {EditProfileComponent} from "./profile/EditProfile/editProfile.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
 import {MessageComponent} from "./profile/MessagePage/Message.component";
-import {ConfirmProfileComponent} from "./profile/confirmProfile/confirmProfile.component";
+import {ConfirmProfileComponent} from "./profile/СonfirmProfile/confirmProfile.component";
 import {AdminPageComponent} from "./profile/adminPage/adminPage.component";
 
 const appRoutes: Routes = [
