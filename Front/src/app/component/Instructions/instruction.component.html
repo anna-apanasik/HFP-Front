@@ -17,8 +17,9 @@
             <select class="form-control"
                     id="selectTopic"
                     [(ngModel)]="instruction.section"
-                    #topic="ngModel">
-                <option *ngFor="let section of sections" [ngValue]="section">
+                    #section="ngModel"
+                    >
+                <option *ngFor="let section of sections" [ngValue]="section" >
                   {{ section.title }}
                 </option>
             </select>
@@ -29,7 +30,7 @@
                     [disabled]="steps.length == 0 || !instruction.title || !instruction.section"
               >{{ 'SAVE' | translate }}</button>
             <button class="btn btn-danger">
-              <span class="glyphicon glyphicon-trash"></span>
+              <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
             </button>
         </div>
     </div>
@@ -41,7 +42,11 @@
 </div>
 <div class="container">
   <div *ngFor="let item of steps">
-    <app-editor-step [step]="item" [edit]="false" (deleteStepEvent)="deleteStep($event,data)"></app-editor-step>
+    <app-editor-step [step]="item"
+                     [edit]="false"
+                     (deleteStepEvent)="deleteStep($event,data)"
+                     (newStepEvent)="receiveNewStep($event,data)"
+                     ></app-editor-step>
   </div>
   <app-editor-step  [edit]="true"
                     (newStepEvent)="receiveNewStep($event,data)">

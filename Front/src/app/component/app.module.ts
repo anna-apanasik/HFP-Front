@@ -54,6 +54,7 @@ import {EditorStepComponent} from "./Instructions/Editor/editorStep.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
 import {InstructionService} from "../service/InstructionService";
 import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
+import {StepService} from "../service/StepService";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -123,6 +124,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProjectService,
     HeaderService,
     InstructionService,
+    StepService,
     appRouting
   ],
   bootstrap: [ AppComponent]

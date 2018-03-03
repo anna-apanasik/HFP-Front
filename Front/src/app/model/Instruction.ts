@@ -11,6 +11,10 @@ export class Instruction {
   userId: number;
   steps: Step[];
   section: Section;
+
+  constructor() {
+    this.section = new Section();
+  }
 }
 
 export class Project {
