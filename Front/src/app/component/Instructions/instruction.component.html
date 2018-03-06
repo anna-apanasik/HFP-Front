@@ -1,55 +1,62 @@
-<div class="wrapper-instruction">
-    <div class="row instruction">
-        <div class="form-group name-instruction">
-            <label>{{'NameInstruction'|translate}}</label>
-            <input type="text" [(ngModel)]="instruction.title"
-                   name="nameOfInstruction"
-                   class="form-control"
-                   id="name-of-instruction"
-                   #nameOfInstruction="ngModel"
-                   placeholder="{{'Enter'|translate}}"
-                   required>
-        </div>
-
-        <!--TODO validate for select list (disable button)-->
-        <div class="form-group section">
-            <label for="selectTopic">{{'SelectTopic' | translate }}</label>
-            <select class="form-control"
-                    id="selectTopic"
-                    [(ngModel)]="instruction.section"
-                    #section="ngModel"
-                    >
-                <option *ngFor="let section of sections" [ngValue]="section" >
-                  {{ section.title }}
-                </option>
-            </select>
-        </div>
-        <div class="form-group buttons">
-            <button class="btn btn-success"
-                    (click)="saveInstruction(instruction)"
-                    [disabled]="steps.length == 0 || !instruction.title || !instruction.section"
-              >{{ 'SAVE' | translate }}</button>
-            <button class="btn btn-danger">
-              <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
-            </button>
-        </div>
-    </div>
-    <tag-input [(ngModel)]='tags'
-               [editable]='true'
-               (onTagEdited)="onTagEdited($event)"
-               [ngModelOptions]="{standalone: true}">
-    </tag-input>
-</div>
 <div class="container">
+  <div class="wrapper-instruction">
+    <div class="row instruction">
+      <div class="form-group name-instruction">
+        <label>{{'NameInstruction'|translate}}</label>
+        <input type="text" [(ngModel)]="instruction.title"
+               name="nameOfInstruction"
+               class="form-control"
+               id="name-of-instruction"
+               #nameOfInstruction="ngModel"
+               placeholder="{{'Enter'|translate}}"
+               required>
+      </div>
+
+      <!--TODO validate for select list (disable button)-->
+      <div class="form-group section">
+        <label for="selectTopic">{{'SelectTopic' | translate }}</label>
+        <select class="form-control"
+                id="selectTopic"
+                [(ngModel)]="instruction.section"
+                #section="ngModel"
+        >
+          <option *ngFor="let section of sections" [ngValue]="section">
+            {{ section.title }}
+          </option>
+        </select>
+      </div>
+      <div class="form-group buttons">
+        <button class="btn btn-success"
+                (click)="saveInstruction(instruction)"
+                [disabled]="steps.length == 0 || !instruction.title || !instruction.section"
+        >{{ 'SAVE' | translate }}
+        </button>
+        <button class="btn btn-danger">
+          <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="input-tags">
+      <tag-input [(ngModel)]='tags'
+                 [editable]='true'
+                 [removable]="true"
+                 (onTagEdited)="onTagEdited($event)"
+                 [ngModelOptions]="{standalone: true}"
+                 theme='dark'>
+      </tag-input>
+    </div>
+  </div>
+  <!--<div class="container">-->
   <div *ngFor="let item of steps">
     <app-editor-step [step]="item"
                      [edit]="false"
                      (deleteStepEvent)="deleteStep($event,data)"
                      (newStepEvent)="receiveNewStep($event,data)"
-                     ></app-editor-step>
+    ></app-editor-step>
   </div>
-  <app-editor-step  [edit]="true"
-                    (newStepEvent)="receiveNewStep($event,data)">
+  <app-editor-step [edit]="true"
+                   (newStepEvent)="receiveNewStep($event,data)">
   </app-editor-step>
 </div>
 

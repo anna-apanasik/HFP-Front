@@ -1,0 +1,18 @@
+<div class="container view-instruction">
+  <h1 class="title-instruction"> {{ instruction.title }}
+      <span class="badge badge-danger section">{{ instruction.section.title }}</span>
+  </h1>
+
+  <div class="container-tags">
+    <label class="label-style title-tag"> {{'Tags'|translate}}</label>
+    <a *ngFor="let tag of instruction.tags" (click)="switched(tag)">
+      <span class="glyphicon glyphicon-tag tag"></span>{{ tag }}
+    </a>
+  </div>
+
+  <div *ngFor="let step of instruction.steps">
+    <div class="panel panel-default">
+      <app-view-step [step]="step"></app-view-step>
+    </div>
+  </div>
+</div>

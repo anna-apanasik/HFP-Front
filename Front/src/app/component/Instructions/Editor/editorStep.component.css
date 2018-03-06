@@ -2,7 +2,7 @@ input.ng-touched.ng-invalid {border:solid red 2px;}
 
 .wrapper-step {
   margin-top: 15px;
-  background-color: #f5f5f5;
+  background-color: rgba(111, 112, 123, 0.45);
   padding: 20px;
   border-radius: 3px;
 }

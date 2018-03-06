@@ -17,12 +17,11 @@ import {StepService} from "../../service/StepService";
   styleUrls: ['./instruction.component.css'],
 })
 
-export class InstructionComponent implements OnInit{
-  protected project: Instruction = new Instruction;
+/*TODO add tags*/
+export class InstructionComponent implements OnInit {
   user: User;
   tags: string[];
   position: number = 0;
-  isDisabledButtonAdd: boolean = false;
   instruction: Instruction = new Instruction();
   steps: Step[] = [];
   step: Step = new Step;
@@ -34,7 +33,6 @@ export class InstructionComponent implements OnInit{
               protected authGuard: AuthGuard,
               private activatedRoute: ActivatedRoute,
               private router: Router) {
-    // this.project.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505210950/azufvfotm2nypj55ebnm.png';
     this.user = JSON.parse(localStorage.getItem("currentUser"));
     this.instruction = new Instruction();
   }
@@ -49,6 +47,10 @@ export class InstructionComponent implements OnInit{
   }
 
   saveInstruction() {
+    console.log(this.tags);
+    this.instruction.tags = this.tags.filter(e => e['value']);
+    /* TODO check create/update/delete tags*/
+
     if(this.instruction.id.toString() == 'create') {
       this.instruction.steps = this.steps;
       this.instruction.id = 0;
@@ -57,7 +59,8 @@ export class InstructionComponent implements OnInit{
       this.instructionService.createInstruction(this.instruction)
         .subscribe(resp => {
           this.instruction = resp;
-          this.router.navigate(['/profile/instruction', resp.id])
+          this.tags = this.instruction.tags;
+          this.router.navigate(['/instruction', resp.id])
         });
       return;
     }
@@ -66,9 +69,11 @@ export class InstructionComponent implements OnInit{
       .subscribe(resp => {
         console.log(resp)
         this.instruction = resp;
+        this.tags = this.instruction.tags;
         this.router.navigate(['/profile/instruction', resp.id])
       });
   }
+
   setSection(value) {
     console.log(value)
   }
@@ -125,6 +130,7 @@ export class InstructionComponent implements OnInit{
         console.log(res);
         this.instruction = res;
         this.steps = this.instruction.steps;
+        this.tags = this.instruction.tags;
       })
     }
   }

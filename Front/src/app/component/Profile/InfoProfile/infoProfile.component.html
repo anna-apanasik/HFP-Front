@@ -32,7 +32,16 @@
       </button>
     </div>
   </div>
+
+  <div class="col-sm-6">
+    <div class="list-group">
+      <div *ngFor="let instruction of instructions">
+        <app-profile-instruction [instruction]="instruction" [isProfile]="true"></app-profile-instruction>
+      </div>
+    </div>
+  </div>
 </div>
-<div id="openDeleteProfile" class="modal fade" aria-hidden="true" aria-labelledby="openDeleteProfile" tabindex="-1" role="dialog">
+<div id="openDeleteProfile" class="modal fade" aria-hidden="true" aria-labelledby="openDeleteProfile" tabindex="-1"
+     role="dialog">
   <app-delete-profile></app-delete-profile>
 </div>

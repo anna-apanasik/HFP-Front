@@ -1,5 +1,7 @@
 import { Component} from "@angular/core";
 import {AuthGuard} from "../../service/guards/auth.guards";
+import { ComponentRef } from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-profile',
@@ -8,5 +10,10 @@ import {AuthGuard} from "../../service/guards/auth.guards";
 })
 
 export class profileComponent {
-  constructor( protected authGuard: AuthGuard){}
+  constructor( protected authGuard: AuthGuard,
+               private router: Router){}
+
+  ngOnDestroy() {
+    console.log('destoy', this)
+  }
 }

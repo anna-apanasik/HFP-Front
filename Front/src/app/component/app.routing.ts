@@ -13,9 +13,11 @@ import {InstructionComponent} from "./Instructions/instruction.component";
 import {MessageComponent} from "./Profile/MessagePage/Message.component";
 import {ConfirmProfileComponent} from "./Profile/СonfirmProfile/confirmProfile.component";
 import {AdminPageComponent} from "./Profile/adminPage/adminPage.component";
+import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstruction.component";
 
 const appRoutes: Routes = [
-  {path:'success-registration',component: SuccessRegistrationComponent},
+  { path:'success-registration',component: SuccessRegistrationComponent },
+  { path: 'instruction/:id', component: ViewInstructionComponent },
   {path: 'project', component: ProjectPageComponent},
   { path: 'profile',
     component: profileComponent,

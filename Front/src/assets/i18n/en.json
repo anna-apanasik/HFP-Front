@@ -94,5 +94,6 @@
   "StepDescription": "Step description",
   "SelectTopic": "Select topic",
   "Edit": "Edit",
-  "DeleteProfile": "Are you sure you want to delete your profile?"
+  "DeleteProfile": "Are you sure you want to delete your profile?",
+  "Section": "Section"
 }

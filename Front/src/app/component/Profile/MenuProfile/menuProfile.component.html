@@ -1,29 +1,29 @@
 <div class="profile">
   <div class="container">
-    <ul class="nav nav-tabs tab ">
-      <li><a [routerLink]="['/profile']" routerLinkActive="active">{{'Profile'|translate}}</a></li>
-      <li>
-        <a [routerLink]="['/profile/edit-profile']"
-           routerLinkActive="active"> {{ 'EditProfile'|translate }} </a>
-      </li>
-      <li>
-        <a [routerLink]="['/profile/instruction/create']"
-           routerLinkActive="active"
-           *ngIf="user.role == 'ROLE_VER'"> {{'CreateInstruction'|translate}} </a>
-      </li>
-      <li><a [routerLink]="['/profile/message-confirm']"
+      <ul class="nav nav-tabs tab">
+        <li><a [routerLink]="['/profile']" routerLinkActive="active">{{'Profile'|translate}}</a></li>
+        <li>
+          <a [routerLink]="['/profile/edit-profile']"
+             routerLinkActive="active"> {{ 'EditProfile'|translate }} </a>
+        </li>
+        <li>
+          <a [routerLink]="['/profile/instruction/create']"
              routerLinkActive="active"
-             *ngIf="user.role == 'ROLE_ADMIN'"> {{'MessageConfirm'|translate}} </a>
-      </li>
-      <li><a [routerLink]="['/profile/confirm-profile']"
-             routerLinkActive="active"
-             *ngIf="user.role == 'ROLE_USER'">{{'ConfirmProfile'|translate}}</a>
-      </li>
-      <li><a [routerLink]="['/profile/admin']"
-             routerLinkActive="active"
-             *ngIf="user.role == 'ROLE_ADMIN'">{{'Admin'|translate}}</a>
-      </li>
-    </ul>
+             *ngIf="user.role == 'ROLE_VER'"> {{'CreateInstruction'|translate}} </a>
+        </li>
+        <li><a [routerLink]="['/profile/message-confirm']"
+               routerLinkActive="active"
+               *ngIf="user.role == 'ROLE_ADMIN'"> {{'MessageConfirm'|translate}} </a>
+        </li>
+        <li><a [routerLink]="['/profile/confirm-profile']"
+               routerLinkActive="active"
+               *ngIf="user.role == 'ROLE_USER'">{{'ConfirmProfile'|translate}}</a>
+        </li>
+        <li><a [routerLink]="['/profile/admin']"
+               routerLinkActive="active"
+               *ngIf="user.role == 'ROLE_ADMIN'">{{'Admin'|translate}}</a>
+        </li>
+      </ul>
   </div>
   <router-outlet></router-outlet>
 </div>

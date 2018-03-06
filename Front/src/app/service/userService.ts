@@ -92,7 +92,7 @@ export class UserService extends CoreService {
 
   deleteProfile(id: number) {
     return this.authHttp
-      .delete(`${this.webService}/deleteProfile/` + id, {headers: this.headers})
+      .delete(`${this.webService}deleteUser/` + id, {headers: this.headers})
       .map(res => res);
   }
 }

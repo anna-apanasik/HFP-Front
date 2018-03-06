@@ -1,0 +1,33 @@
+.view-instruction {
+  position: relative;
+  top:85px;
+  font-size: medium;
+}
+
+.title-instruction {
+  text-align: center;
+  font-size: 60px;
+}
+
+.title-tag {
+  font-size: 22px;
+}
+
+.section {
+  font-size: 15px;
+  background-color: #f39c12
+}
+
+.container-tags {
+  margin: 10px 0;
+}
+
+.tag {
+  margin: 2px;
+  font-size: 20px;
+}
+
+.panel-default{
+  background: rgba(111, 112, 123, 0.45);
+  padding: 5px 5px;
+}
