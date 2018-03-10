@@ -2,10 +2,26 @@
   text-align: center;
 }
 
+.profile {
+  margin-top: 5px;
+}
+
 .profile-info {
   right: 13px;
 }
 
 .profile-edit-button {
   min-width: 100px;
+}
+
+.create-instruction-button {
+  margin: 15px;
+  display: block;
+}
+
+.profile-info-instruction-message {
+  font-size: 22px;
+  font-style: oblique;
+  display: block;
+  margin-top: 30px;
 }

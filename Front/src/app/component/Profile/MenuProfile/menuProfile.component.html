@@ -11,6 +11,11 @@
              routerLinkActive="active"
              *ngIf="user.role == 'ROLE_VER'"> {{'CreateInstruction'|translate}} </a>
         </li>
+        <li>
+          <a [routerLink]="['/profile/my-instructions']"
+             routerLinkActive="active"
+             *ngIf="user.role == 'ROLE_VER'"> {{'MyInstructions'|translate}} </a>
+        </li>
         <li><a [routerLink]="['/profile/message-confirm']"
                routerLinkActive="active"
                *ngIf="user.role == 'ROLE_ADMIN'"> {{'MessageConfirm'|translate}} </a>

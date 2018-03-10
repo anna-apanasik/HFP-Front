@@ -46,6 +46,7 @@ export class EditProfileComponent {
     this.user.firstName = this.firstName || this.oldUser.firstName;
     this.user.lastName = this.lastName || this.oldUser.lastName;
     this.user.password = this.password || this.oldUser.password;
+    this.user.email = this.email || this.oldUser.email;
 
     this.userService.updateProfile(this.user)
       .subscribe(data => {

@@ -25,6 +25,7 @@ export class ProfileInstructionComponent {
         /*TODO check router navigate*/
       });
   }
+
   editInstruction() {
     this.router.navigate(['/profile/instruction', this.instruction.id])
   }

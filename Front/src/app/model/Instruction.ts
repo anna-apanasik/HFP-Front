@@ -14,8 +14,6 @@ export class Instruction {
 
   constructor() {
     this.section = new Section();
-    /*TODO delete default value for rating*/
-    this.rating = 0;
   }
 }
 

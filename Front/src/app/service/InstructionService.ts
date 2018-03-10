@@ -60,7 +60,7 @@ export class InstructionService extends CoreService {
 
   getAllUserInstruction(id: number, limit: number = null) {
     return this.authHttp
-      .get(`${this.webService}userInstructions/` + id + `/limit=` + limit,{headers: this.headers})
+      .get(`${this.webService}userInstructions/` + id + `${ limit ? '/limit=' + limit : '' }`,{headers: this.headers})
       .map(res => res.json());
   }
 }

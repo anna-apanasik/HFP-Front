@@ -1,5 +1,5 @@
 import {Component, OnInit} from "@angular/core";
-import {ActivatedRoute, Params} from "@angular/router";
+import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Instruction} from "../../../model/Instruction";
 import {User} from "../../../model/user";
 import {InstructionService} from "../../../service/InstructionService";
@@ -11,11 +11,12 @@ import {InstructionService} from "../../../service/InstructionService";
 })
 
 export class ViewInstructionComponent implements OnInit {
-  private user: User;
+  protected user: User;
   protected instruction: Instruction = new Instruction();
 
   constructor(private activatedRoute: ActivatedRoute,
-              private instructionService: InstructionService) {
+              private instructionService: InstructionService,
+              private router: Router) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
@@ -33,6 +34,18 @@ export class ViewInstructionComponent implements OnInit {
         this.instruction = res;
         console.log(this.instruction);
       })
+  }
+
+  deleteInstruction() {
+    this.instructionService.deleteInstruction(this.instruction)
+      .subscribe(resp => {
+        location.href='/profile';
+        /*TODO check router navigate*/
+      });
+  }
+
+  editInstruction() {
+    this.router.navigate(['/profile/instruction', this.instruction.id])
   }
 
   switched(tag: string){

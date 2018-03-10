@@ -13,7 +13,7 @@
       <h4 class="alert-heading">{{ 'NameInstruction'|translate }} : <a (click)="viewInstruction()">{{ instruction.title }}</a></h4>
       <h4> {{'Section'|translate}} : {{ instruction.section.title}} </h4>
       <h4> {{'RatingProject'|translate}} : {{ instruction.rating }} </h4>
-      <div>
+      <div *ngIf="instruction.tags">
         <label class="label-style"> {{'Tags'|translate}}</label>
         <a *ngFor="let tag of instruction.tags" (click)="switched(tag)"><span class="glyphicon glyphicon-tag tag"></span>{{ tag }}</a>
       </div>

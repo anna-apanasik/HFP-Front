@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="col-sm-6 profile-info">
+  <div class="col-sm-6 profile profile-info">
     <ul class="list-group">
       <li class="profile-photo list-group-item list-group-item-secondary ">
         <img id="default-img" *ngIf="!user.image"
@@ -33,12 +33,30 @@
     </div>
   </div>
 
-  <div class="col-sm-6">
-    <div class="list-group">
-      <div *ngFor="let instruction of instructions">
-        <app-profile-instruction [instruction]="instruction" [isProfile]="true"></app-profile-instruction>
+  <div class="col-sm-6 profile">
+    <!--TODO check role -->
+    <div *ngIf="createInstruction && user.role == 'ROLE_VER'" align="center">
+      <span class="profile-info-instruction-message"> {{ 'MessageDontHaveInstruction' | translate }}</span>
+      <button class="btn btn-success create-instruction-button" [routerLink]="['/profile/instruction/create']">
+        {{'CreateInstruction'| translate}}
+      </button>
+    </div>
+
+    <div *ngIf="!createInstruction && user.role == 'ROLE_VER'">
+      <div class="list-group">
+        <div *ngFor="let instruction of instructions">
+          <app-profile-instruction [instruction]="instruction" [isProfile]="true"></app-profile-instruction>
+        </div>
       </div>
     </div>
+
+    <div *ngIf="user.role != 'ROLE_VER'" align="center">
+      <span class="profile-info-instruction-message"> {{ 'MessageConfirmProfile' | translate }} </span>
+      <button class="btn btn-success create-instruction-button" [routerLink]="['/profile/confirm-profile']">
+        {{'ConfirmProfile'| translate}}
+      </button>
+    </div>
+
   </div>
 </div>
 <div id="openDeleteProfile" class="modal fade" aria-hidden="true" aria-labelledby="openDeleteProfile" tabindex="-1"

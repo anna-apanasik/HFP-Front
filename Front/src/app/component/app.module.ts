@@ -59,6 +59,7 @@ import {DeleteProfileComponent} from "./Profile/DeleteProfile/deleteProfile.comp
 import {ProfileInstructionComponent} from "./Instructions/ProfileInstruction/profileInstruction.component";
 import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstruction.component";
 import {ViewStepComponent} from "./Instructions/ViewStep/viewStep.component";
+import {UserInstructionComponent} from "./Profile/UserInstructions/userInstruction.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -96,7 +97,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     DeleteProfileComponent,
     ProfileInstructionComponent,
     ViewInstructionComponent,
-    ViewStepComponent
+    ViewStepComponent,
+    UserInstructionComponent
   ],
   imports: [
     BrowserModule,

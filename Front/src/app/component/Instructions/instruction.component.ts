@@ -20,7 +20,7 @@ import {StepService} from "../../service/StepService";
 /*TODO add tags*/
 export class InstructionComponent implements OnInit {
   user: User;
-  tags: string[];
+  tags: string [];
   position: number = 0;
   instruction: Instruction = new Instruction();
   steps: Step[] = [];
@@ -47,19 +47,18 @@ export class InstructionComponent implements OnInit {
   }
 
   saveInstruction() {
-    console.log(this.tags);
-    this.instruction.tags = this.tags.filter(e => e['value']);
-    /* TODO check create/update/delete tags*/
+    console.log('tags save', this.tags);
+    this.instruction.tags = this.tags ? this.tags.map(e => e['value'] ? e['value'] : e) : [];
 
     if(this.instruction.id.toString() == 'create') {
       this.instruction.steps = this.steps;
       this.instruction.id = 0;
       console.log(this.instruction)
-      console.log(this.instruction.section)
       this.instructionService.createInstruction(this.instruction)
         .subscribe(resp => {
-          this.instruction = resp;
-          this.tags = this.instruction.tags;
+          console.log('create', resp)
+          //this.instruction = resp;
+          //this.tags = this.instruction.tags;
           this.router.navigate(['/instruction', resp.id])
         });
       return;
@@ -67,7 +66,6 @@ export class InstructionComponent implements OnInit {
 
     this.instructionService.updateInstruction(this.instruction)
       .subscribe(resp => {
-        console.log(resp)
         this.instruction = resp;
         this.tags = this.instruction.tags;
         this.router.navigate(['/profile/instruction', resp.id])

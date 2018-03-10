@@ -14,6 +14,7 @@ import {MessageComponent} from "./Profile/MessagePage/Message.component";
 import {ConfirmProfileComponent} from "./Profile/СonfirmProfile/confirmProfile.component";
 import {AdminPageComponent} from "./Profile/adminPage/adminPage.component";
 import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstruction.component";
+import {UserInstructionComponent} from "./Profile/UserInstructions/userInstruction.component";
 
 const appRoutes: Routes = [
   { path:'success-registration',component: SuccessRegistrationComponent },
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
       { path: '', component: InfoProfileComponent },
       { path: 'edit-profile', component: EditProfileComponent },
       { path: 'instruction/:id', component: InstructionComponent },
+      { path: 'my-instructions', component: UserInstructionComponent },
       { path: 'message-confirm', component: MessageComponent },
       { path: 'confirm-profile', component: ConfirmProfileComponent },
       { path: 'admin', component: AdminPageComponent }

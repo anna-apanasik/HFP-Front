@@ -10,10 +10,5 @@ import {Router} from "@angular/router";
 })
 
 export class profileComponent {
-  constructor( protected authGuard: AuthGuard,
-               private router: Router){}
-
-  ngOnDestroy() {
-    console.log('destoy', this)
-  }
+  constructor( protected authGuard: AuthGuard) {}
 }

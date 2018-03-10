@@ -115,7 +115,7 @@
                   (emailValidation.invalid && emailValidation.dirty) ||
                   (passwordValidation.invalid && passwordValidation.dirty) ||
                   (confirmPasswordValidation.invalid && confirmPasswordValidation.dirty) ||
-                  (confirmPasswordValidation.dirty && passwordValidation.dirty && !checkConfirmPassword())"
+                  ((confirmPasswordValidation.dirty || passwordValidation.dirty) && !checkConfirmPassword())"
         type="submit"
         name="save-submit"
         id="save-submit"

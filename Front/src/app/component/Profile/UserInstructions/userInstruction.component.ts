@@ -1,17 +1,16 @@
 import { Component} from "@angular/core";
+import {InstructionService} from "../../../service/InstructionService";
 import {User} from "../../../model/user";
 import {Instruction} from "../../../model/Instruction";
-import {Section} from "../../../model/Section";
-import {InstructionService} from "../../../service/InstructionService";
 
 @Component({
-  selector: 'app-info-profile',
-  templateUrl: './infoProfile.component.html',
-  styleUrls: ['./infoProfile.component.css']
+  selector: 'app-my-instructions',
+  templateUrl: './userInstruction.component.html',
+  styleUrls: ['./userInstruction.component.css']
 })
 
-export class InfoProfileComponent {
-  protected user: User;
+export class UserInstructionComponent {
+  private user: User;
   protected instructions: Instruction[];
   protected createInstruction: boolean = false;
 
@@ -25,13 +24,13 @@ export class InfoProfileComponent {
 
   loadInstructions() {
     this.instructionService
-      .getAllUserInstruction(this.user.id, 4)
+      .getAllUserInstruction(this.user.id)
       .subscribe(res => {
-        this.instructions = res;
-        this.createInstruction = false;
-      },
+          this.instructions = res;
+          this.createInstruction = false;
+        },
         error => {
-        this.createInstruction = true;
+          this.createInstruction = true;
         })
   }
 }

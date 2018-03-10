@@ -1,0 +1,15 @@
+.my-instruction-message {
+  font-size: 22px;
+  font-style: oblique;
+  display: block;
+  margin-top: 30px;
+}
+
+.create-instruction-button {
+  margin: 15px;
+  display: block;
+}
+
+.my-instruction-one-instruction-block {
+  margin: 10px 0;
+}
