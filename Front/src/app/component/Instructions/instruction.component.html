@@ -31,7 +31,8 @@
                 [disabled]="steps.length == 0 || !instruction.title || !instruction.section"
         >{{ 'SAVE' | translate }}
         </button>
-        <button class="btn btn-danger">
+        <button class="btn btn-danger"
+                [disabled]="instruction.id == 'create'">
           <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
         </button>
       </div>

@@ -40,12 +40,14 @@
               {{ 'SAVE' | translate }}
             </button>
             <button  *ngIf="step.position !== 0 && !edit"
-                     (click)="edit = !edit"
+                     (click)="edit = !edit ; buttonEdit = !buttonEdit"
                      class="btn btn-warning"
                       >
               {{'Edit'| translate}}
             </button>
-            <button class="btn btn-danger" (click)="deleteStep(step)">
+            <button class="btn btn-danger"
+                    [disabled]="!step.id && !edit"
+                    (click)="deleteStep(step)">
               <span class="glyphicon glyphicon-trash"></span>
             </button>
         </div>

@@ -97,7 +97,8 @@
   "DeleteProfile": "Are you sure you want to delete your profile?",
   "Section": "Section",
   "MessageDontHaveInstruction": "Oops.. You don't have any created instructions...",
-  "MessageConfirmProfile": "Confirm your profile. After that you can do more..."
-
+  "MessageConfirmProfile": "Confirm your profile. After that you can do more...",
+  "MessageEmptySection": " Oops... This section is empty...",
+  "MessageNoTags": "There are no tags"
 
 }

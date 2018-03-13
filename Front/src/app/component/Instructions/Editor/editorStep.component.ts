@@ -1,11 +1,7 @@
 import {Component, EventEmitter, Input, Output} from "@angular/core";
-import {selector} from "rxjs/operator/publish";
 import {Instruction} from "../../../model/Instruction";
-import {User} from "../../../model/user";
 import {AuthGuard} from "../../../service/guards/auth.guards";
-import {ProjectService} from "../../../service/projectService";
 import {Step} from "../../../model/Step";
-import {Section} from "../../../model/Section";
 
 
 @Component({
@@ -20,44 +16,41 @@ export class EditorStepComponent {
   @Input() edit: boolean;
   @Output() newStepEvent = new EventEmitter();
   @Output() deleteStepEvent = new EventEmitter();
-  user: User;
+  buttonEdit: boolean = false;
   tags: string[];
   position: number = 0;
-  newStep: Step = new Step();
-  currentTopic: Section = new Section();
-  topics: Section[] = [new Section(1,'IT'), new Section(2,'Books')];
 
-  constructor(private projectService: ProjectService,
-              protected authGuard: AuthGuard) {
-   // this.project.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505210950/azufvfotm2nypj55ebnm.png';
-    this.user = JSON.parse(localStorage.getItem("currentUser"));
+  constructor(protected authGuard: AuthGuard) {
   }
 
   addStep(step) {
-    let copy = Object.assign({},step);
-    this.newStepEvent.emit(copy);
-    if(step.id) {
+    let copy = Object.assign({}, step);
+
+    if(!this.buttonEdit || step.id) {
+      this.newStepEvent.emit(copy);
+    }
+
+    if(!this.buttonEdit && step.id) {
       this.edit = !this.edit;
     }
 
-    this.step.clearStep();
+    if(!this.buttonEdit && !step.id) {
+      this.step.clearStep();
+    }
+
+    if(this.buttonEdit) {
+      this.buttonEdit = !this.buttonEdit;
+      this.edit = !this.edit;
+    }
   }
 
   deleteStep(step) {
+    if(this.edit && !step.id && !this.buttonEdit) {
+      this.step.clearStep();
+      return;
+    }
+
     let copy = Object.assign({},step);
     this.deleteStepEvent.emit(copy);
   }
-
-  changeStatus(status: boolean) {
-    return !status;
-  }
-
-  saveStep(step) {
-    //this.isDisabledButtonAdd = this.changeStatus(this.isDisabledButtonAdd);
-    //this.steps.push(step);
-    console.log(this.newStep)
-    console.log(step)
-    //this.newStep.clearStep();
-  }
-
 }
