@@ -16,8 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 public class DBConfiguration {
     private String DRIVER = "com.mysql.jdbc.Driver";
 
-    private String PASSWORD = "root";
-
+    private String PASSWORD = "root"; 
 
     private String URL="jdbc:mysql://localhost:3306/craut_project?characterEncoding=UTF-8";
 
