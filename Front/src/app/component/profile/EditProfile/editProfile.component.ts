@@ -1,4 +1,4 @@
-import { Component} from "@angular/core";
+import {Component} from "@angular/core";
 import {UserService} from "../../../service/userService";
 import {User} from "../../../model/user";
 import {ImageComponent} from "../../imageArea/image.component";
@@ -14,33 +14,47 @@ import {ValidationData} from "../../../service/validationData";
 
 export class EditProfileComponent {
   protected user: User = new User();
-  isPasswordConfirm = false;
-  passwordConfirm: string;
+  protected oldUser: User;
+
+  protected firstName: string;
+  protected lastName: string;
+  protected email: string;
+  protected login: string;
+  protected password: string;
+  protected confirmPassword: string;
+
   form: FormGroup;
-  formErrors = {
-    passwordConfirm: ''
-  };
-  constructor (private userService: UserService,
-               private imageComponent: ImageComponent,
-               private validationService: ValidationData) {
+
+  constructor(private userService: UserService,
+              private imageComponent: ImageComponent,
+              private validation: ValidationData) {
     this.user.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505169795/sy6afdedllqhpbh8zebq.jpg';
+    this.oldUser = JSON.parse(localStorage.getItem("currentUser"));
   }
-  static setErrors(answer: string) {
-    return answer === null;
+
+  checkConfirmPassword() {
+    return this.validation.checkConfirmPassword(this.password, this.confirmPassword);
   }
-  checkPasswordConfirm(){
-    this.formErrors.passwordConfirm = this.validationService.confirmPassword(this.user.password, this.passwordConfirm);
-    this.isPasswordConfirm = EditProfileComponent.setErrors(this.formErrors.passwordConfirm);
+
+  checkEmptyFields() {
+    return !this.firstName && !this.lastName && !this.email && !this.login && !this.password && !this.confirmPassword;
   }
-  updateProfile(data: any) {
-    console.log(this.user.image);
-    this.userService.updateProfile(this.user).subscribe(data => {
-      console.log(this.user);
-      localStorage.setItem("currentUser",JSON.stringify(data.json()));
+
+  updateProfile() {
+    this.user.id = this.oldUser.id;
+    this.user.userName = this.login || this.oldUser.userName;
+    this.user.firstName = this.firstName || this.oldUser.firstName;
+    this.user.lastName = this.lastName || this.oldUser.lastName;
+    this.user.password = this.password || this.oldUser.password;
+
+    this.userService.updateProfile(this.user)
+      .subscribe(data => {
+        localStorage.setItem("currentUser", JSON.stringify(data.json()));
     });
   }
-  updateImg(value: any){
+
+  updateImg(value: any) {
     this.user.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505169254/' + value + '.jpg';
-    localStorage.setItem("image",this.user.image);
+    localStorage.setItem("image", this.user.image);
   }
 }

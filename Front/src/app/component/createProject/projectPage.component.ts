@@ -1,6 +1,6 @@
 import { Component} from "@angular/core";
 import {ImageComponent} from "../imageArea/image.component";
-import {Project} from "../../model/project";
+import {Project} from "../../model/Instruction";
 import {ProjectService} from "../../service/projectService";
 import {DateModel} from "ng2-datepicker";
 import {AuthGuard} from "../../service/guards/auth.guards";
@@ -20,7 +20,7 @@ export class ProjectPageComponent {
   user:User;
   calendar:DateModel;
   loading = false;
-  tags:string[];
+  tags: string[];
   errorMessage: string;
   constructor(private projectService:ProjectService,
               protected authGuard: AuthGuard) {

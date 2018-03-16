@@ -1,5 +1,5 @@
 import {Component, Input} from "@angular/core";
-import {Project} from "../../../model/project";
+import {Project} from "../../../model/Instruction";
 
 @Component ({
   selector:'app-contaner-for-project',

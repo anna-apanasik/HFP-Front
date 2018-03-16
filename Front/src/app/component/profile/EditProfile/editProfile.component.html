@@ -16,60 +16,110 @@
 
     <div class="panel panel-default">
       <div class="row">
-        <div class="col-xs-6 h-100" >
+        <div class="col-xs-6 h-100">
           <div class="form-group-label">
             <label class="label-style">{{'FirstName'|translate}}</label>
-            <input type="text" [(ngModel)]="user.firstName" name="firstname"
-                   id="firstname" class="form-control" value=""
-                   placeholder="{{'newFirstName'|translate}}" #firstname="ngModel" required>
+            <input type="text"
+                   [(ngModel)]="firstName"
+                   name="firstname"
+                   id="firstname"
+                   class="form-control"
+                   value=""
+                   placeholder="{{'newFirstName'|translate}}"
+                   #firstname="ngModel"
+                   required>
 
             <label class="label-style">{{'LastName'|translate}}</label>
-            <input type="text" [(ngModel)]="user.lastName" name="lastname" id="lastname" class="form-control" value=""
-                   placeholder="{{'newLastName'|translate}}" #lastname="ngModel" required>
+            <input type="text"
+                   [(ngModel)]="lastName"
+                   name="lastname"
+                   id="lastname"
+                   class="form-control"
+                   value=""
+                   placeholder="{{'newLastName'|translate}}"
+                   #lastname="ngModel"
+                   required>
 
             <label class="label-style">{{'email'|translate}}</label>
-            <input type="text" [(ngModel)]="user.email" name="email" id="email" class="form-control" value=""
-                   placeholder="{{'newemail'|translate}}" #email="ngModel" required email>
-            <div [hidden]="email.valid || email.untouched" class="alert" style="color: red">
+            <input type="text"
+                   [(ngModel)]="email"
+                   name="emailValidation"
+                   id="emailValidation"
+                   class="form-control"
+                   value=""
+                   placeholder="{{'newemail'|translate}}"
+                   #emailValidation="ngModel"
+                   required email>
+            <div [hidden]="emailValidation.valid || emailValidation.pristine" class="alert">
               {{'IncorrectEmail'|translate}}
             </div>
-
           </div>
         </div>
 
+
         <div class="col-xs-6">
           <div class="form-group">
-            <label class="label-style">{{'Nick'|translate}}</label>
-            <input type="text" [(ngModel)]="user.userName" name="nickName" id="nickName" class="form-control" value=""
-                   placeholder="{{'newNick'|translate}}" #nickName="ngModel" required>
-
-            <label class="label-style">{{'password'|translate}}</label>
-            <input type="password" [(ngModel)]="user.password" name="password"
-                   id="password" class="form-control" value=""
-                   placeholder="{{'newpassword'|translate}}"
-                   #password="ngModel" required pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}$">
-            <div [hidden]="password.valid || password.untouched"
-                 class="alert" style="color: red">{{'IncorrectPassword'|translate}}
+            <label class="label-style">{{'Login'|translate}}</label>
+            <input type="text"
+                   [(ngModel)]="login"
+                   name="user-login"
+                   id="user-login"
+                   class="form-control"
+                   value=""
+                   placeholder="{{'NewLogin'|translate}}"
+                   #userLogin="ngModel"
+                   required pattern="^[A-Za-z]+$">
+            <div *ngIf="userLogin.invalid && userLogin.dirty" class="alert">
+              {{ 'IncorrectNick'| translate }}
             </div>
 
-            <div ngClass="{{isPasswordConfirm?'has-success':''}}">
-              <label class="label-style">{{'confirmPassword'|translate}}</label>
-              <input type="password" [(ngModel)]="passwordConfirm" (keyup)="checkPasswordConfirm()"
-                     name="passwordConfirm" id="password-confirm" tabindex="4"
-                     class="form-control" placeholder="{{'confirmPassword'|translate}}" #confirmpassword="ngModel"
-                     required pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}$">
-              <div [hidden]="confirmpassword.valid || confirmpassword.untouched"
-                   class="alert" style="color: red" *ngIf="formErrors.passwordConfirm" >{{ 'ErrorConfirm'| translate}}</div>
+            <label class="label-style">{{'password'|translate}}</label>
+            <input type="password"
+                   [(ngModel)]="password"
+                   name="passwordValidation"
+                   id="passwordValidation"
+                   class="form-control"
+                   value=""
+                   placeholder="{{'newpassword'|translate}}"
+                   #passwordValidation="ngModel"
+                   required pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}$">
+            <div [hidden]="passwordValidation.valid || passwordValidation.pristine" class="alert">
+              {{'IncorrectPassword'|translate}}
+            </div>
+
+            <label class="label-style">{{'confirmPassword'|translate}}</label>
+            <input type="password"
+                   [(ngModel)]="confirmPassword"
+                   name="confirmPasswordValidation"
+                   id="password-confirm"
+                   tabindex="4"
+                   class="form-control"
+                   placeholder="{{'confirmPassword'|translate}}"
+                   #confirmPasswordValidation="ngModel"
+                   required pattern="^(?=.*\d)(?=.*[A-Z])(?=.*[a-z]).{8,}$">
+            <div *ngIf="confirmPasswordValidation.invalid && confirmPasswordValidation.dirty" class="alert">
+              {{ 'IncorrectPassword'| translate }}
+            </div>
+            <div *ngIf="confirmPasswordValidation.dirty && !checkConfirmPassword()" class="alert">
+              {{ 'ErrorConfirm'| translate }}
             </div>
           </div>
         </div>
       </div>
     </div>
-<!--TODO возможность редактирвоания по одному полю-->
-    <input [disabled]="firstname.invalid || lastname.invalid || email.invalid || nickName.invalid || password.invalid || confirmpassword.invalid"
-           type="submit" name="save-submit" id="save-submit" tabindex="3"
-           class="btn btn-success btn-block pos" value="{{'SAVE'| translate}}" style="position:relative; top: 20px;">
 
+    <input
+      [disabled]="checkEmptyFields() ||
+                  (userLogin.invalid && userLogin.dirty) ||
+                  (emailValidation.invalid && emailValidation.dirty) ||
+                  (passwordValidation.invalid && passwordValidation.dirty) ||
+                  (confirmPasswordValidation.invalid && confirmPasswordValidation.dirty) ||
+                  (confirmPasswordValidation.dirty && passwordValidation.dirty && !checkConfirmPassword())"
+      type="submit"
+      name="save-submit"
+      id="save-submit"
+      tabindex="3"
+      class="btn btn-success btn-block pos"
+      value="{{'SAVE'| translate}}" style="position:relative; top: 20px;">
   </div>
 </form>
-

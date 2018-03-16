@@ -10,6 +10,7 @@
   "inpsearche":"Начните вводить запрос...",
   "REGISTER":"Регистрация",
   "LOGIN":"Вход",
+  "Login": "Логин",
   "REMEMBER_ME":"Запомнить меня",
   "email": "Адрес электронной почты",
   "password": "Пароль",
@@ -32,10 +33,10 @@
   "SAVE":"Сохранить",
   "newFirstName":"Новое имя",
   "newLastName": "Новая фамилия",
-  "newNick": "Новый ник",
   "newemail": "Новый email",
   "newpassword": "Новый пароль",
-  "NameProject": "Имя проекта",
+  "NewLogin": "Новый логин",
+  "NameInstruction": "Название инструкции",
   "DescriptionProject": "Описание проекта",
   "ChooseDate": "Выберите дату окончания сбора средств",
   "RequerMoney":"Введите необходимую сумму",
@@ -85,5 +86,11 @@
   "Description":"Описание",
   "UnConfirm":"Не подтверждать",
   "Confirm":"Подтвердить",
-  "Instructions": "Мои Инструкции"
+  "Instructions": "Мои Инструкции",
+  "AddStep": "Добавить шаг",
+  "Enter": "Введите...",
+  "TitleOfStep": "Название шага",
+  "Step": "Шаг",
+  "StepDescription": "Описание шага",
+  "SelectTopic": "Выберите раздел"
 }

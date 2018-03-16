@@ -3,7 +3,7 @@ import {ProjectService} from "../../service/projectService";
 import {Observable} from "rxjs/Observable";
 import { CoreService} from "../../service/coreService";
 import {Http,Response} from "@angular/http";
-import {Project} from "../../model/project";
+import {Project} from "../../model/Instruction";
 import {ProjectAndTagsRequestDto} from "../../model/ProjectAndTagsRequestDto";
 import {ProjectRequestDto} from "../../model/ProjectRequestDto";
 

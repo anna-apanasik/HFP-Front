@@ -1,5 +1,6 @@
-input.ng-touched.ng-invalid {border:solid red 2px;}
+input.ng-touched.ng-invalid, input.ng-invalid.required{border:solid red 2px;}
 input.ng-touched.ng-valid {border:solid green 2px;}
+
 .form-control{
   position: relative;
   max-width: 500px;
@@ -21,4 +22,5 @@ input.ng-touched.ng-valid {border:solid green 2px;}
   margin-top: 0;
   margin-bottom: 5px;
   padding: 3px;
+  color: red;
 }

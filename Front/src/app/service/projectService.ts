@@ -1,6 +1,6 @@
 import { Injectable} from "@angular/core";
 import {CoreService} from "./coreService";
-import {Project} from "../model/project";
+import {Project} from "../model/Instruction";
 import {Http,Response,Headers} from "@angular/http";
 import {AuthConfigConsts, AuthHttp} from 'angular2-jwt';
 import {Comments} from "../model/comments";

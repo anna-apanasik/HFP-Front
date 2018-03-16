@@ -1,0 +1,53 @@
+<div class="wrapper-step">
+    <div class="step">
+        <div *ngIf="edit">
+            <div class="header-step">
+                <input type="text"
+                       [(ngModel)]="step.name"
+                       id="name-of-step"
+                       #nameOfStep="ngModel"
+                       placeholder="{{'TitleOfStep'|translate}}"
+                       required>
+            </div>
+
+            <div class="textarea">
+                <textarea class="description"
+                          [(ngModel)]="step.text"
+                          id="text-area-component"
+                          name="stepDescription"
+                          placeholder="{{'StepDescription'|translate}}"
+                          #stepDescription="ngModel"
+                          required>
+                </textarea>
+            </div>
+        </div>
+        <div *ngIf="!edit">
+            <div class="header-step">
+                    <span class="badge badge-info"
+                          style="padding: 8px 10px 10px 10px">
+                      {{'Step' | translate}} {{ step.position }}
+                    </span>
+                <span>{{step.name}}</span>
+            </div>
+            <div class="textarea">
+                    <p> {{ step.text }} </p>
+            </div>
+        </div>
+        <div class="step-button">
+            <button  *ngIf="edit"
+                     (click)="addStep(step)"
+                      class="btn btn-success">
+              {{ 'SAVE' | translate }}
+            </button>
+            <button  *ngIf="step.position !== 0 && !edit"
+                     (click)="edit = !edit"
+                     class="btn btn-success"
+                      >
+             Редактировать
+            </button>
+            <button class="btn btn-danger" (click)="deleteStep(step)">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+        </div>
+    </div>
+</div>

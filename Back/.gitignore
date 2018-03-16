@@ -22,3 +22,6 @@ nbbuild/
 dist/
 nbdist/
 .nb-gradle/
+
+/src/main/java/com/craut/project/craut/service/Verification.java
+/src/main/java/com/craut/project/craut/configuration/DBConfiguration.java

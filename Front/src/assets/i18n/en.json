@@ -8,8 +8,9 @@
   "dark":"Dark",
   "white":"White",
   "inpsearche":"start enter request...",
-  "REGISTER":"Ragistration",
+  "REGISTER":"Registration",
   "LOGIN":"Login",
+  "Login": "Login",
   "REMEMBER_ME":"Remember me",
   "email": "Email",
   "password": "Password",
@@ -32,10 +33,10 @@
   "SAVE":"Save",
   "newFirstName":"New first name",
   "newLastName": "New last name",
-  "newNick": "New nick name",
   "newemail": "New email",
   "newpassword": "New password",
-  "NameProject": "Name project",
+  "NewLogin": "New login",
+  "NameInstruction": "Name of instruction",
   "DescriptionProject": "Description project",
   "ChooseDate": "Select the end date for fundraising",
   "RequerMoney":"Enter the required amount",
@@ -85,5 +86,12 @@
   "Description":"Description",
   "UnConfirm":"Unconfirm",
   "Confirm":"Confirm",
-  "Instructions": "My Instructions"
+  "Instructions": "My Instructions",
+  "AddStep": "Add step",
+  "Enter": "Enter ...",
+  "TitleOfStep": "Title of step",
+  "Step": "Step",
+  "StepDescription": "Step description",
+  "SelectTopic": "Select topic"
+
 }

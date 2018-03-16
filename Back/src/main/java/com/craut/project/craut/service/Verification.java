@@ -31,7 +31,7 @@ public class Verification
                 MimeMessage message = new MimeMessage(session);
                 MimeMessageHelper helper = new MimeMessageHelper(message);
                 message.setSubject("Auth");
-                message.setContent("<a href=\"http://localhost:8080/verification?token="+token+
+                message.setContent("<a href=\"http://localhost:8086/verification?token="+token+
                         "\">clikc to activate profile</a>", "text/html");
                 message.addRecipient(Message.RecipientType.TO, new InternetAddress(email));
                 message.setSentDate(new Date());
