@@ -63,4 +63,16 @@ export class InstructionService extends CoreService {
       .get(`${this.webService}userInstructions/` + id + `${ limit ? '/limit=' + limit : '' }`,{headers: this.headers})
       .map(res => res.json());
   }
+
+  getSectionById(id: number) {
+    return this.authHttp
+      .get(`${this.webService}getSection/` + id)
+      .map(res => res.json())
+  }
+
+  getInstructionsOfSection(id: number) {
+    return this.authHttp
+      .get(`${this.webService}instructionsOfSection/` + id)
+      .map(res => res.json())
+  }
 }
