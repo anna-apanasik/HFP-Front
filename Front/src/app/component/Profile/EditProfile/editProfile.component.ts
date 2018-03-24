@@ -22,6 +22,7 @@ export class EditProfileComponent {
   protected login: string;
   protected password: string;
   protected confirmPassword: string;
+  protected errorMessage: string;
 
   form: FormGroup;
 
@@ -51,7 +52,10 @@ export class EditProfileComponent {
     this.userService.updateProfile(this.user)
       .subscribe(data => {
         localStorage.setItem("currentUser", JSON.stringify(data.json()));
-      });
+      },
+        error => {
+          this.errorMessage =  error.json().message;
+        });
   }
 
   updateImg(value: any) {

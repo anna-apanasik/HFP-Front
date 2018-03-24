@@ -60,6 +60,9 @@ import {ProfileInstructionComponent} from "./Instructions/ProfileInstruction/pro
 import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstruction.component";
 import {ViewStepComponent} from "./Instructions/ViewStep/viewStep.component";
 import {UserInstructionComponent} from "./Profile/UserInstructions/userInstruction.component";
+import {MainPageComponent} from "./MainPage/mainPage.component";
+import {SectionComponent} from "./MainPage/Section/section.component";
+import {InstructionHelper} from "../service/helpers/InstructionHelper";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -98,7 +101,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     ProfileInstructionComponent,
     ViewInstructionComponent,
     ViewStepComponent,
-    UserInstructionComponent
+    UserInstructionComponent,
+    MainPageComponent,
+    SectionComponent
   ],
   imports: [
     BrowserModule,
@@ -135,7 +140,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderService,
     InstructionService,
     StepService,
-    appRouting
+    appRouting,
+    InstructionHelper
   ],
   bootstrap: [ AppComponent]
 })

@@ -1,0 +1,25 @@
+<div class="container main-page">
+  <div class="col-sm-6 column">
+    <div *ngFor="let section of sections;  even as isEven">
+      <div *ngIf="isEven">
+        <a [routerLink]="['/' + section.id]">
+          <div class="alert alert-dismissible alert-info" align="center">
+            <h1 class="alert-heading">{{section.title}}</h1>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 column">
+    <div *ngFor="let section of sections; odd as isOdd">
+      <div *ngIf="isOdd">
+        <a [routerLink]="['/' + section.id]">
+          <div class="alert alert-dismissible alert-warning" align="center">
+            <h1 class="alert-heading">{{section.title}}</h1>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -9,6 +9,9 @@ import {Step} from "../../../model/Step";
 
 export class ViewStepComponent {
   @Input() step: Step = new Step();
+  @Input() hidePosition: boolean = false;
+  @Input() position: number;
+
   constructor() {}
 
 }

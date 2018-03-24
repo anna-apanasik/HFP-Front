@@ -3,6 +3,7 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {Instruction} from "../../../model/Instruction";
 import {User} from "../../../model/user";
 import {InstructionService} from "../../../service/InstructionService";
+import {InstructionHelper} from "../../../service/helpers/InstructionHelper";
 
 @Component({
   selector: 'app-view-instruction',
@@ -31,6 +32,8 @@ export class ViewInstructionComponent implements OnInit {
     this.instructionService
       .getInstruction(this.instruction.id)
       .subscribe(res => {
+        console.log(res.steps)
+        InstructionHelper.sortStepArrayByPosition(res.steps);
         this.instruction = res;
         console.log(this.instruction);
       })

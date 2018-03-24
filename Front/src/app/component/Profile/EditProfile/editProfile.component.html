@@ -68,7 +68,7 @@
                    value=""
                    placeholder="{{'NewLogin'|translate}}"
                    #userLogin="ngModel"
-                   required pattern="^[A-Za-z]+$">
+                   required pattern="^[A-Za-z0-9]+$">
             <div *ngIf="userLogin.invalid && userLogin.dirty" class="alert">
               {{ 'IncorrectNick'| translate }}
             </div>
@@ -122,7 +122,11 @@
         tabindex="3"
         class="saveSubmit btn btn-success btn-block"
         value="{{'SAVE'| translate}}">
+      <div *ngIf="errorMessage">
+        <div class="alert update-profile-error-message">{{ errorMessage }}</div>
+      </div>
     </div>
+
 
   </div>
 </form>

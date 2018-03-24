@@ -47,7 +47,6 @@ export class InstructionComponent implements OnInit {
   }
 
   saveInstruction() {
-    console.log('tags save', this.tags);
     this.instruction.tags = this.tags ? this.tags.map(e => e['value'] ? e['value'] : e) : [];
 
     if(this.instruction.id.toString() == 'create') {
@@ -56,33 +55,25 @@ export class InstructionComponent implements OnInit {
       console.log(this.instruction)
       this.instructionService.createInstruction(this.instruction)
         .subscribe(resp => {
-          console.log('create', resp)
-          //this.instruction = resp;
-          //this.tags = this.instruction.tags;
+          console.log('create', resp);
           this.router.navigate(['/instruction', resp.id])
         });
       return;
     }
-
+console.log(this.instruction);
     this.instructionService.updateInstruction(this.instruction)
       .subscribe(resp => {
         this.instruction = resp;
         this.tags = this.instruction.tags;
-        this.router.navigate(['/profile/instruction', resp.id])
+        this.router.navigate(['/instruction', resp.id])
       });
-  }
-
-  setSection(value) {
-    console.log(value)
   }
 
   deleteInstruction() {
     this.instructionService.deleteInstruction(this.instruction)
       .subscribe(resp => {
         console.log('delete', resp)
-        let id = 'create';
-        //this.instruction.clear();
-        this.router.navigate(['/profile/instruction',id])
+        this.router.navigate(['/profile']);
       });
   }
 
@@ -134,11 +125,9 @@ export class InstructionComponent implements OnInit {
   }
 
   getSection() {
-    //this.sections = [new Section(1,'It')]
     this.instructionService
       .getSections()
       .subscribe(sections => {
-        console.log(sections)
         this.sections = sections;
       })
   }

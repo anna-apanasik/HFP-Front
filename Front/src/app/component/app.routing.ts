@@ -15,6 +15,8 @@ import {ConfirmProfileComponent} from "./Profile/СonfirmProfile/confirmProfile.
 import {AdminPageComponent} from "./Profile/adminPage/adminPage.component";
 import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstruction.component";
 import {UserInstructionComponent} from "./Profile/UserInstructions/userInstruction.component";
+import {MainPageComponent} from "./MainPage/mainPage.component";
+import {SectionComponent} from "./MainPage/Section/section.component";
 
 const appRoutes: Routes = [
   { path:'success-registration',component: SuccessRegistrationComponent },
@@ -35,7 +37,8 @@ const appRoutes: Routes = [
   {path: 'transferMoney', component: PayProjectComponent},
   {path: 'view/project/:idproject', component: ViewProjectComponent},
   {path: 'searcheResults/:request', component: SearcheResultComponent},
-  {path: '', component: ProjectListComponent},
+  {path: '', component: MainPageComponent},
+  {path: ':section', component: SectionComponent},
   {path: '**', redirectTo: '/' }
 ];
 

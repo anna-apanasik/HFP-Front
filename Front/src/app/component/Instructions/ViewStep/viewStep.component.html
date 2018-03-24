@@ -1,5 +1,6 @@
 <div class="header-step">
-  <span class="badge badge-info"
+  <span *ngIf="!hidePosition"
+    class="badge badge-info"
         style="padding: 8px 10px 10px 10px">
     {{'Step' | translate}} {{ step.position }}
   </span>

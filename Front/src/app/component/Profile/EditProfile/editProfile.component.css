@@ -30,6 +30,11 @@ input.ng-dirty.ng-valid {border:solid green 2px;}
   padding-bottom: 5px;
 }
 
+.update-profile-error-message {
+  font-size: 18px;
+  padding: 15px;
+}
+
 .form-group-label {
   margin: 10px 25px;
 }
