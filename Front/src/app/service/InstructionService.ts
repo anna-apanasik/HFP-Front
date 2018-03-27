@@ -54,25 +54,4 @@ export class InstructionService extends CoreService {
   deleteStep(step: Step) {
     return this.authHttp.delete(`${this.webService}deleteStep/` + step.id,{headers: this.headers}).map(res => res);
   }
-  getSections() {
-    return this.authHttp.get(`${this.webService}getSections`).map(res => res.json());
-  }
-
-  getAllUserInstruction(id: number, limit: number = null) {
-    return this.authHttp
-      .get(`${this.webService}userInstructions/` + id + `${ limit ? '/limit=' + limit : '' }`,{headers: this.headers})
-      .map(res => res.json());
-  }
-
-  getSectionById(id: number) {
-    return this.authHttp
-      .get(`${this.webService}getSection/` + id)
-      .map(res => res.json())
-  }
-
-  getInstructionsOfSection(id: number) {
-    return this.authHttp
-      .get(`${this.webService}instructionsOfSection/` + id)
-      .map(res => res.json())
-  }
 }

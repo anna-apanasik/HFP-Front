@@ -9,12 +9,17 @@
         <li>
           <a [routerLink]="['/profile/instruction/create']"
              routerLinkActive="active"
-             *ngIf="user.role == 'ROLE_VER'"> {{'CreateInstruction'|translate}} </a>
+             *ngIf="user.role == 'ROLE_VER' || user.role == 'ROLE_ADMIN'"> {{'CreateInstruction'|translate}} </a>
+        </li>
+        <li>
+          <a [routerLink]="['/profile/create-section']"
+             routerLinkActive="active"
+             *ngIf="user.role == 'ROLE_ADMIN'"> {{'CreateSection'|translate}} </a>
         </li>
         <li>
           <a [routerLink]="['/profile/my-instructions']"
              routerLinkActive="active"
-             *ngIf="user.role == 'ROLE_VER'"> {{'MyInstructions'|translate}} </a>
+             *ngIf="user.role == 'ROLE_VER' || user.role == 'ROLE_ADMIN'"> {{'MyInstructions'|translate}} </a>
         </li>
         <li><a [routerLink]="['/profile/message-confirm']"
                routerLinkActive="active"

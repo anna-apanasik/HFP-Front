@@ -1,0 +1,43 @@
+.section {
+  display: inline-flex;
+  font-size: 18px;
+  width: 100%;
+  margin: 2px 0;
+}
+
+.section:hover {
+  background: #c4e9ff;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.create-section {
+  display: inline-flex;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.button-save {
+  margin-top: 25px;
+  margin-left: 25px;
+  height: 80%;
+  width: 25%;
+}
+
+.title-section {
+  width: 75%;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  padding: 0;
+}
+
+.panel {
+  padding: 0 70px 10px;
+}
+
+.panel-default {
+  background: rgba(111, 112, 123, 0.45);
+}

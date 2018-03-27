@@ -99,6 +99,8 @@
   "MessageDontHaveInstruction": "Oops.. You don't have any created instructions...",
   "MessageConfirmProfile": "Confirm your profile. After that you can do more...",
   "MessageEmptySection": " Oops... This section is empty...",
-  "MessageNoTags": "There are no tags"
-
+  "MessageNoTags": "There are no tags",
+  "Story": "Story",
+  "CreateSection": "Create section",
+  "SectionTitle": "Section title"
 }

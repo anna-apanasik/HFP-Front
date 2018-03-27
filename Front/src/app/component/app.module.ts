@@ -63,6 +63,8 @@ import {UserInstructionComponent} from "./Profile/UserInstructions/userInstructi
 import {MainPageComponent} from "./MainPage/mainPage.component";
 import {SectionComponent} from "./MainPage/Section/section.component";
 import {InstructionHelper} from "../service/helpers/InstructionHelper";
+import {CreateSectionComponent} from "./Profile/CreateSection/createSection.component";
+import {SectionService} from "../service/SectionService";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -103,7 +105,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ViewStepComponent,
     UserInstructionComponent,
     MainPageComponent,
-    SectionComponent
+    SectionComponent,
+    CreateSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -141,7 +144,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     InstructionService,
     StepService,
     appRouting,
-    InstructionHelper
+    InstructionHelper,
+    SectionService
   ],
   bootstrap: [ AppComponent]
 })

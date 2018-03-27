@@ -17,11 +17,12 @@ import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstr
 import {UserInstructionComponent} from "./Profile/UserInstructions/userInstruction.component";
 import {MainPageComponent} from "./MainPage/mainPage.component";
 import {SectionComponent} from "./MainPage/Section/section.component";
+import {CreateSectionComponent} from "./Profile/CreateSection/createSection.component";
 
 const appRoutes: Routes = [
-  { path:'success-registration',component: SuccessRegistrationComponent },
+  { path: 'success-registration',component: SuccessRegistrationComponent },
   { path: 'instruction/:id', component: ViewInstructionComponent },
-  {path: 'project', component: ProjectPageComponent},
+  { path: 'project', component: ProjectPageComponent},
   { path: 'profile',
     component: profileComponent,
     children: [
@@ -31,6 +32,7 @@ const appRoutes: Routes = [
       { path: 'my-instructions', component: UserInstructionComponent },
       { path: 'message-confirm', component: MessageComponent },
       { path: 'confirm-profile', component: ConfirmProfileComponent },
+      { path: 'create-section', component: CreateSectionComponent },
       { path: 'admin', component: AdminPageComponent }
     ]
   },
@@ -38,7 +40,7 @@ const appRoutes: Routes = [
   {path: 'view/project/:idproject', component: ViewProjectComponent},
   {path: 'searcheResults/:request', component: SearcheResultComponent},
   {path: '', component: MainPageComponent},
-  {path: ':section', component: SectionComponent},
+  {path: 'section/:id', component: SectionComponent},
   {path: '**', redirectTo: '/' }
 ];
 
