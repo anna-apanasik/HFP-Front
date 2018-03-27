@@ -10,6 +10,7 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {AuthConfigConsts} from "angular2-jwt";
 import {UserService} from "../../service/userService";
 import {StepService} from "../../service/StepService";
+import {SectionService} from "../../service/SectionService";
 
 @Component({
   selector: 'app-instruction',
@@ -27,12 +28,15 @@ export class InstructionComponent implements OnInit {
   step: Step = new Step;
   currentSection: Section = new Section();
   sections: Section[] = [];
+  isStory: boolean;
+  typeOfInstruction: string = 'Instruction';
 
   constructor(private instructionService: InstructionService,
               private stepService: StepService,
               protected authGuard: AuthGuard,
               private activatedRoute: ActivatedRoute,
-              private router: Router) {
+              private router: Router,
+              private sectionService: SectionService) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
     this.instruction = new Instruction();
   }
@@ -44,6 +48,7 @@ export class InstructionComponent implements OnInit {
     this.instruction.userId = this.user.id;
     this.getSection();
     this.loadInstruction();
+    console.log(this.isStory);
   }
 
   saveInstruction() {
@@ -125,7 +130,7 @@ console.log(this.instruction);
   }
 
   getSection() {
-    this.instructionService
+    this.sectionService
       .getSections()
       .subscribe(sections => {
         this.sections = sections;
@@ -136,5 +141,9 @@ console.log(this.instruction);
     this.instructionService
       .getSteps(instructionId)
       .subscribe( steps => this.steps = steps);
+  }
+
+  switchType() {
+    this.isStory ? this.typeOfInstruction = 'Instruction' :  this.typeOfInstruction = 'Story';
   }
 }

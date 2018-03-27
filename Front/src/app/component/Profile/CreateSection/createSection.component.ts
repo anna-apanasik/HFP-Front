@@ -38,6 +38,7 @@ export class CreateSectionComponent implements OnInit {
         },
         error => {
           this.errorMessage = error.json().message;
-        })
+        });
+    this.getAllSections();
   }
 }

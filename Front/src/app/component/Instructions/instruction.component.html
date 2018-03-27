@@ -25,6 +25,16 @@
           </option>
         </select>
       </div>
+
+      <div class="form-group type-story">
+            {{ typeOfInstruction | translate}}
+          <a class="type-story-switch">
+            <input type="checkbox" name="switch" id="switch-story" [disabled]="steps.length > 1" [(ngModel)]="isStory" (click)="switchType()">
+            <label for="switch-story"></label>
+          </a>
+
+      </div>
+
       <div class="form-group buttons">
         <button class="btn btn-success"
                 (click)="saveInstruction(instruction)"
@@ -51,14 +61,17 @@
   <!--<div class="container">-->
   <div *ngFor="let item of steps">
     <app-editor-step [step]="item"
+                     [isStory]="isStory"
                      [edit]="false"
                      (deleteStepEvent)="deleteStep($event,data)"
                      (newStepEvent)="receiveNewStep($event,data)"
     ></app-editor-step>
   </div>
-  <app-editor-step [edit]="true"
-                   (newStepEvent)="receiveNewStep($event,data)">
-  </app-editor-step>
+  <div [hidden]="isStory && steps.length == 1">
+    <app-editor-step [edit]="true"
+                     (newStepEvent)="receiveNewStep($event,data)">
+    </app-editor-step>
+  </div>
 </div>
 
 
