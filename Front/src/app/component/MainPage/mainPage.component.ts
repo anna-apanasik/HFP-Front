@@ -1,6 +1,6 @@
 import {Component, OnInit} from "@angular/core";
-import {InstructionService} from "../../service/InstructionService";
 import {Section} from "../../model/Section";
+import {SectionService} from "../../service/SectionService";
 
 @Component({
   selector: 'app-main-page',
@@ -10,7 +10,7 @@ import {Section} from "../../model/Section";
 
 export class MainPageComponent implements OnInit {
   protected sections: Section[];
-  constructor(private instructionService: InstructionService) {
+  constructor(private sectionService: SectionService) {
 
   }
 
@@ -19,7 +19,7 @@ export class MainPageComponent implements OnInit {
   }
 
   loadSections() {
-    this.instructionService
+    this.sectionService
       .getSections()
       .subscribe(res => {
         this.sections = res;

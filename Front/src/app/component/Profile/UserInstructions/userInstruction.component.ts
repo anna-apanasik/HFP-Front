@@ -2,6 +2,7 @@ import { Component} from "@angular/core";
 import {InstructionService} from "../../../service/InstructionService";
 import {User} from "../../../model/user";
 import {Instruction} from "../../../model/Instruction";
+import {SectionService} from "../../../service/SectionService";
 
 @Component({
   selector: 'app-my-instructions',
@@ -14,7 +15,7 @@ export class UserInstructionComponent {
   protected instructions: Instruction[];
   protected createInstruction: boolean = false;
 
-  constructor(private instructionService: InstructionService,) {
+  constructor(private sectionService: SectionService,) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
@@ -23,7 +24,7 @@ export class UserInstructionComponent {
   }
 
   loadInstructions() {
-    this.instructionService
+    this.sectionService
       .getAllUserInstruction(this.user.id)
       .subscribe(res => {
           this.instructions = res;

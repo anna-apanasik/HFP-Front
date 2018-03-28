@@ -18,7 +18,7 @@
     </div>
   </div>
 
-  <div *ngIf="createInstruction">
+  <div *ngIf="createInstruction" align="center">
     <span class="my-instruction-message"> {{ 'MessageDontHaveInstruction' | translate }}</span>
     <button class="btn btn-success create-instruction-button" [routerLink]="['/profile/instruction/create']">
       {{'CreateInstruction'| translate}}

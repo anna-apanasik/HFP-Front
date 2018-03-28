@@ -1,4 +1,15 @@
 .step-name {
+  font-weight: bold;
   font-size: 20px;
-  padding: 0 8px;
+  padding: 0 15px;
+}
+
+.step-text {
+  padding: 10px 15px;
+  font-size: 18px;
+}
+
+.step-number {
+  margin: 15px;
+  padding: 8px 10px 10px 10px
 }

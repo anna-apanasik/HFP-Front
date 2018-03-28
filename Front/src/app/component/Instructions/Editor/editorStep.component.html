@@ -23,15 +23,20 @@
         </div>
         <div *ngIf="!edit">
             <div class="header-step">
-                    <span class="badge badge-info"
-                          style="padding: 8px 10px 10px 10px">
+                    <span *ngIf="!isStory" class="badge badge-info step-number">
                       {{'Step' | translate}} {{ step.position }}
                     </span>
-                <span>{{step.name}}</span>
+                <span class="step-name">{{step.name}}</span>
             </div>
-            <div class="textarea">
+            <div class="textarea step-text">
                     <p> {{ step.text }} </p>
             </div>
+
+          <div *ngIf="step.arrayOfImages">
+            <div  *ngFor="let image of step.arrayOfImages" class="step-image-container">
+                <img id="id-area-image" class="img-responsive step-image" name="image" src="{{image}}"/>
+              </div>
+          </div>
         </div>
         <div class="step-button">
             <button  *ngIf="edit"
@@ -50,6 +55,29 @@
                     (click)="deleteStep(step)">
               <span class="glyphicon glyphicon-trash"></span>
             </button>
+
+            <button *ngIf="edit"
+                    class="btn btn-info"
+                    data-toggle="modal"
+                    data-target="#openUploadImages">
+             <span class="glyphicon glyphicon-camera"></span>
+            </button>
         </div>
     </div>
+</div>
+
+<div id="openUploadImages" class="modal fade" aria-hidden="true" aria-labelledby="openUploadImages" tabindex="-1"
+     role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a class="close" data-dismiss="modal" aria-hidden="true">x</a>
+        <h3 class="text-center">{{'UploadImages'|translate }}</h3>
+      </div>
+      <div class="modal-footer">
+        <app-cloudinary (upImgStep)="updateImg($event, step)"></app-cloudinary>
+      </div>
+    </div>
+  </div>
+
 </div>

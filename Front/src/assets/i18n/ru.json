@@ -102,5 +102,7 @@
   "MessageNoTags": "Нет ни одного тега",
   "Story": "Статья",
   "CreateSection": "Создать секцию",
-  "SectionTitle": "Название секции"
+  "SectionTitle": "Название секции",
+  "Instruction": "Инструкция",
+  "UploadImages": "Добавьте изображения"
 }

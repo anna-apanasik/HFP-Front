@@ -102,5 +102,7 @@
   "MessageNoTags": "There are no tags",
   "Story": "Story",
   "CreateSection": "Create section",
-  "SectionTitle": "Section title"
+  "SectionTitle": "Section title",
+  "Instruction": "Instruction",
+  "UploadImages": "Upload images"
 }

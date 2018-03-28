@@ -12,8 +12,11 @@ import {Step} from "../../../model/Step";
 
 export class EditorStepComponent {
   protected project: Instruction = new Instruction;
+  protected images: string[] = [];
+
   @Input() step: Step = new Step();
   @Input() edit: boolean;
+  @Input() isStory: boolean;
   @Output() newStepEvent = new EventEmitter();
   @Output() deleteStepEvent = new EventEmitter();
   buttonEdit: boolean = false;
@@ -52,5 +55,9 @@ export class EditorStepComponent {
 
     let copy = Object.assign({},step);
     this.deleteStepEvent.emit(copy);
+  }
+
+  updateImg(value: any, step) {
+    this.images.push('http://res.cloudinary.com/crowbanding/image/upload/v1505169254/' + value + '.jpg');
   }
 }

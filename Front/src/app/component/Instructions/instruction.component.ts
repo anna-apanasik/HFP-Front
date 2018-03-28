@@ -11,6 +11,7 @@ import {AuthConfigConsts} from "angular2-jwt";
 import {UserService} from "../../service/userService";
 import {StepService} from "../../service/StepService";
 import {SectionService} from "../../service/SectionService";
+import {InstructionHelper} from "../../service/helpers/InstructionHelper";
 
 @Component({
   selector: 'app-instruction',
@@ -52,6 +53,7 @@ export class InstructionComponent implements OnInit {
   }
 
   saveInstruction() {
+    // TODO add save images(array)
     this.instruction.tags = this.tags ? this.tags.map(e => e['value'] ? e['value'] : e) : [];
 
     if(this.instruction.id.toString() == 'create') {
@@ -124,6 +126,10 @@ console.log(this.instruction);
         console.log(res);
         this.instruction = res;
         this.steps = this.instruction.steps;
+        this.steps.forEach(e => {
+          e.arrayOfImages = InstructionHelper.reformatStringToArray(e.image)
+        });
+        console.log(this.steps)
         this.tags = this.instruction.tags;
       })
     }

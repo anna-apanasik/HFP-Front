@@ -3,6 +3,7 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {InstructionService} from "../../../service/InstructionService";
 import {Section} from "../../../model/Section";
 import {Instruction} from "../../../model/Instruction";
+import {SectionService} from "../../../service/SectionService";
 
 @Component({
   selector: 'app-section',
@@ -16,19 +17,19 @@ export class SectionComponent implements OnInit {
   protected emptySection: boolean = false;
 
   constructor(private activatedRoute: ActivatedRoute,
-              private instructionService: InstructionService) {
+              private sectionService: SectionService) {
   }
 
   ngOnInit() {
     this.activatedRoute.params.subscribe((params: Params) => {
-      this.section.id = params['section'];
+      this.section.id = params['id'];
     });
     this.getSection();
     this.getInstructions()
   }
 
   getSection()  {
-    this.instructionService
+    this.sectionService
       .getSectionById(this.section.id)
       .subscribe(res => {
         this.section = res;
@@ -36,7 +37,7 @@ export class SectionComponent implements OnInit {
   }
 
   getInstructions() {
-    this.instructionService
+    this.sectionService
       .getInstructionsOfSection(this.section.id)
       .subscribe(res => {
         this.instructions = res;

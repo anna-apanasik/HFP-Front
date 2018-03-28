@@ -6,4 +6,9 @@ export class InstructionHelper {
       ? 1 : a.position < b.position
         ? -1 : 0)
   }
+
+  static reformatStringToArray(str: string) {
+    return str.slice(1, str.length - 1)
+      .split(',');
+  }
 }

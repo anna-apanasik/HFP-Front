@@ -3,6 +3,7 @@ import {User} from "../../../model/user";
 import {Instruction} from "../../../model/Instruction";
 import {Section} from "../../../model/Section";
 import {InstructionService} from "../../../service/InstructionService";
+import {SectionService} from "../../../service/SectionService";
 
 @Component({
   selector: 'app-info-profile',
@@ -15,7 +16,7 @@ export class InfoProfileComponent {
   protected instructions: Instruction[];
   protected createInstruction: boolean = false;
 
-  constructor(private instructionService: InstructionService,) {
+  constructor(private sectionService: SectionService,) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
@@ -24,7 +25,7 @@ export class InfoProfileComponent {
   }
 
   loadInstructions() {
-    this.instructionService
+    this.sectionService
       .getAllUserInstruction(this.user.id, 4)
       .subscribe(res => {
         this.instructions = res;

@@ -7,16 +7,27 @@ input.ng-touched.ng-invalid {border:solid red 2px;}
   border-radius: 3px;
 }
 
-.header-step {
-  margin: 10px;
-}
-
 .header-step input {
-  margin-left: 15px;
   min-width: 300px;
   border: 2px solid rgb(220, 228, 236);
   border-radius: 3px;
   font-size: 18px;
+}
+
+.step-name {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 0 15px;
+}
+
+.step-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 5px;
+}
+
+.step-image-container {
+  display: inline-flex;
 }
 
 .step textarea {
@@ -32,6 +43,12 @@ input.ng-touched.ng-invalid {border:solid red 2px;}
   font-size: 14px !important;
 }
 
+.step-number {
+  padding: 8px 10px 10px 10px
+}
 
-
+.step-text {
+  padding: 10px 15px;
+  font-size: 16px;
+}
 

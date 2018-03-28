@@ -20,6 +20,10 @@ export class ProfileInstructionComponent {
   deleteInstruction() {
     this.instructionService.deleteInstruction(this.instruction)
       .subscribe(resp => {
+        if(location.pathname == '/profile/my-instructions') {
+          location.href='/profile/my-instructions';
+          return;
+        }
         //this.router.navigate(['/profile']);
         location.href='/profile';
         /*TODO check router navigate*/
