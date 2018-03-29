@@ -4,6 +4,7 @@ import {User} from "../../../model/user";
 import {ImageComponent} from "../../imageArea/image.component";
 import {FormGroup} from "@angular/forms";
 import {ValidationData} from "../../../service/validationData";
+import {CloudinaryComponent} from "../../CloudinaryImageComponent/CloudinaryComponent";
 
 @Component({
   selector: 'app-edit-profile',
@@ -29,7 +30,7 @@ export class EditProfileComponent {
   constructor(private userService: UserService,
               private imageComponent: ImageComponent,
               private validation: ValidationData) {
-    this.user.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505169795/sy6afdedllqhpbh8zebq.jpg';
+    this.user.image = localStorage.getItem("image") || CloudinaryComponent.UNKNOWM_PROFILE_IMAGE;
     this.oldUser = JSON.parse(localStorage.getItem("currentUser"));
   }
 

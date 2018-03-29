@@ -7,6 +7,7 @@ import {Observable} from 'rxjs/Observable';
 import {AuthConfigConsts, AuthHttp} from 'angular2-jwt';
 import 'rxjs/add/operator/map';
 import {MessageRequestDto} from "../model/MessageRequestDto";
+import {CloudinaryComponent} from "../component/CloudinaryImageComponent/CloudinaryComponent";
 
 
 @Injectable()
@@ -23,7 +24,7 @@ export class UserService extends CoreService {
   }
 
   register(user: User) {
-    user.image = "http://res.cloudinary.com/crowbanding/image/upload/v1505169795/sy6afdedllqhpbh8zebq.jpg";
+    user.image = CloudinaryComponent.UNKNOWM_PROFILE_IMAGE;
 
     console.log("registration");
     return this.http

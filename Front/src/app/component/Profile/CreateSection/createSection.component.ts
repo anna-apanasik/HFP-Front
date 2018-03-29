@@ -35,10 +35,11 @@ export class CreateSectionComponent implements OnInit {
       .createSection(this.section)
       .subscribe(res => {
           this.errorMessage = '';
+          this.section.title = '';
+          this.getAllSections();
         },
         error => {
           this.errorMessage = error.json().message;
         });
-    this.getAllSections();
   }
 }

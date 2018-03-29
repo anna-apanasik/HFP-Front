@@ -2,11 +2,7 @@
   <div class="col-sm-6 profile profile-info">
     <ul class="list-group">
       <li class="profile-photo list-group-item list-group-item-secondary ">
-        <img id="default-img" *ngIf="!user.image"
-             src="http://res.cloudinary.com/crowbanding/image/upload/c_lfill,h_300,q_100,r_0,w_200/a_0/sy6afdedllqhpbh8zebq.jpg"/>
-        <div>
-          <img id="cloud-img" class="user-image" style="width: 500px" *ngIf="user.image" src='{{user.image}}'/>
-        </div>
+        <img id="cloud-img" class="user-image" src='{{ user.image || image }}'/>
       </li>
       <li class="list-group-item list-group-item-secondary font-weight-bold">
         <label>{{ 'Login' | translate }} : {{ user.userName }}</label>
