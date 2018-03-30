@@ -8,7 +8,7 @@ import {CloudinaryImageComponent, CloudinaryOptions, CloudinaryUploader} from 'n
 })
 export class CloudinaryComponent {
 
-  static readonly UNKNOWM_PROFILE_IMAGE = "http://res.cloudinary.com/crowbanding/image/upload/c_lfill,h_300,q_100,r_0,w_200/a_0/sy6afdedllqhpbh8zebq.jpg";
+  static readonly UNKNOWN_PROFILE_IMAGE = "http://res.cloudinary.com/crowbanding/image/upload/c_lfill,h_300,q_100,r_0,w_200/a_0/sy6afdedllqhpbh8zebq.jpg";
 
   @Output() upImgStep: EventEmitter<any> = new EventEmitter();
   uploader: CloudinaryUploader = new CloudinaryUploader(

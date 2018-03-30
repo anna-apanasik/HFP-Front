@@ -30,7 +30,7 @@ export class EditProfileComponent {
   constructor(private userService: UserService,
               private imageComponent: ImageComponent,
               private validation: ValidationData) {
-    this.user.image = localStorage.getItem("image") || CloudinaryComponent.UNKNOWM_PROFILE_IMAGE;
+    this.user.image = localStorage.getItem("image") || CloudinaryComponent.UNKNOWN_PROFILE_IMAGE;
     this.oldUser = JSON.parse(localStorage.getItem("currentUser"));
   }
 

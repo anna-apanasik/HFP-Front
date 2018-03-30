@@ -20,7 +20,7 @@ export class InfoProfileComponent {
 
   constructor(private sectionService: SectionService,) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
-    this.image = localStorage.getItem("image") || CloudinaryComponent.UNKNOWM_PROFILE_IMAGE;
+    this.image = localStorage.getItem("image") || CloudinaryComponent.UNKNOWN_PROFILE_IMAGE;
   }
 
   ngOnInit() {

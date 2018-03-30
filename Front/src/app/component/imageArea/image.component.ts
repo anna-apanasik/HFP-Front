@@ -18,7 +18,7 @@ export class ImageComponent {
     if (this.image != null) {
       this.user.image = this.image;
     } else
-      this.user.image = CloudinaryComponent.UNKNOWM_PROFILE_IMAGE;
+      this.user.image = CloudinaryComponent.UNKNOWN_PROFILE_IMAGE;
   }
 
   updateImg(value: any) {

@@ -24,7 +24,7 @@ export class UserService extends CoreService {
   }
 
   register(user: User) {
-    user.image = CloudinaryComponent.UNKNOWM_PROFILE_IMAGE;
+    user.image = CloudinaryComponent.UNKNOWN_PROFILE_IMAGE;
 
     console.log("registration");
     return this.http
