@@ -1,0 +1,61 @@
+<div class="container">
+  <div class="col-sm-6 profile profile-info">
+    <ul class="list-group">
+      <li class="profile-photo list-group-item list-group-item-secondary ">
+        <img id="cloud-img" class="user-image" src='{{ user.image || image }}'/>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label>{{ 'Login' | translate }} : {{ user.userName }}</label>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label> {{ 'email' | translate }} : {{ user.email }}</label>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label>{{'FirstName' | translate }} : {{ user.userName }}</label>
+      </li>
+      <li class="list-group-item list-group-item-secondary font-weight-bold">
+        <label> {{ 'LastName' | translate }} : {{ user.lastName }}</label>
+      </li>
+    </ul>
+    <div align="center">
+      <button class="btn btn-warning profile-edit-button" [routerLink]="['/profile/edit-profile']">
+        {{'Edit'| translate}}
+      </button>
+      <button class="btn btn-danger"
+              data-toggle="modal"
+              data-target="#openDeleteProfile">
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="col-sm-6 profile">
+    <!--TODO check role -->
+    <div *ngIf="createInstruction && (user.role == 'ROLE_VER' ||  user.role == 'ROLE_ADMIN')" align="center">
+      <span class="profile-info-instruction-message"> {{ 'MessageDontHaveInstruction' | translate }}</span>
+      <button class="btn btn-success create-instruction-button" [routerLink]="['/profile/instruction/create']">
+        {{'CreateInstruction'| translate}}
+      </button>
+    </div>
+
+    <div *ngIf="!createInstruction && (user.role == 'ROLE_VER' ||  user.role == 'ROLE_ADMIN')">
+      <div class="list-group">
+        <div *ngFor="let instruction of instructions">
+          <app-profile-instruction [instruction]="instruction" [isProfile]="true"></app-profile-instruction>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="user.role != 'ROLE_VER' && user.role != 'ROLE_ADMIN'" align="center">
+      <span class="profile-info-instruction-message"> {{ 'MessageConfirmProfile' | translate }} </span>
+      <button class="btn btn-success create-instruction-button" [routerLink]="['/profile/confirm-profile']">
+        {{'ConfirmProfile'| translate}}
+      </button>
+    </div>
+
+  </div>
+</div>
+<div id="openDeleteProfile" class="modal fade" aria-hidden="true" aria-labelledby="openDeleteProfile" tabindex="-1"
+     role="dialog">
+  <app-delete-profile></app-delete-profile>
+</div>

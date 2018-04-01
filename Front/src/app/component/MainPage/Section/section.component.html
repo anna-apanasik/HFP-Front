@@ -1,0 +1,25 @@
+<div class="container section">
+  <div align="center">
+    <span class="badge badge-pill badge-warning section-title">{{ section.title }}</span>
+  </div>
+
+  <div *ngIf="emptySection" align="center">
+    <span class="empty-section-message"> {{ 'MessageEmptySection' | translate }} </span>
+  </div>
+
+  <div class="col-sm-6 column">
+    <div *ngFor="let instruction of instructions;  even as isEven">
+      <div *ngIf="isEven" class="one-instruction">
+        <app-profile-instruction [instruction]="instruction" [isProfile]="false"></app-profile-instruction>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-6 column">
+    <div *ngFor="let instruction of instructions; odd as isOdd">
+      <div *ngIf="isOdd" class="one-instruction">
+        <app-profile-instruction [instruction]="instruction" [isProfile]="false"></app-profile-instruction>
+      </div>
+    </div>
+  </div>
+</div>

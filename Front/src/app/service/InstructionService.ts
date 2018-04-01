@@ -34,7 +34,7 @@ export class InstructionService extends CoreService {
 
   deleteInstruction(instruction: Instruction) {
     return this.authHttp
-      .delete(`${this.webService}/deleteInstruction/` + instruction.id, {headers: this.headers}).map(res => res);
+      .delete(`${this.webService}deleteInstruction/` + instruction.id, {headers: this.headers}).map(res => res);
   }
 
   getSteps(id: number) {
@@ -53,8 +53,5 @@ export class InstructionService extends CoreService {
 
   deleteStep(step: Step) {
     return this.authHttp.delete(`${this.webService}deleteStep/` + step.id,{headers: this.headers}).map(res => res);
-  }
-  getSections() {
-    return this.authHttp.get(`${this.webService}getSections`).map(res => res.json());
   }
 }

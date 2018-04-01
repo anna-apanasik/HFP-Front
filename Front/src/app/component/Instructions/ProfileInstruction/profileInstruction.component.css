@@ -1,0 +1,18 @@
+.button-profile {
+  margin: 2px;
+  padding: 0;
+  position: absolute;
+  top: 20px;
+}
+
+.button-delete {
+  right: 20px;
+}
+
+.button-edit {
+  right: 40px;
+}
+
+.tag {
+  margin: 2px;
+}

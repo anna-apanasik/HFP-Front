@@ -86,12 +86,23 @@
   "Description":"Description",
   "UnConfirm":"Unconfirm",
   "Confirm":"Confirm",
-  "Instructions": "My Instructions",
+  "MyInstructions": "My Instructions",
   "AddStep": "Add step",
   "Enter": "Enter ...",
   "TitleOfStep": "Title of step",
   "Step": "Step",
   "StepDescription": "Step description",
-  "SelectTopic": "Select topic"
-
+  "SelectTopic": "Select topic",
+  "Edit": "Edit",
+  "DeleteProfile": "Are you sure you want to delete your profile?",
+  "Section": "Section",
+  "MessageDontHaveInstruction": "Oops.. You don't have any created instructions...",
+  "MessageConfirmProfile": "Confirm your profile. After that you can do more...",
+  "MessageEmptySection": " Oops... This section is empty...",
+  "MessageNoTags": "There are no tags",
+  "Story": "Story",
+  "CreateSection": "Create section",
+  "SectionTitle": "Section title",
+  "Instruction": "Instruction",
+  "UploadImages": "Upload images"
 }

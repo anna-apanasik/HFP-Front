@@ -1,0 +1,9 @@
+
+<!--TODO check-->
+<body *ngIf="authGuard.isActivate() == true">
+  <app-menu-profile></app-menu-profile>
+<!--<app-blocked-page></app-blocked-page>-->
+</body>
+<body *ngIf="authGuard.isActivate() == false">
+    you can't go to the page. Please login or registrate.
+</body>

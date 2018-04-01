@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="create-section">
+      <div class="form-group title-section">
+        <label> {{ 'SectionTitle' | translate }} </label>
+        <input type="text" [(ngModel)]="section.title"
+               name="titleOfSection"
+               class="form-control"
+               id="title-of-section"
+               #titleOfSection="ngModel"
+               required>
+      </div>
+      <button class="btn btn-success button-save"
+              (click)="saveSection()"
+              [disabled]="!section.title"
+      >{{ 'SAVE' | translate }}
+      </button>
+    </div>
+
+    <div *ngIf="errorMessage">
+      <div class="alert error-message"> {{ errorMessage }}</div>
+    </div>
+
+    <div *ngFor="let section of sections; index as index; even as isEven; odd as isOdd">
+      <div class="section list-group-item" [ngClass]="{'text-warning': isEven, 'text-info': isOdd }">
+        <p> {{ index + 1 }}. </p>
+        <p [routerLink]="['section/' + section.id]">
+          &nbsp; {{ section.title }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

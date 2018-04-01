@@ -1,5 +1,4 @@
 .wrapper-instruction {
-  width: 80%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -7,6 +6,8 @@
 .instruction {
   display: inline-flex;
   width: 100%;
+  background-color: rgba(111, 112, 123, 0.45);
+  margin-left: 1px;
 }
 
 .form-group {
@@ -15,7 +16,7 @@
 }
 
 .name-instruction {
-  width: 45%;
+  width: 40%;
 }
 
 .section {
@@ -25,4 +26,67 @@
 .buttons {
   width: 16%;
   padding-top: 25px;
+}
+
+.type-story {
+  width: 15%;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 18px;
+  font-weight: bold;
+  height: 45px;
+  margin-top: 25px;
+}
+
+.type-story-switch {
+  margin-bottom: -5px;
+  margin-left: 7px;
+}
+
+.type-story-switch label{
+  text-indent: -999px;
+  margin:0 ;
+  width: 36px;
+  height: 20px;
+  background: #e5e5e5;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.type-story-switch label:after{
+  content: ' ';
+  position: absolute;
+  left: 2px;
+  top: 1px;
+  display: block;
+  background: #073642;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  -webkit-transition: all 0.25s linear;
+  -moz-transition: all 0.25s linear;
+  -o-transition: all 0.25s linear;
+  transition: all 0.25s linear;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.9);
+}
+
+.type-story-switch input[type='checkbox']:checked + label{
+  background: #2aa198;
+}
+
+.type-story-switch input{
+  display:none;
+}
+
+.type-story-switch input[type='checkbox']:checked + label:after{
+  left: 17px;
+  border-color: #06829e;
+}
+
+.type-story-switch input[type='checkbox']:disabled + label:after{
+  cursor: not-allowed;
+  opacity: 0.4;
 }

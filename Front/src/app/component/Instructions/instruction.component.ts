@@ -10,6 +10,8 @@ import {ActivatedRoute, Params, Router} from "@angular/router";
 import {AuthConfigConsts} from "angular2-jwt";
 import {UserService} from "../../service/userService";
 import {StepService} from "../../service/StepService";
+import {SectionService} from "../../service/SectionService";
+import {InstructionHelper} from "../../service/helpers/InstructionHelper";
 
 @Component({
   selector: 'app-instruction',
@@ -17,24 +19,25 @@ import {StepService} from "../../service/StepService";
   styleUrls: ['./instruction.component.css'],
 })
 
-export class InstructionComponent implements OnInit{
-  protected project: Instruction = new Instruction;
+/*TODO add tags*/
+export class InstructionComponent implements OnInit {
   user: User;
-  tags: string[];
+  tags: string [];
   position: number = 0;
-  isDisabledButtonAdd: boolean = false;
   instruction: Instruction = new Instruction();
   steps: Step[] = [];
   step: Step = new Step;
   currentSection: Section = new Section();
   sections: Section[] = [];
+  isStory: boolean;
+  typeOfInstruction: string = 'Instruction';
 
   constructor(private instructionService: InstructionService,
               private stepService: StepService,
               protected authGuard: AuthGuard,
               private activatedRoute: ActivatedRoute,
-              private router: Router) {
-    // this.project.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505210950/azufvfotm2nypj55ebnm.png';
+              private router: Router,
+              private sectionService: SectionService) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
     this.instruction = new Instruction();
   }
@@ -46,40 +49,38 @@ export class InstructionComponent implements OnInit{
     this.instruction.userId = this.user.id;
     this.getSection();
     this.loadInstruction();
+    console.log(this.isStory);
   }
 
   saveInstruction() {
+    // TODO add save images(array)
+    this.instruction.tags = this.tags ? this.tags.map(e => e['value'] ? e['value'] : e) : [];
+
     if(this.instruction.id.toString() == 'create') {
       this.instruction.steps = this.steps;
       this.instruction.id = 0;
       console.log(this.instruction)
-      console.log(this.instruction.section)
       this.instructionService.createInstruction(this.instruction)
         .subscribe(resp => {
-          this.instruction = resp;
-          this.router.navigate(['/profile/instruction', resp.id])
+          console.log('create', resp);
+          this.router.navigate(['/instruction', resp.id])
         });
       return;
     }
-
+console.log(this.instruction);
     this.instructionService.updateInstruction(this.instruction)
       .subscribe(resp => {
-        console.log(resp)
         this.instruction = resp;
-        this.router.navigate(['/profile/instruction', resp.id])
+        this.tags = this.instruction.tags;
+        this.router.navigate(['/instruction', resp.id])
       });
-  }
-  setSection(value) {
-    console.log(value)
   }
 
   deleteInstruction() {
     this.instructionService.deleteInstruction(this.instruction)
       .subscribe(resp => {
         console.log('delete', resp)
-        let id = 'create';
-        //this.instruction.clear();
-        this.router.navigate(['/profile/instruction',id])
+        this.router.navigate(['/profile']);
       });
   }
 
@@ -125,16 +126,19 @@ export class InstructionComponent implements OnInit{
         console.log(res);
         this.instruction = res;
         this.steps = this.instruction.steps;
+        this.steps.forEach(e => {
+          e.arrayOfImages = InstructionHelper.reformatStringToArray(e.image)
+        });
+        console.log(this.steps)
+        this.tags = this.instruction.tags;
       })
     }
   }
 
   getSection() {
-    //this.sections = [new Section(1,'It')]
-    this.instructionService
+    this.sectionService
       .getSections()
       .subscribe(sections => {
-        console.log(sections)
         this.sections = sections;
       })
   }
@@ -143,5 +147,9 @@ export class InstructionComponent implements OnInit{
     this.instructionService
       .getSteps(instructionId)
       .subscribe( steps => this.steps = steps);
+  }
+
+  switchType() {
+    this.isStory ? this.typeOfInstruction = 'Instruction' :  this.typeOfInstruction = 'Story';
   }
 }

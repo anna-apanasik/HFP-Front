@@ -10,7 +10,7 @@ import {LoginPageComponent} from "./Login/loginpage.component";
 })
 export class LoginComponent {
 
-  constructor(private loginpage:LoginPageComponent){}
+  constructor(private loginPage:LoginPageComponent){}
   activeLinkLogin: boolean = true;
   activeLinkRegister: boolean = false;
 

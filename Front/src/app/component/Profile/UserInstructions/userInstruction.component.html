@@ -1,0 +1,27 @@
+<div class="container">
+  <div *ngIf="!createInstruction">
+
+    <div class="col-sm-6 column">
+      <div *ngFor="let instruction of instructions;  even as isEven">
+        <div *ngIf="isEven" class="my-instruction-one-instruction-block">
+          <app-profile-instruction [instruction]="instruction" [isProfile]="true"></app-profile-instruction>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6">
+      <div *ngFor="let instruction of instructions; odd as isOdd">
+        <div *ngIf="isOdd" class="my-instruction-one-instruction-block">
+          <app-profile-instruction [instruction]="instruction" [isProfile]="true"></app-profile-instruction>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="createInstruction" align="center">
+    <span class="my-instruction-message"> {{ 'MessageDontHaveInstruction' | translate }}</span>
+    <button class="btn btn-success create-instruction-button" [routerLink]="['/profile/instruction/create']">
+      {{'CreateInstruction'| translate}}
+    </button>
+  </div>
+</div>

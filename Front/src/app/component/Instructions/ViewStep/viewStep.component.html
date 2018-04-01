@@ -1,0 +1,10 @@
+<div class="header-step">
+  <span *ngIf="!hidePosition"
+        class="badge badge-info step-number">
+    {{'Step' | translate}} {{ step.position }}
+  </span>
+  <span class="step-name">{{ step.name }}</span>
+</div>
+<div class=" textarea step-text">
+  <p> {{ step.text }} </p>
+</div>

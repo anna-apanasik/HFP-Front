@@ -24,7 +24,7 @@ import {CommonModule} from "@angular/common";
 import {logoutComponent} from "./logout/logout.component";
 import {profileComponent} from "./Profile/profile.component";
 import {RouterModule, Router, Routes} from "@angular/router";
-import {appMenuProfileComponent} from "./Profile/menuProfile/menuProfile.component";
+import {appMenuProfileComponent} from "./Profile/MenuProfile/menuProfile.component";
 import {EditProfileComponent} from "./Profile/EditProfile/editProfile.component";
 import {InfoProfileComponent} from "./Profile/InfoProfile/infoProfile.component";
 import {ImageComponent} from "./imageArea/image.component";
@@ -35,7 +35,7 @@ import {ProjectPageComponent} from "./createProject/projectPage.component";
 import {DatePickerModule} from "ng2-datepicker";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
-import {ConfirmProfileComponent} from "./Profile/confirmProfile/confirmProfile.component";
+import {ConfirmProfileComponent} from "./Profile/СonfirmProfile/confirmProfile.component";
 import {ProjectInfoComponent} from "./Profile/projectPage/projectInfo.component";
 import {AdminPageComponent} from "./Profile/adminPage/adminPage.component";
 import {ErrorAccesComponent} from "./Error/errorAcces/errorAcces.component";
@@ -55,6 +55,16 @@ import {InstructionComponent} from "./Instructions/instruction.component";
 import {InstructionService} from "../service/InstructionService";
 import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
 import {StepService} from "../service/StepService";
+import {DeleteProfileComponent} from "./Profile/DeleteProfile/deleteProfile.component";
+import {ProfileInstructionComponent} from "./Instructions/ProfileInstruction/profileInstruction.component";
+import {ViewInstructionComponent} from "./Instructions/ViewInstruction/viewInstruction.component";
+import {ViewStepComponent} from "./Instructions/ViewStep/viewStep.component";
+import {UserInstructionComponent} from "./Profile/UserInstructions/userInstruction.component";
+import {MainPageComponent} from "./MainPage/mainPage.component";
+import {SectionComponent} from "./MainPage/Section/section.component";
+import {InstructionHelper} from "../service/helpers/InstructionHelper";
+import {CreateSectionComponent} from "./Profile/CreateSection/createSection.component";
+import {SectionService} from "../service/SectionService";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -88,7 +98,15 @@ export function HttpLoaderFactory(http: HttpClient) {
     MessageComponent,
     PayProjectComponent,
     BlockAccountComponent,
-    InstructionComponent
+    InstructionComponent,
+    DeleteProfileComponent,
+    ProfileInstructionComponent,
+    ViewInstructionComponent,
+    ViewStepComponent,
+    UserInstructionComponent,
+    MainPageComponent,
+    SectionComponent,
+    CreateSectionComponent
   ],
   imports: [
     BrowserModule,
@@ -125,7 +143,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     HeaderService,
     InstructionService,
     StepService,
-    appRouting
+    appRouting,
+    InstructionHelper,
+    SectionService
   ],
   bootstrap: [ AppComponent]
 })

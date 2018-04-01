@@ -4,25 +4,25 @@ import {CloudinaryImageComponent, CloudinaryOptions, CloudinaryUploader} from 'n
 @Component({
   selector: 'app-cloudinary',
   templateUrl: './CloudinaryComponent.html',
-  styleUrls:["./CloudinaryComponent.css"]
+  styleUrls: ["./CloudinaryComponent.css"]
 })
-export class CloudinaryComponent{
+export class CloudinaryComponent {
 
-  cloudinaryImage: any;
-  @Output() upImg: EventEmitter<any> = new EventEmitter();
+  static readonly UNKNOWN_PROFILE_IMAGE = "http://res.cloudinary.com/crowbanding/image/upload/c_lfill,h_300,q_100,r_0,w_200/a_0/sy6afdedllqhpbh8zebq.jpg";
+
   @Output() upImgStep: EventEmitter<any> = new EventEmitter();
   uploader: CloudinaryUploader = new CloudinaryUploader(
-    new CloudinaryOptions({ cloudName: 'crowbanding', uploadPreset: 'f4k1c585' })
+    new CloudinaryOptions({cloudName: 'crowbanding', uploadPreset: 'f4k1c585'})
   );
 
-  constructor(){
+  constructor() {
 
     this.uploader.onAfterAddingFile = (item: any) => {
       this.uploader.uploadAll();
       return item;
     };
+
     this.uploader.onSuccessItem = (item: any, response: string, status: number, headers: any) => {
-      this.upImg.emit(JSON.parse(response).public_id);
       this.upImgStep.emit(JSON.parse(response).public_id);
       console.log('it public url: ' + JSON.parse(response).public_id);
       return {item, response, status, headers};
