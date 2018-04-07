@@ -89,6 +89,7 @@ export class InstructionComponent implements OnInit {
 
     this.step.position = this.steps.length + 1;
     this.step.instructionId = this.instruction.id;
+    this.step.image = InstructionHelper.reformatArrayToString(this.step.arrayOfImages);
     if(this.instruction.id.toString() != 'create') {
       this.instructionService.createStep(this.step).subscribe( resp => this.steps.push(resp));
       return;

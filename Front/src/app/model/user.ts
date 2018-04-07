@@ -11,5 +11,8 @@ export class User {
   image: string;
   role: string;
 
-  constructor(){}
+  constructor(id = null, userName = null) {
+    this.id = id;
+    this.userName = userName;
+  }
 }

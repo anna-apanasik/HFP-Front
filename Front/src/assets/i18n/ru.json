@@ -104,5 +104,9 @@
   "CreateSection": "Создать секцию",
   "SectionTitle": "Название секции",
   "Instruction": "Инструкция",
-  "UploadImages": "Добавьте изображения"
+  "UploadImages": "Добавьте изображения",
+  "EnterComment": "Введите ваш комментарий...",
+  "YourComment": "Ваш комментарий:",
+  "SaveChanges": "Сохранить изменения",
+  "Comment": "Комментарий:"
 }

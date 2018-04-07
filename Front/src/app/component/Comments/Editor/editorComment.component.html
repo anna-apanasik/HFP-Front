@@ -1,0 +1,63 @@
+<div class="editor-comment panel panel-default">
+
+  <div class="user-info">
+    <div class="user-login"> {{ comment.user.userName }}</div>
+    <div class="wrapper-user-image" [ngClass]="{ 'view-image-comment': !edit }">
+      <img id="id-area-image" class="img-responsive" src={{userImage}}/>
+    </div>
+  </div>
+
+  <div class="wrapper-view-comment" *ngIf="!edit">
+    <div class="view-comment-text">
+      <span><strong> {{ "Comment" | translate }} </strong></span>
+      <span class="view-comment"> {{ comment.text }} </span>
+    </div>
+
+    <div *ngIf="isAuthenticatedUserComment" class="buttons-view-comment-container">
+      <button class="btn btn-primary button-view-comment" (click)="edit = !edit">
+        <span class="glyphicon glyphicon-pencil button-color"></span>
+      </button>
+
+      <button class="btn btn-primary button-view-comment" (click)="onDelete()">
+        <span class="glyphicon glyphicon-trash button-color"></span>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="wrapper-create-comment" *ngIf="edit">
+    <div class="title-comment">{{ "YourComment" | translate }}</div>
+    <div >
+      <textarea class="text"
+                [(ngModel)]="comment.text"
+                id="text-area-component"
+                name="commentText"
+                placeholder="{{ 'EnterComment' | translate }}"
+                #commentText="ngModel"
+                required>
+      </textarea>
+    </div>
+
+    <div class="buttons" *ngIf="edit && !comment.id">
+      <button class="btn btn-success"
+              (click)="onSave()"
+              [disabled]="!comment.text">
+        {{ 'SAVE' | translate }}
+      </button>
+    </div>
+
+    <div class="buttons" *ngIf="edit && comment.id">
+      <button class="btn btn-success"
+              (click)="onUpdate()"
+              [disabled]="!comment.text">
+        {{ 'SaveChanges' | translate }}
+      </button>
+      <button class="btn btn-danger"
+              (click)="onDelete()"
+              [disabled]="!comment.text">
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
+    </div>
+  </div>
+
+</div>

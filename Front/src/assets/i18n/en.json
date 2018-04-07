@@ -104,5 +104,9 @@
   "CreateSection": "Create section",
   "SectionTitle": "Section title",
   "Instruction": "Instruction",
-  "UploadImages": "Upload images"
+  "UploadImages": "Upload images",
+  "EnterComment": "Enter your comment here...",
+  "YourComment": "Your comment:",
+  "SaveChanges": "Save changes",
+  "Comment": "Comment:"
 }

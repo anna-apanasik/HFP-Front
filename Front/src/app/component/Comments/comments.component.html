@@ -1,0 +1,10 @@
+<div class="comment-container">
+  <div *ngFor="let comment of commentsMock">
+    <app-editor-comment [comment]="comment"
+                        [isAuthenticatedUserComment]="comment.user.id === user.id"></app-editor-comment>
+  </div>
+
+  <div *ngIf="isAuthenticatedUser">
+    <app-editor-comment [edit]="true"></app-editor-comment>
+  </div>
+</div>

@@ -65,6 +65,9 @@ import {SectionComponent} from "./MainPage/Section/section.component";
 import {InstructionHelper} from "../service/helpers/InstructionHelper";
 import {CreateSectionComponent} from "./Profile/CreateSection/createSection.component";
 import {SectionService} from "../service/SectionService";
+import {EditorCommentComponent} from "./Comments/Editor/editorComment.component";
+import {CommentService} from "../service/CommentService";
+import {CommentsComponent} from "./Comments/comments.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -106,7 +109,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     UserInstructionComponent,
     MainPageComponent,
     SectionComponent,
-    CreateSectionComponent
+    CreateSectionComponent,
+    EditorCommentComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,
@@ -145,7 +150,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     StepService,
     appRouting,
     InstructionHelper,
-    SectionService
+    SectionService,
+    CommentService
   ],
   bootstrap: [ AppComponent]
 })
