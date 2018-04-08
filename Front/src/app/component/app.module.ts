@@ -65,6 +65,7 @@ import {SectionComponent} from "./MainPage/Section/section.component";
 import {InstructionHelper} from "../service/helpers/InstructionHelper";
 import {CreateSectionComponent} from "./Profile/CreateSection/createSection.component";
 import {SectionService} from "../service/SectionService";
+import {RatingComponent} from "./Rating/rating.component";
 import {EditorCommentComponent} from "./Comments/Editor/editorComment.component";
 import {CommentService} from "../service/CommentService";
 import {CommentsComponent} from "./Comments/comments.component";
@@ -111,7 +112,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     SectionComponent,
     CreateSectionComponent,
     EditorCommentComponent,
-    CommentsComponent
+    CommentsComponent,
+    CreateSectionComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,

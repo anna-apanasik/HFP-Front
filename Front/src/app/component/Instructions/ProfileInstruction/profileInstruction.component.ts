@@ -12,7 +12,7 @@ import {Router} from "@angular/router";
 export class ProfileInstructionComponent {
   @Input() instruction: Instruction = new Instruction();
   @Input() isProfile: boolean;
-
+  rate : 5;
   constructor(private instructionService: InstructionService,
               private router: Router) {
   }
@@ -37,6 +37,10 @@ export class ProfileInstructionComponent {
   viewInstruction() {
     /*TODO check router navigate*/
     location.href = '/instruction/' + this.instruction.id;
+  }
+
+  onRateChange(value) {
+    this.rate = value;
   }
 
   switched(tag: string){

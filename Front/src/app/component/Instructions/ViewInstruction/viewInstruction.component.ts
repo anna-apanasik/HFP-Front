@@ -55,4 +55,8 @@ export class ViewInstructionComponent implements OnInit {
     /* TODO search for tag */
     console.log('tag ', tag)
   }
+
+  onRateChange(value){
+    this.instruction.rating = (this.instruction.rating + value)/2;
+  }
 }
