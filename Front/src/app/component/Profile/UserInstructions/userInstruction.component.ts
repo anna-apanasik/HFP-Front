@@ -15,15 +15,19 @@ export class UserInstructionComponent {
   protected instructions: Instruction[];
   protected createInstruction: boolean = false;
 
-  constructor(private sectionService: SectionService,) {
+  constructor(private sectionService: SectionService,
+              private instructionService: InstructionService,
+              ) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
   ngOnInit() {
     this.loadInstructions();
+
   }
 
   loadInstructions() {
+    this.instructionService.deleteSection(32);
     this.sectionService
       .getAllUserInstruction(this.user.id)
       .subscribe(res => {

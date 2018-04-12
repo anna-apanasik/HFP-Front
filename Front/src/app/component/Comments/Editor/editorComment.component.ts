@@ -19,6 +19,7 @@ export class EditorCommentComponent implements OnInit {
 
   private instructionId: number = null;
   protected userImage: string;
+  private testComment: Comment = new Comment(1, 31, JSON.parse(localStorage.getItem("currentUser")), 'omg');
 
   constructor(private activatedRoute: ActivatedRoute,
               private commentService: CommentService) {

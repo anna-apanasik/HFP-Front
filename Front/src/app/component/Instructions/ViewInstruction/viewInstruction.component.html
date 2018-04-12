@@ -8,12 +8,12 @@
     <rating [maxScore]="5" [forDisplay]="false" (rateChanged)="onRateChange($event)"></rating>
     {{ rate }}
     <div *ngIf="user && user.id == instruction.userId" class="buttons-instruction">
-      <button class="btn btn-link button-view-instruction">
-        <span class="glyphicon glyphicon-pencil" (click)="editInstruction()"></span>
+      <button class="btn btn-link button-view-instruction" (click)="editInstruction()">
+        <span class="glyphicon glyphicon-pencil"></span>
       </button>
 
-      <button class="btn btn-link button-view-instruction">
-        <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
+      <button class="btn btn-link button-view-instruction" (click)="deleteInstruction()">
+        <span class="glyphicon glyphicon-trash"></span>
       </button>
     </div>
   </div>

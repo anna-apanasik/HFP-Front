@@ -4,6 +4,7 @@ import {Subscription} from "rxjs/Subscription";
 import {ActivatedRoute} from "@angular/router";
 import {ProjectService} from "../../service/projectService";
 import {sendRequest} from "selenium-webdriver/http";
+import {InstructionService} from "../../service/InstructionService";
 
 @Component({
   selector: 'app-searche-result',
@@ -17,7 +18,8 @@ export class SearcheResultComponent implements OnDestroy,OnInit{
   protected parseRequest:string;
   private subscribtion:Subscription;
   constructor(private activateRouter: ActivatedRoute,
-              private projectService: ProjectService){
+              private projectService: ProjectService,
+              private instructionService: InstructionService,){
     this.subscribtion = this.activateRouter.params.subscribe(params => this.request = params["request"]);
   }
   ngOnDestroy(){
