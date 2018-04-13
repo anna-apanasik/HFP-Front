@@ -14,9 +14,8 @@
       {{ 'NameInstruction' | translate }} : <a (click)="viewInstruction()">{{ instruction.title }}</a>
     </h4>
     <h4> {{'Section' | translate}} : {{ instruction.section.title}} </h4>
-    <h4> {{'RatingProject'| translate}} : {{ instruction.rating }} </h4>
-    <rating [maxScore]="5" [forDisplay]="!isProfile" (rateChanged)="onRateChange($event)"></rating>
-    {{ rate }}
+    <h4> {{'RatingProject'| translate}} : {{ rating.value }} </h4>
+    <rating [maxScore]="5" [score]="rating.value" (rateChanged)="onRateChange($event)"></rating>
     <div>
       <label class="label-style"> {{'Tags'| translate}}</label>
       <a *ngFor="let tag of instruction.tags" (click)="switched(tag)">
@@ -24,6 +23,5 @@
       </a>
       <span *ngIf="!instruction.tags">{{ 'MessageNoTags' | translate}}</span>
     </div>
-    <!--TODO star-rating-->
   </div>
 </a>

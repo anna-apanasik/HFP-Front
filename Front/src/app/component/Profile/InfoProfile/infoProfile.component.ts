@@ -1,8 +1,6 @@
 import { Component} from "@angular/core";
 import {User} from "../../../model/user";
 import {Instruction} from "../../../model/Instruction";
-import {Section} from "../../../model/Section";
-import {InstructionService} from "../../../service/InstructionService";
 import {SectionService} from "../../../service/SectionService";
 import {CloudinaryComponent} from "../../CloudinaryImageComponent/CloudinaryComponent";
 

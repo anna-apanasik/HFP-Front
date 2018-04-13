@@ -4,6 +4,8 @@ import {Instruction} from "../../../model/Instruction";
 import {User} from "../../../model/user";
 import {InstructionService} from "../../../service/InstructionService";
 import {InstructionHelper} from "../../../service/helpers/InstructionHelper";
+import {RatingService} from "../../../service/RatingService";
+import {Rating} from "../../../model/Rating";
 
 @Component({
   selector: 'app-view-instruction',
@@ -14,10 +16,12 @@ import {InstructionHelper} from "../../../service/helpers/InstructionHelper";
 export class ViewInstructionComponent implements OnInit {
   protected user: User;
   protected instruction: Instruction = new Instruction();
+  rating: Rating;
 
   constructor(private activatedRoute: ActivatedRoute,
               private instructionService: InstructionService,
-              private router: Router) {
+              private router: Router,
+              private ratingService: RatingService) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
@@ -26,6 +30,9 @@ export class ViewInstructionComponent implements OnInit {
       this.instruction.id = params['id'];
     });
     this.loadInstruction();
+    this.ratingService.getRating(this.instruction.id).subscribe(res =>
+      this.rating = res
+    )
   }
 
   loadInstruction() {
@@ -57,6 +64,9 @@ export class ViewInstructionComponent implements OnInit {
   }
 
   onRateChange(value){
-    this.instruction.rating = (this.instruction.rating + value)/2;
+    this.rating.userValue = value;
+    this.ratingService.updateRating(this.rating).subscribe(res => {
+      this.rating = res;
+    });
   }
 }

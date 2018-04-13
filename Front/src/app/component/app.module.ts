@@ -69,6 +69,7 @@ import {RatingComponent} from "./Rating/rating.component";
 import {EditorCommentComponent} from "./Comments/Editor/editorComment.component";
 import {CommentService} from "../service/CommentService";
 import {CommentsComponent} from "./Comments/comments.component";
+import {RatingService} from "../service/RatingService";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -154,7 +155,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     appRouting,
     InstructionHelper,
     SectionService,
-    CommentService
+    CommentService,
+    RatingService
   ],
   bootstrap: [ AppComponent]
 })

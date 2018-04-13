@@ -19,7 +19,6 @@ export class EditorCommentComponent implements OnInit {
 
   private instructionId: number = null;
   protected userImage: string;
-  private testComment: Comment = new Comment(1, 31, JSON.parse(localStorage.getItem("currentUser")), 'omg');
 
   constructor(private activatedRoute: ActivatedRoute,
               private commentService: CommentService) {
@@ -50,24 +49,15 @@ export class EditorCommentComponent implements OnInit {
 
     this.commentService
       .createComment(this.comment)
-      .subscribe( res => {
-        console.log(res)
-      });
   }
 
   onUpdate() {
     this.commentService
       .updateComment(this.comment)
-      .subscribe(res => {
-        console.log(res)
-      });
   }
 
   onDelete() {
     this.commentService
       .deleteComment(this.comment.id)
-      .subscribe(res => {
-        console.log(res)
-      });
   }
 }

@@ -1,7 +1,9 @@
-import {Component, Input} from "@angular/core";
+import {Component, Input, OnInit} from "@angular/core";
 import {Instruction} from "../../../model/Instruction";
 import {InstructionService} from "../../../service/InstructionService";
 import {Router} from "@angular/router";
+import {RatingService} from "../../../service/RatingService";
+import {Rating} from "../../../model/Rating";
 
 @Component({
   selector: 'app-profile-instruction',
@@ -9,12 +11,21 @@ import {Router} from "@angular/router";
   styleUrls: ['./profileInstruction.component.css']
 })
 
-export class ProfileInstructionComponent {
+export class ProfileInstructionComponent implements OnInit{
   @Input() instruction: Instruction = new Instruction();
   @Input() isProfile: boolean;
-  rate : 5;
+  rating : Rating = new Rating();
   constructor(private instructionService: InstructionService,
-              private router: Router) {
+              private router: Router,
+              private ratingService: RatingService) {
+  }
+
+  ngOnInit() {
+    this.ratingService.getRating(this.instruction.id).subscribe(res => {
+      console.log('rating');
+      console.log(res);
+      this.rating.value = res;
+    })
   }
 
   deleteInstruction() {
@@ -40,7 +51,8 @@ export class ProfileInstructionComponent {
   }
 
   onRateChange(value) {
-    this.rate = value;
+    this.rating.userValue = value;
+    this.ratingService.updateRating(this.rating).subscribe(res => this.rating = res);
   }
 
   switched(tag: string){

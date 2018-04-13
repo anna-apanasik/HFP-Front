@@ -10,9 +10,4 @@ export class User {
   email: string;
   image: string;
   role: string;
-
-  constructor(id = null, userName = null) {
-    this.id = id;
-    this.userName = userName;
-  }
 }

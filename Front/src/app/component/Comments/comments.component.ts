@@ -16,13 +16,6 @@ export class CommentsComponent implements OnInit {
   protected isAuthenticatedUser: boolean = false;
   protected comments: Comment[];
 
-  commentsMock = [
-    new Comment(1,48,new User(11, 'current'),' Achieve the maximum speed possible on the Web Platform today, and take it further, via Web Workers and server-side rendering. '),
-    new Comment(2,48,new User(10, 'other'),'some text'),
-    new Comment(3,48,new User(10, 'other'),'some text'),
-    new Comment(4,48,new User(11, 'current'),'some text')
-  ];
-
   constructor(private activatedRoute: ActivatedRoute,
               private commentService: CommentService) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
