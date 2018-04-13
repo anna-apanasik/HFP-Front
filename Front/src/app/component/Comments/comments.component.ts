@@ -15,7 +15,6 @@ export class CommentsComponent implements OnInit {
   private instructionId: number;
   protected isAuthenticatedUser: boolean = false;
   protected comments: Comment[];
-
   constructor(private activatedRoute: ActivatedRoute,
               private commentService: CommentService) {
     this.user = JSON.parse(localStorage.getItem("currentUser"));
@@ -30,6 +29,10 @@ export class CommentsComponent implements OnInit {
 
   ngOnInit() {
     this.getComments()
+  }
+
+  onUpdateComments() {
+    this.getComments();
   }
 
   getComments() {
