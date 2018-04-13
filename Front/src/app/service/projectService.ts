@@ -4,7 +4,6 @@ import {Project} from "../model/Instruction";
 import {Http,Response,Headers} from "@angular/http";
 import {AuthConfigConsts, AuthHttp} from 'angular2-jwt';
 import {Comments} from "../model/comments";
-import {Tags} from "../model/tags";
 
 @Injectable()
 export class ProjectService extends CoreService{
