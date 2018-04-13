@@ -2,20 +2,34 @@
   font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
   font-size: 20px;
   color: #000000;
-  width: 1400px;
-  left:50px;
   text-align: left;
   border-collapse: collapse;
   background:  rgba(111, 112, 123, 0.45);
-  margin: 10px;
+  margin: 10px 0;
+  width: 100%;
 }
+
+.user-image {
+  text-align: center;
+}
+
+.document-image {
+  max-height: 150px;
+  max-width: 150px;
+  border-radius: 25px;
+}
+
+.checkbox-column {
+  min-width: 20px;
+}
+
 .table_dark th {
-  color: #EDB749;
+  color: #2d3e4f;
   border-bottom: 1px solid #37B5A5;
   padding: 12px 17px;
 }
 .table_dark td {
-  color: #CAD4D6;
+  color: #2d3e4f;
   border-bottom: 1px solid #37B5A5;
   border-right:1px solid #37B5A5;
   padding: 7px 17px;
@@ -29,10 +43,22 @@
 .table_dark tr:hover td {
   text-decoration: underline;
 }
-.checkbox  {
-  position: absolute;
-  left: 60px;
-  content: '';
-  display: table;
-  clear: both;
+
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+}
+
+.settings {
+  text-align: center;
+}
+
+.button-settings {
+  background-color: transparent;
+  border: none;
+}
+
+.checkbox-input {
+  min-width: 18px;
+  min-height: 18px;
 }

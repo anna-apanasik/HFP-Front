@@ -1,14 +1,14 @@
 <form class="register-form" #form="ngForm" (ngSubmit)="updateProfile(form.value)" role="form" style="display: inline">
   <div class="container">
     <div class="panel" id="imagearea">
-      <div class="panel-default">
-        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs" id="photo">
-          <div align="center" style="margin:15px">
-            <img id="id-area-image" class="img-responsive" src={{user.image}}/>
+      <div class="panel-default user-image-container">
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs user-uploaded-image-container" id="photo">
+          <div align="center">
+            <img id="id-area-image" class="img-responsive user-uploaded-image" src={{user.image}}>
           </div>
         </div>
 
-        <div>
+        <div class="drop-zone-image">
           <app-cloudinary (upImgStep)="updateImg($event)"></app-cloudinary>
         </div>
       </div>
