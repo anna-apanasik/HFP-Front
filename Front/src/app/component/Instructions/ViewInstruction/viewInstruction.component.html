@@ -6,7 +6,7 @@
       </h1>
     </div>
     <rating [maxScore]="5" [forDisplay]="false" (rateChanged)="onRateChange($event)"></rating>
-    {{ rating.value }}
+    {{ rating?.value }}
     <div *ngIf="user && user.id == instruction.userId" class="buttons-instruction">
       <button class="btn btn-link button-view-instruction" (click)="editInstruction()">
         <span class="glyphicon glyphicon-pencil"></span>

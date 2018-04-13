@@ -7,7 +7,7 @@ import {CommentService} from "../../service/CommentService";
 @Component({
   selector: "app-comments",
   templateUrl: "comments.component.html",
-  styleUrls: []
+  styleUrls: ["comments.component.css"]
 })
 
 export class CommentsComponent implements OnInit {
@@ -36,7 +36,9 @@ export class CommentsComponent implements OnInit {
     this.commentService
       .getComments(this.instructionId)
       .subscribe( res => {
-        this.comments = res;
+        if(res) {
+          this.comments = res;
+        }
       });
   }
 }

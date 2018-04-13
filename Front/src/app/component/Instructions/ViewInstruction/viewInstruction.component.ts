@@ -16,7 +16,7 @@ import {Rating} from "../../../model/Rating";
 export class ViewInstructionComponent implements OnInit {
   protected user: User;
   protected instruction: Instruction = new Instruction();
-  rating: Rating;
+  rating: Rating = new Rating();
 
   constructor(private activatedRoute: ActivatedRoute,
               private instructionService: InstructionService,

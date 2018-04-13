@@ -108,5 +108,6 @@
   "EnterComment": "Enter your comment here...",
   "YourComment": "Your comment:",
   "SaveChanges": "Save changes",
-  "Comment": "Comment:"
+  "Comment": "Comment:",
+  "EmptyComments": "This instruction doesn't have comments..."
 }

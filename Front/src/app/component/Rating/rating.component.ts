@@ -24,8 +24,6 @@ export class RatingComponent implements OnInit {
   range = [];
   marked = -1;
 
-  constructor() { }
-
   ngOnInit() {
     for (var i = 0; i < this.maxScore; i++) {
       this.range.push(i);

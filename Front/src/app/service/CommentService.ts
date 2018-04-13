@@ -28,7 +28,7 @@ export class CommentService extends CoreService {
   getComments(instructionId: number) {
     return this.authHttp
       .get(`${ this.webService }getCommentsByInstructionId/` + instructionId)
-      .map( res => res.json());
+      .map( res => res['_body'] ? res.json() : -1);
   }
 
   updateComment(comment: Comment) {
