@@ -5,6 +5,8 @@ import {Router} from "@angular/router";
 import {RatingService} from "../../../service/RatingService";
 import {Rating} from "../../../model/Rating";
 import {User} from "../../../model/user";
+import {routing} from "../../app.routing";
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-profile-instruction',
@@ -20,7 +22,8 @@ export class ProfileInstructionComponent implements OnInit{
 
   constructor(private instructionService: InstructionService,
               private router: Router,
-              private ratingService: RatingService) {
+              private ratingService: RatingService,
+              private location: Location) {
   }
 
   ngOnInit() {
@@ -56,7 +59,20 @@ export class ProfileInstructionComponent implements OnInit{
     this.rating.userValue = value;
     this.rating.instructionId = this.instruction.id;
     this.rating.userId = this.user.id;
-    this.ratingService.updateRating(this.rating).subscribe(res => this.rating = res);
+    this.ratingService.updateRating(this.rating).subscribe(res =>
+      {
+        if(res.length > 7) {
+          alert("Вы уже голосовали!");
+        }
+
+        let path = '';
+        if(this.location.path() == '/profile') {
+          path = '/profile';
+        } else {
+          path = '/sections/' + this.instruction.section.id;
+        }
+        location.href = path;
+      });
   }
 
   switched(tag: string){

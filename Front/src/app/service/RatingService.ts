@@ -23,7 +23,6 @@ export class RatingService extends CoreService {
   }
 
   updateRating(rating: Rating) {
-
     return this.authHttp
       .post(`${this.webService}rating/`,
         {
@@ -32,12 +31,7 @@ export class RatingService extends CoreService {
           value: rating.userValue
         },
         {headers: this.headers}).map(res => {
-          let temp = res.json();
-          rating.id = temp.id ;
-          rating.userId = temp.userId;
-          rating.instructionId = temp.instructionId ;
-          rating.value = temp.value;
-          return rating;
+          return res['_body'];
         }
       );
   }
