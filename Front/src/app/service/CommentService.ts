@@ -20,9 +20,6 @@ export class CommentService extends CoreService {
     return this.authHttp
       .post(`${this.webService}createComment`, JSON.stringify(comment), {headers: this.headers})
       .map((response:Response) => response)
-      // .do(() => {
-      //   //location.href="view/project/" + comment.idproject;
-      // });
   }
 
   getComments(instructionId: number) {
@@ -34,13 +31,13 @@ export class CommentService extends CoreService {
   updateComment(comment: Comment) {
     return this.authHttp
       .post(`${ this.webService }updateComment/` + comment.id, comment, {headers: this.headers})
-      .map(res => res.json())
+      .map(() => {});
   }
 
   deleteComment(commentId: number) {
     return this.authHttp
       .delete(`${ this.webService }deleteComment/` + commentId, {headers: this.headers})
-      .map(res => res.json())
+      .map(() => {});
   }
 
 }
