@@ -2,7 +2,7 @@
   <div *ngIf="comments?.length > 0">
     <div *ngFor="let comment of comments">
       <app-editor-comment [comment]="comment"
-                          [isAuthenticatedUserComment]="comment.user.id === user.id"
+                          [isAuthenticatedUserComment]="user && comment.user.id === user.id"
                           (updateCommentsEvent)="onUpdateComments()"></app-editor-comment>
     </div>
   </div>
