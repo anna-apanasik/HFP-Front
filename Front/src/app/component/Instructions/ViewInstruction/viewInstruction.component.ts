@@ -31,7 +31,7 @@ export class ViewInstructionComponent implements OnInit {
     });
     this.loadInstruction();
     this.ratingService.getRating(this.instruction.id).subscribe(res =>
-      this.rating = res
+      this.rating.value = res
     )
   }
 
