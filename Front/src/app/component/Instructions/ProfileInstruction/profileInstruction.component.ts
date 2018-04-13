@@ -4,6 +4,7 @@ import {InstructionService} from "../../../service/InstructionService";
 import {Router} from "@angular/router";
 import {RatingService} from "../../../service/RatingService";
 import {Rating} from "../../../model/Rating";
+import {User} from "../../../model/user";
 
 @Component({
   selector: 'app-profile-instruction',
@@ -15,6 +16,8 @@ export class ProfileInstructionComponent implements OnInit{
   @Input() instruction: Instruction = new Instruction();
   @Input() isProfile: boolean;
   rating : Rating = new Rating();
+  user : User;
+
   constructor(private instructionService: InstructionService,
               private router: Router,
               private ratingService: RatingService) {
@@ -22,10 +25,9 @@ export class ProfileInstructionComponent implements OnInit{
 
   ngOnInit() {
     this.ratingService.getRating(this.instruction.id).subscribe(res => {
-      console.log('rating');
-      console.log(res);
       this.rating.value = res;
     })
+    this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
   deleteInstruction() {
@@ -52,6 +54,8 @@ export class ProfileInstructionComponent implements OnInit{
 
   onRateChange(value) {
     this.rating.userValue = value;
+    this.rating.instructionId = this.instruction.id;
+    this.rating.userId = this.user.id;
     this.ratingService.updateRating(this.rating).subscribe(res => this.rating = res);
   }
 

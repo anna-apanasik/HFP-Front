@@ -25,7 +25,7 @@ export class RatingService extends CoreService {
   updateRating(rating: Rating) {
 
     return this.authHttp
-      .put(`${this.webService}updateRating/`+ rating.instructionId,
+      .post(`${this.webService}rating/`,
         {
           userId: rating.userId,
           instructionId: rating.instructionId,

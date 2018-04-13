@@ -39,32 +39,16 @@ export class RatingComponent implements OnInit {
   };
 
   public isMarked = (index) => {
-    if (!this.forDisplay) {
-      if (index <= this.marked) {
-        console.log('fa-star' + index)
-        return 'fa-star';
-      }
-      else {
-        console.log('fa-star-o' + index)
-        return 'fa-star-o';
-      }
-    }
-    else {
       if (this.score >= index + 1) {
-        console.log('fa-star' + index)
         return 'fa-star';
       }
       else if (this.score > index && this.score < index + 1) {
-        console.log('fa-star-half-o' + index)
         return 'fa-star-half-o';
       }
       else {
-        console.log('fa-star-o' + index)
         return 'fa-star-o';
       }
-    }
   }
-
 }
 
 
