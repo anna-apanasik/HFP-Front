@@ -22,6 +22,11 @@ export class InstructionService extends CoreService {
       .get(`${this.webService}getInstruction/` + id).map(res => res.json());
   }
 
+  getRating(rating) {
+    return this.authHttp
+      .get(`${this.webService}getRating/` + rating).map(res => res.json());
+  }
+
   createInstruction(instruction: Instruction) {
     return this.authHttp
       .post(`${this.webService}createInstruction`, instruction, {headers: this.headers}).map(res => res.json());
