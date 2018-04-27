@@ -49,7 +49,6 @@ export class InstructionComponent implements OnInit {
     this.instruction.userId = this.user.id;
     this.getSection();
     this.loadInstruction();
-    console.log(this.isStory);
   }
 
   saveInstruction() {
@@ -59,15 +58,13 @@ export class InstructionComponent implements OnInit {
     if(this.instruction.id.toString() == 'create') {
       this.instruction.steps = this.steps;
       this.instruction.id = 0;
-      console.log(this.instruction)
       this.instructionService.createInstruction(this.instruction)
         .subscribe(resp => {
-          console.log('create', resp);
           this.router.navigate(['/instruction', resp.id])
         });
       return;
     }
-console.log(this.instruction);
+
     this.instructionService.updateInstruction(this.instruction)
       .subscribe(resp => {
         this.instruction = resp;
@@ -79,25 +76,21 @@ console.log(this.instruction);
   deleteInstruction() {
     this.instructionService.deleteInstruction(this.instruction)
       .subscribe(resp => {
-        console.log('delete', resp)
         this.router.navigate(['/profile']);
       });
   }
 
   public receiveNewStep(data) {
     this.step = data;
-    console.log('receive',this.step);
     if(this.step.id) {
-      console.log('updateStep')
-      this.instructionService.updateStep(this.step).subscribe( resp => console.log('resp',resp));
+      this.instructionService.updateStep(this.step).subscribe( );
       return;
     }
 
-    console.log('create')
     this.step.position = this.steps.length + 1;
     this.step.instructionId = this.instruction.id;
+    this.step.image = InstructionHelper.reformatArrayToString(this.step.arrayOfImages);
     if(this.instruction.id.toString() != 'create') {
-      console.log('send step');
       this.instructionService.createStep(this.step).subscribe( resp => this.steps.push(resp));
       return;
     }
@@ -107,13 +100,11 @@ console.log(this.instruction);
 
   public deleteStep(data) {
     this.instructionService.deleteStep(data).subscribe(() => {
-      console.log('delete',data)
       this.steps = this.steps.filter(item => item.position != data.position);
       this.steps.map((item,i)=> item.position = i +1);
       this.instruction.steps = this.steps;
       this.instructionService.updateInstruction(this.instruction)
         .subscribe(resp => {
-          console.log(resp)
           this.instruction = resp;
           this.router.navigate(['/profile/instruction', resp.id])
         });
@@ -123,13 +114,11 @@ console.log(this.instruction);
   loadInstruction() {
     if(this.instruction.id.toString() !== 'create') {
       this.instructionService.getInstruction(this.instruction.id).subscribe( res => {
-        console.log(res);
         this.instruction = res;
         this.steps = this.instruction.steps;
         this.steps.forEach(e => {
           e.arrayOfImages = InstructionHelper.reformatStringToArray(e.image)
         });
-        console.log(this.steps)
         this.tags = this.instruction.tags;
       })
     }

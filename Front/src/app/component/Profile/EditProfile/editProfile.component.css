@@ -9,6 +9,23 @@ input.ng-dirty.ng-valid {border:solid green 2px;}
   margin: 10px 25px;
 }
 
+.user-image-container {
+  display: flex;
+}
+
+.user-uploaded-image {
+  border-radius: 25px;
+}
+
+.drop-zone-image {
+  width: 100%;
+}
+
+.user-uploaded-image-container {
+  display: flex;
+  align-items: center;
+}
+
 .panel-default{
   background: rgba(111, 112, 123, 0.45);
   padding: 5px 5px;

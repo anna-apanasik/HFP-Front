@@ -1,0 +1,17 @@
+<div class="comment-container">
+  <div *ngIf="comments?.length > 0">
+    <div *ngFor="let comment of comments">
+      <app-editor-comment [comment]="comment"
+                          [isAuthenticatedUserComment]="user && comment.user.id === user.id"
+                          (updateCommentsEvent)="onUpdateComments()"></app-editor-comment>
+    </div>
+  </div>
+  <div *ngIf="!comments?.length" class="empty-comment-message">
+    <span>{{ 'EmptyComments' | translate }} </span>
+  </div>
+
+  <div *ngIf="isAuthenticatedUser">
+    <app-editor-comment [edit]="true"
+                        (updateCommentsEvent)="onUpdateComments()"></app-editor-comment>
+  </div>
+</div>

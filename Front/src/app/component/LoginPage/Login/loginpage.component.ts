@@ -34,13 +34,11 @@ export class LoginPageComponent{
       })
       .subscribe(
         data => {
-          console.log(JSON.stringify(data));
           localStorage.setItem('currentUser', JSON.stringify(data));
           location.href="/profile";
         },
         error => {
           this.loading = false;
-          console.log(this.errorMessage = error.json().message);
         }
       );
   }

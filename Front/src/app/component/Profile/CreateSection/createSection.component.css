@@ -3,6 +3,7 @@
   font-size: 18px;
   width: 100%;
   margin: 2px 0;
+  justify-content: space-between;
 }
 
 .section:hover {
@@ -18,7 +19,6 @@
 }
 
 .button-save {
-  margin-top: 25px;
   margin-left: 25px;
   height: 80%;
   width: 25%;
@@ -40,4 +40,17 @@
 
 .panel-default {
   background: rgba(111, 112, 123, 0.45);
+}
+
+.button-delete-section {
+  background-color: transparent;
+  border: none;
+}
+
+.button-text-warning {
+  color: #f49c10;
+}
+
+.button-text-info {
+  color: #3498db;
 }

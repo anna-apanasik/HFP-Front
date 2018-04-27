@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Output} from "@angular/core";
+import {Component, EventEmitter, Input, Output} from "@angular/core";
 import {CloudinaryImageComponent, CloudinaryOptions, CloudinaryUploader} from 'ng2-cloudinary';
 
 @Component({
@@ -24,7 +24,6 @@ export class CloudinaryComponent {
 
     this.uploader.onSuccessItem = (item: any, response: string, status: number, headers: any) => {
       this.upImgStep.emit(JSON.parse(response).public_id);
-      console.log('it public url: ' + JSON.parse(response).public_id);
       return {item, response, status, headers};
     };
   }

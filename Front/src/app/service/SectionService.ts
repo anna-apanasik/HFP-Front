@@ -43,4 +43,10 @@ export class SectionService extends CoreService {
       .post(`${this.webService}createSection`, section,{ headers: this.headers })
       .map(res => res.json)
   }
+
+  deleteSection(id: number) {
+    return this.authHttp
+      .delete(`${this.webService}deleteSection/` + id, { headers: this.headers })
+      .map(res => res)
+  }
 }

@@ -22,6 +22,11 @@ export class InstructionService extends CoreService {
       .get(`${this.webService}getInstruction/` + id).map(res => res.json());
   }
 
+  getRating(rating) {
+    return this.authHttp
+      .get(`${this.webService}getRating/` + rating).map(res => res.json());
+  }
+
   createInstruction(instruction: Instruction) {
     return this.authHttp
       .post(`${this.webService}createInstruction`, instruction, {headers: this.headers}).map(res => res.json());
@@ -35,6 +40,11 @@ export class InstructionService extends CoreService {
   deleteInstruction(instruction: Instruction) {
     return this.authHttp
       .delete(`${this.webService}deleteInstruction/` + instruction.id, {headers: this.headers}).map(res => res);
+  }
+
+  deleteSection(instruction: Number) {
+    return this.authHttp
+      .delete(`${this.webService}deleteSection/` + instruction, {headers: this.headers}).map(res => res);
   }
 
   getSteps(id: number) {

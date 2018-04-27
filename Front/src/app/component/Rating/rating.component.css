@@ -1,0 +1,20 @@
+.star-rating .to-rate {
+  cursor: pointer;
+  padding: 0 3px;
+}
+.star-rating .fa-star-o {
+  color: orange;
+}
+.star-rating .fa-star {
+  color: orange;
+}
+.star-rating .fa-star-half-o {
+  color: orange;
+}
+.star-rating .to-display {
+  padding: 0 2px;
+}
+.star-rating i {
+  font-size: 25px !important;
+}
+

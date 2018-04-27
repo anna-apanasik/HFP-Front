@@ -80,7 +80,7 @@
   "SearcheResult":"Searche results: ",
   "Table":"Table users",
   "MessageConfirm":"Confirm",
-  "Scan": "Scan passport",
+  "Scan": "Document",
   "Action":"Action",
   "ConfirmInformation":"Confirm information",
   "Description":"Description",
@@ -104,5 +104,13 @@
   "CreateSection": "Create section",
   "SectionTitle": "Section title",
   "Instruction": "Instruction",
-  "UploadImages": "Upload images"
+  "UploadImages": "Upload images",
+  "EnterComment": "Enter your comment here...",
+  "YourComment": "Your comment:",
+  "SaveChanges": "Save changes",
+  "Comment": "Comment:",
+  "EmptyComments": "This instruction doesn't have comments...",
+  "Status": "Status",
+  "Blocked": "Blocked",
+  "UnBlocked": "Unblocked"
 }

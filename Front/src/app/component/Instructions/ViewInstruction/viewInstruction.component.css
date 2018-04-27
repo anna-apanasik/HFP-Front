@@ -1,11 +1,23 @@
+.header-instruction {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 .view-instruction {
   position: relative;
   top:85px;
   font-size: medium;
 }
 
+rating {
+  margin-top: 20px;
+}
 .title-instruction {
   font-size: 60px;
+  text-align: center;
+  width: 70%;
 }
 
 .title-tag {
@@ -35,15 +47,16 @@
 .button-view-instruction {
   margin: 2px;
   padding: 0;
-  position: absolute;
-  top: 14%;
   font-size: 25px;
 }
 
-.button-delete {
-  right: 20px;
+.buttons-instruction {
+  margin-top: 20px;
 }
 
-.button-edit {
-  right: 50px;
+.rate-value {
+  font-size:20px;
+  margin: 20px 0 0 0;
+  font-weight: 900;
 }
+

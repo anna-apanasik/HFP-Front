@@ -80,9 +80,9 @@
   "SearcheResult":"Результаты поиска: ",
   "Table":"Таблица пользователей",
   "MessageConfirm":"Подтверждение пользователей",
-  "Scan": "Скан пасспорта",
+  "Scan": "Документ",
   "Action":"Действие",
-  "ConfirmInformation":"Инормация для подтверждения",
+  "ConfirmInformation":"Информация для подтверждения",
   "Description":"Описание",
   "UnConfirm":"Не подтверждать",
   "Confirm":"Подтвердить",
@@ -104,5 +104,13 @@
   "CreateSection": "Создать секцию",
   "SectionTitle": "Название секции",
   "Instruction": "Инструкция",
-  "UploadImages": "Добавьте изображения"
+  "UploadImages": "Добавьте изображения",
+  "EnterComment": "Введите ваш комментарий...",
+  "YourComment": "Ваш комментарий:",
+  "SaveChanges": "Сохранить изменения",
+  "Comment": "Комментарий:",
+  "EmptyComments": "У этой инструкции нет комментариев",
+  "Status": "Статус",
+  "Blocked": "Заблокирован",
+  "UnBlocked": "Разблокирован"
 }

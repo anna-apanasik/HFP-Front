@@ -12,7 +12,7 @@ import {Step} from "../../../model/Step";
 
 export class EditorStepComponent {
   protected project: Instruction = new Instruction;
-  protected images: string[] = [];
+  image: string = "";
 
   @Input() step: Step = new Step();
   @Input() edit: boolean;
@@ -57,7 +57,10 @@ export class EditorStepComponent {
     this.deleteStepEvent.emit(copy);
   }
 
-  updateImg(value: any, step) {
-    this.images.push('http://res.cloudinary.com/crowbanding/image/upload/v1505169254/' + value + '.jpg');
+  updateImg(value: any) {
+    if(value.idStep === this.step.id){
+      this.image = 'http://res.cloudinary.com/crowbanding/image/upload/v1505169254/' + value.img + '.jpg';
+      this.step.arrayOfImages.push(this.image);
+    }
   }
 }

@@ -52,3 +52,15 @@ input.ng-touched.ng-invalid {border:solid red 2px;}
   font-size: 16px;
 }
 
+.textarea{
+  display: flex;
+}
+
+.textarea textarea {
+  width: 70%;
+  margin: 15px 0 20px 0;
+}
+
+.textarea .cloud-img {
+  width: 30%;
+}

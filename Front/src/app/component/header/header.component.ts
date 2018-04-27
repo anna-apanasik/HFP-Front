@@ -1,9 +1,9 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { AppComponent} from '../app.component';
 import {AuthGuard} from '../../service/guards/auth.guards';
 import {User} from "../../model/user";
-import {BehaviorSubject} from "rxjs/BehaviorSubject";
 import {HeaderService} from "../../service/HeaderService";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-header',
@@ -17,7 +17,8 @@ export class HeaderComponent implements OnInit{
   curentUser: User = new User;
   constructor(public appComponent: AppComponent,
               protected authGuard: AuthGuard,
-              private headerService:HeaderService) {}
+              private headerService:HeaderService,
+              public router: Router) {}
   switchLanguage(language: string) {
     localStorage.setItem("language",language);
     this.appComponent.changeLanguage(language);
@@ -47,8 +48,5 @@ export class HeaderComponent implements OnInit{
       this.setLightMode();
       localStorage.setItem("mode", "day");
     }
-  }
-  sendRequest(){
-    location.href = '/searcheResults/searche'+this.searcheRequest;
   }
 }

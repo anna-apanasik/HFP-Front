@@ -2,6 +2,7 @@ import { Component} from "@angular/core";
 import {AuthGuard} from "../../service/guards/auth.guards";
 import { ComponentRef } from '@angular/core';
 import {Router} from "@angular/router";
+import {InstructionService} from "../../service/InstructionService";
 
 @Component({
   selector: 'app-profile',
@@ -10,5 +11,6 @@ import {Router} from "@angular/router";
 })
 
 export class profileComponent {
-  constructor( protected authGuard: AuthGuard) {}
+  constructor( protected authGuard: AuthGuard) {
+  }
 }

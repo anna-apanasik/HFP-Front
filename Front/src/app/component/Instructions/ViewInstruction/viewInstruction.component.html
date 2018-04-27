@@ -1,16 +1,21 @@
 <div class="container view-instruction">
-  <div align="center">
-    <h1 class="title-instruction"> {{ instruction.title }}
-      <span class="badge badge-danger section">{{ instruction.section.title }}</span>
-    </h1>
-
-    <div *ngIf="user && user.id == instruction.userId">
-      <button class="btn btn-link button-view-instruction button-edit">
-        <span class="glyphicon glyphicon-pencil" (click)="editInstruction()"></span>
+  <div class="header-instruction">
+    <div class="title-instruction">
+      <h1> {{ instruction.title }}
+        <span class="badge badge-danger section">{{ instruction.section.title }}</span>
+      </h1>
+    </div>
+    <rating [maxScore]="5" [score]="rating.value" [forDisplay]="false" (rateChanged)="onRateChange($event)"></rating>
+    <div class="rate-value">
+      {{ rating?.value }}
+    </div>
+    <div *ngIf="user && user.id == instruction.userId" class="buttons-instruction">
+      <button class="btn btn-link button-view-instruction" (click)="editInstruction()">
+        <span class="glyphicon glyphicon-pencil"></span>
       </button>
 
-      <button class="btn btn-link button-view-instruction button-delete">
-        <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
+      <button class="btn btn-link button-view-instruction" (click)="deleteInstruction()">
+        <span class="glyphicon glyphicon-trash"></span>
       </button>
     </div>
   </div>
@@ -20,10 +25,13 @@
       <span class="glyphicon glyphicon-tag tag"></span>{{ tag }}
     </a>
   </div>
-
   <div *ngFor="let step of instruction.steps">
     <div class="panel panel-default">
       <app-view-step [step]="step" [hidePosition]="instruction.steps.length == 1"></app-view-step>
     </div>
+  </div>
+
+  <div class="comments">
+    <app-comments></app-comments>
   </div>
 </div>

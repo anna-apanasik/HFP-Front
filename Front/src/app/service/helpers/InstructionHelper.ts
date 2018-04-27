@@ -11,4 +11,8 @@ export class InstructionHelper {
     return str.slice(1, str.length - 1)
       .split(',');
   }
+
+  static reformatArrayToString(arr: Array <string>) {
+    return arr.join(',');
+  }
 }
