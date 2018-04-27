@@ -3,6 +3,7 @@
   font-size: 18px;
   width: 100%;
   margin: 2px 0;
+  justify-content: space-between;
 }
 
 .section:hover {
@@ -40,4 +41,9 @@
 
 .panel-default {
   background: rgba(111, 112, 123, 0.45);
+}
+
+.button-delete-section {
+  background-color: transparent;
+  border: none;
 }

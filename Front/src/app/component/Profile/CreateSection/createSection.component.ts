@@ -42,4 +42,8 @@ export class CreateSectionComponent implements OnInit {
           this.errorMessage = error.json().message;
         });
   }
+
+  deleteSection(section) {
+    console.log(section);
+  }
 }

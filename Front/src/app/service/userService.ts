@@ -46,9 +46,9 @@ export class UserService extends CoreService {
     console.log(JSON.stringify(data));
     return this.authHttp.post(`${this.webService}confirmButton`, JSON.stringify(data), {headers: this.headers})
       .map((response: Response) => response)
-      .do(data => {
-        location.href = "/profile";
-      });
+      // .do(data => {
+      //   location.href = "/profile";
+      // });
   }
 
   deleting(data: number[]) {

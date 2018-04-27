@@ -17,18 +17,29 @@ export class MessageComponent implements OnInit {
 
 
   ngOnInit() {
-    this.userService.getMessage().subscribe((resp: Response) => {
-      for (let index in resp) {
-        console.log(resp[index]);
-        this.messages[index] = resp[index];
-      }
-    });
+    this.getMessages()
   }
 
   confirm(choose: number, id: number) {
     this.blockedList.unshift(choose);
     this.blockedList.push(id);
-    this.userService.confirm(this.blockedList);
-    this.blockedList.splice(0, 1);
+    this.userService.confirm(this.blockedList)
+      .subscribe(() => {
+        this.getMessages();
+        this.blockedList.splice(0, 1);
+        console.log(this.messages);
+      });
+
+  }
+
+  getMessages() {
+    this.userService.getMessage()
+      .subscribe((resp: Response) => {
+        this.messages = [];
+      for (let index in resp) {
+        console.log(resp[index]);
+        this.messages[index] = resp[index];
+      }
+    });
   }
 }
