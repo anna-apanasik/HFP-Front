@@ -16,3 +16,20 @@
 .tag {
   margin: 2px;
 }
+
+.no-tags {
+  font-size: 16px;
+}
+
+.alert-block {
+  margin-bottom: 0;
+}
+
+.label-tag-title {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.tag-name {
+  font-size: 16px;
+}

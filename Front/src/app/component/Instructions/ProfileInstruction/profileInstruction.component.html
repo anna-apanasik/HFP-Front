@@ -1,11 +1,11 @@
-<a class="list-group-item list-group-item-action flex-column align-items-start active">
-  <div class="alert alert-dismissible alert-primary">
-    <!--TODO check user id and hide buttton-->
+<a class="list-group-item list-group-item-action flex-column align-items-start active"
+   style="cursor: pointer;"
+   [routerLink]="['/instruction/' + instruction.id]">
+  <div class="alert alert-dismissible alert-primary alert-block">
     <div *ngIf="isProfile">
       <button class="btn btn-primary button-profile button-delete">
         <span class="glyphicon glyphicon-trash" (click)="deleteInstruction()"></span>
       </button>
-      <!--TODO redirect to edit instruction-->
       <button class="btn btn-primary button-profile button-edit">
         <span class="glyphicon glyphicon-pencil" (click)="editInstruction()"></span>
       </button>
@@ -15,13 +15,15 @@
     </h4>
     <h4> {{'Section' | translate}} : {{ instruction.section.title}} </h4>
     <h4> {{'RatingProject'| translate}} : {{ rating.value }} </h4>
-    <rating [maxScore]="5" [score]="rating.value" (rateChanged)="onRateChange($event)"></rating>
+    <rating [maxScore]="5" [forDisplay]="!isProfile" [score]="rating.value" (rateChanged)="onRateChange($event)"></rating>
     <div>
-      <label class="label-style"> {{'Tags'| translate}}</label>
-      <a *ngFor="let tag of instruction.tags" (click)="switched(tag)">
-        <span class="glyphicon glyphicon-tag tag"></span>{{ tag }}
+      <label class="label-style label-tag-title"> {{'Tags'| translate}}</label>
+      <a *ngFor="let tag of instruction.tags" (click)="switched(tag)" class="tag-name">
+        &nbsp;
+        <span class="glyphicon glyphicon-tag tag"></span>
+        {{ tag }}
       </a>
-      <span *ngIf="!instruction.tags">{{ 'MessageNoTags' | translate}}</span>
+      <span *ngIf="!instruction.tags" class="no-tags"> &nbsp; {{ 'MessageNoTags' | translate}}</span>
     </div>
   </div>
 </a>

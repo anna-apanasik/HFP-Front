@@ -5,8 +5,10 @@
         <span class="badge badge-danger section">{{ instruction.section.title }}</span>
       </h1>
     </div>
-    <rating [maxScore]="5" [forDisplay]="false" (rateChanged)="onRateChange($event)"></rating>
-    {{ rating?.value }}
+    <rating [maxScore]="5" [score]="rating.value" [forDisplay]="false" (rateChanged)="onRateChange($event)"></rating>
+    <div class="rate-value">
+      {{ rating?.value }}
+    </div>
     <div *ngIf="user && user.id == instruction.userId" class="buttons-instruction">
       <button class="btn btn-link button-view-instruction" (click)="editInstruction()">
         <span class="glyphicon glyphicon-pencil"></span>
