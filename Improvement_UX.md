@@ -47,7 +47,7 @@
     ![alt text](https://github.com/anyablischik/HFP-Front/blob/master/Improvement_UX_Examples/buttonsAfter.png)
     
 * ## Добавление информационных полей (подсказок) 
-    ### Добавление столбца с информацией о текузем статусе пользователя
+    ### Добавление столбца с информацией о текущем статусе пользователя
     ####  До ![alt text](https://github.com/anyablischik/HFP-Front/blob/master/Improvement_UX_Examples/Снимок%20экрана%202018-04-28%20в%200.57.56.png)
     ####  После ![alt text](https://github.com/anyablischik/HFP-Front/blob/master/Improvement_UX_Examples/Снимок%20экрана%202018-04-28%20в%201.37.18.png)
 
