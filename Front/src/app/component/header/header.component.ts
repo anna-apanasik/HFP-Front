@@ -49,7 +49,4 @@ export class HeaderComponent implements OnInit{
       localStorage.setItem("mode", "day");
     }
   }
-  sendRequest(){
-    location.href = '/searcheResults/searche'+this.searcheRequest;
-  }
 }
