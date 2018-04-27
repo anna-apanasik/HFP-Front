@@ -10,4 +10,5 @@ export class User {
   email: string;
   image: string;
   role: string;
+  blocked: string;
 }

@@ -109,5 +109,8 @@
   "YourComment": "Your comment:",
   "SaveChanges": "Save changes",
   "Comment": "Comment:",
-  "EmptyComments": "This instruction doesn't have comments..."
+  "EmptyComments": "This instruction doesn't have comments...",
+  "Status": "Status",
+  "Blocked": "Blocked",
+  "UnBlocked": "Unblocked"
 }

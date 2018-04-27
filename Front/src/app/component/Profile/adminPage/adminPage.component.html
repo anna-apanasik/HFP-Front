@@ -23,6 +23,7 @@
         <th>{{'Image'|translate}}</th>
         <th>{{'Information'|translate}}</th>
         <th>{{'Email'|translate}}</th>
+        <th>{{'Status'|translate}}</th>
 
         <tr *ngFor="let user of users">
           <td>
@@ -36,6 +37,8 @@
           </td>
           <td>{{user.firstName}} {{user.userName}} {{user.lastName}}</td>
           <td>{{user.email}}</td>
+          <td *ngIf="user.blocked == '0'">{{'Blocked'|translate}}</td>
+          <td *ngIf="user.blocked == '1'">{{'UnBlocked'|translate}}</td>
         </tr>
         <tr>
       </table>
