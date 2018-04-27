@@ -83,7 +83,7 @@ export class InstructionComponent implements OnInit {
   public receiveNewStep(data) {
     this.step = data;
     if(this.step.id) {
-      this.instructionService.updateStep(this.step).subscribe( resp => console.log('resp',resp));
+      this.instructionService.updateStep(this.step).subscribe( );
       return;
     }
 

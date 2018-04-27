@@ -76,11 +76,6 @@ export class ProfileInstructionComponent implements OnInit{
   }
 
   switched(tag: string){
-    /*TODO search for tag*/
-      console.log('tag ', tag)
-/*
-    location.href='/searcheResults/tag'+tag;
-*/
   }
 
 }

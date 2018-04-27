@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <a class="navbar-brand text-log" href="/">
-        <h5>HFP</h5>
+        <h5>HFP - habrahabr for people</h5>
         <!-- TODO logotype image -->
        <!-- <img
         src="http://res.cloudinary.com/crowbanding/image/upload/v1506270162/coollogo_com-15493370_ax8zvg.png"
@@ -10,48 +10,52 @@
       </a>
     </div>
 
-    <button class="login btn-primary btn" id="login-button-header" *ngIf="authGuard.isActivate() == false"
-            data-toggle="modal" data-target="#openModal">
-      <span class="glyphicon glyphicon-log-in"></span>
-      {{'login'|translate}}
-    </button>
-
-    <button class="btn btn-primary login" id="logout-button-header" *ngIf="authGuard.isActivate() == true"
-            data-toggle="modal"
-            data-target="#openLogout">{{'Logout'|translate}}
-      <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
-    </button>
-
-    <div class="dropdown settings" dropdown>
-      <ul class="nav nav-pills">
-        <button class="btn btn-primary" dropdown-open style="position:relative; margin: 25px 5px 0 0;"><span
-          class="glyphicon glyphicon-cog"></span></button>
-      </ul>
-      <ul class="dropdown-menu" style="left: 0;">
-        <li><a (click)="switchLanguage('en')">{{'en'|translate}}</a></li>
-        <li><a (click)="switchLanguage('ru')">{{'ru'|translate}}</a></li>
-        <li>
-          <a>
-            <div style="float: left">{{'NIGHT_MODE'|translate}}</div>
-            <a class="btn_switch">
-              <input type="checkbox" name="switch" id="switch" [(ngModel)]="mode" (change)="changeMode()">
-              <label for="switch" style="margin-left: 10px"></label>
-            </a>
-          </a>
-        </li>
-        <li *ngIf="authGuard.isActivate() == true"><a href="profile"><span class="glyphicon glyphicon-user"></span>
-          {{'SettingsProfile'|translate}}</a></li>
-      </ul>
-    </div>
-
-    <div class="search">
-      <input name="query" type="text" class=" search-query txt-field" [(ngModel)]="searcheRequest"
-             placeholder="{{'inpsearche'|translate}}">
-      <button type="submit" class="btn btn-primary" (click)="sendRequest()">
-        <span class="glyphicon glyphicon-search"></span>
+    <div class="wrapper-buttons">
+      <button  class="btn btn-primary"
+               *ngIf="authGuard.isActivate() == true"
+               title="{{'SettingsProfile'|translate}}"
+               (click)="router.navigate(['profile'])">
+          <span class="glyphicon glyphicon-user"></span>
       </button>
-    </div>
 
+      <button class="login btn-primary btn"
+              id="login-button-header"
+              *ngIf="authGuard.isActivate() == false"
+              data-toggle="modal"
+              data-target="#openModal"
+              title="{{'login'|translate}}">
+        <span class="glyphicon glyphicon-log-in"></span>
+      </button>
+
+      <button class="btn btn-primary login"
+              id="logout-button-header"
+              *ngIf="authGuard.isActivate() == true"
+              data-toggle="modal"
+              data-target="#openLogout"
+              title="{{'Logout'|translate}}">
+        <span class="glyphicon glyphicon-log-in" aria-hidden="true"></span>
+      </button>
+
+      <div class="dropdown settings" dropdown title="{{'Settings'|translate}}">
+        <ul class="nav nav-pills">
+          <button class="btn btn-primary" dropdown-open style="position:relative; margin: 10px 5px 0 0;"><span
+            class="glyphicon glyphicon-cog"></span></button>
+        </ul>
+        <ul class="dropdown-menu" style="left: 0;">
+          <li><a (click)="switchLanguage('en')">{{'en'|translate}}</a></li>
+          <li><a (click)="switchLanguage('ru')">{{'ru'|translate}}</a></li>
+          <li>
+            <a>
+              <div style="float: left">{{'NIGHT_MODE'|translate}}</div>
+              <a class="btn_switch">
+                <input type="checkbox" name="switch" id="switch" [(ngModel)]="mode" (change)="changeMode()">
+                <label for="switch" style="margin-left: 10px"></label>
+              </a>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </nav>
 <div id="openModal" class="modal fade" aria-labelledby="openModal" tabindex="-1" aria-hidden="true" role="dialog">

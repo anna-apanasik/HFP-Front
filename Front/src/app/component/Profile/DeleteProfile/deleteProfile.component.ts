@@ -17,11 +17,9 @@ export class DeleteProfileComponent {
   }
 
   deleteProfile() {
-    console.log(this.user.id);
     this.userService
       .deleteProfile(this.user.id)
       .subscribe( res => {
-        console.log('delete', res);
         localStorage.removeItem("currentUser");
         localStorage.removeItem('token');
         this.router.navigate(['/'])

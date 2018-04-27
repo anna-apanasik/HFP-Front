@@ -39,10 +39,8 @@ export class ViewInstructionComponent implements OnInit {
     this.instructionService
       .getInstruction(this.instruction.id)
       .subscribe(res => {
-        console.log(res.steps)
         InstructionHelper.sortStepArrayByPosition(res.steps);
         this.instruction = res;
-        console.log(this.instruction);
       })
   }
 
@@ -59,8 +57,6 @@ export class ViewInstructionComponent implements OnInit {
   }
 
   switched(tag: string){
-    /* TODO search for tag */
-    console.log('tag ', tag)
   }
 
   onRateChange(value){

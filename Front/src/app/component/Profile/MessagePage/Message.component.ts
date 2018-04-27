@@ -27,7 +27,6 @@ export class MessageComponent implements OnInit {
       .subscribe(() => {
         this.getMessages();
         this.blockedList.splice(0, 1);
-        console.log(this.messages);
       });
 
   }
@@ -37,7 +36,6 @@ export class MessageComponent implements OnInit {
       .subscribe((resp: Response) => {
         this.messages = [];
       for (let index in resp) {
-        console.log(resp[index]);
         this.messages[index] = resp[index];
       }
     });

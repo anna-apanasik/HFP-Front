@@ -3,6 +3,12 @@
   padding-left: 30px;
 }
 
+.wrapper-buttons {
+  float: right;
+  display: flex;
+  margin: 10px 0 0 0;
+}
+
 .settings {
   position: relative;
   float: right;
@@ -14,7 +20,7 @@
 .login {
   position: relative;
   float: right;
-  margin: 25px 5px;
+  margin: 11px 5px;
 }
 .logout {
   position: relative;

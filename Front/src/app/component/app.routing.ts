@@ -1,9 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import {profileComponent} from "./Profile/profile.component";
-import {ProjectPageComponent} from "./createProject/projectPage.component";
 import {SuccessRegistrationComponent} from "./SuccessRegistration/successRegistration.component";
-import {SearcheResultComponent} from "./SearcheResult/searcheResult.component";
 import {InfoProfileComponent} from "./Profile/InfoProfile/infoProfile.component";
 import {EditProfileComponent} from "./Profile/EditProfile/editProfile.component";
 import {InstructionComponent} from "./Instructions/instruction.component";
@@ -19,7 +17,6 @@ import {CreateSectionComponent} from "./Profile/CreateSection/createSection.comp
 const appRoutes: Routes = [
   { path: 'success-registration',component: SuccessRegistrationComponent },
   { path: 'instruction/:id', component: ViewInstructionComponent },
-  { path: 'project', component: ProjectPageComponent},
   { path: 'profile',
     component: profileComponent,
     children: [
@@ -33,7 +30,6 @@ const appRoutes: Routes = [
       { path: 'admin', component: AdminPageComponent }
     ]
   },
-  { path: 'searcheResults/:request', component: SearcheResultComponent},
   { path: '', component: MainPageComponent},
   { path: 'section/:id', component: SectionComponent},
   { path: '**', redirectTo: '/' }

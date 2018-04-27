@@ -26,7 +26,6 @@ export class CreateSectionComponent implements OnInit {
       .getSections()
       .subscribe(res => {
         this.sections = res;
-        console.log(this.sections)
       })
   }
 
@@ -44,6 +43,5 @@ export class CreateSectionComponent implements OnInit {
   }
 
   deleteSection(section) {
-    console.log(section);
   }
 }
