@@ -5,26 +5,32 @@
         <img id="cloud-img" class="user-image" src='{{ user.image || image }}'/>
       </li>
       <li class="list-group-item list-group-item-secondary font-weight-bold">
-        <label>{{ 'Login' | translate }} : {{ user.userName }}</label>
+        <label class="label-user-info-title"> {{ 'Login' | translate }} :</label>
+        <label class="label-user-info"> &nbsp; {{ user.userName }}</label>
       </li>
       <li class="list-group-item list-group-item-secondary font-weight-bold">
-        <label> {{ 'email' | translate }} : {{ user.email }}</label>
+        <label class="label-user-info-title"> {{ 'email' | translate }} :</label>
+        <label class="label-user-info">  &nbsp; {{ user.email }}</label>
       </li>
       <li class="list-group-item list-group-item-secondary font-weight-bold">
-        <label>{{'FirstName' | translate }} : {{ user.userName }}</label>
+        <label class="label-user-info-title">{{'FirstName' | translate }} :</label>
+        <label class="label-user-info">  &nbsp; {{ user.userName }}</label>
       </li>
       <li class="list-group-item list-group-item-secondary font-weight-bold">
-        <label> {{ 'LastName' | translate }} : {{ user.lastName }}</label>
+        <label class="label-user-info-title"> {{ 'LastName' | translate }} :</label>
+        <label class="label-user-info">  &nbsp; {{ user.lastName }}</label>
       </li>
     </ul>
     <div align="center">
       <button class="btn btn-warning profile-edit-button" [routerLink]="['/profile/edit-profile']">
+        <span class="glyphicon glyphicon-pencil icon"></span>
         {{'Edit'| translate}}
       </button>
       <button class="btn btn-danger"
               data-toggle="modal"
               data-target="#openDeleteProfile">
-        <span class="glyphicon glyphicon-trash"></span>
+        <span class="glyphicon glyphicon-trash icon"></span>
+        {{'Delete'| translate}}
       </button>
     </div>
   </div>

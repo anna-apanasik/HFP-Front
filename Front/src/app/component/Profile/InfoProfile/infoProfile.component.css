@@ -30,3 +30,16 @@
   max-width: 500px;
   max-height: 500px;
 }
+
+.icon {
+  margin-right: 5px;
+}
+
+.label-user-info-title {
+  font-size: 20px;
+  color: #2984c7;
+}
+
+.label-user-info {
+  font-size: 22px;
+}
