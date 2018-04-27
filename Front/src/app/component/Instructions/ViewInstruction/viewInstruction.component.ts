@@ -65,8 +65,14 @@ export class ViewInstructionComponent implements OnInit {
 
   onRateChange(value){
     this.rating.userValue = value;
-    this.ratingService.updateRating(this.rating).subscribe(res => {
-      this.rating = res;
-    });
+    this.rating.userId = this.user.id;
+    this.rating.instructionId = this.instruction.id;
+    this.ratingService.updateRating(this.rating).subscribe( res => {
+        if (res.length > 7) {
+          alert("Вы уже голосовали!");
+        }
+        location.href = 'instruction/' + this.instruction.id;
+      }
+    )
   }
 }

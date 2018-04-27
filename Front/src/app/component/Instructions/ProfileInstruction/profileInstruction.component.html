@@ -15,7 +15,7 @@
     </h4>
     <h4> {{'Section' | translate}} : {{ instruction.section.title}} </h4>
     <h4> {{'RatingProject'| translate}} : {{ rating.value }} </h4>
-    <rating [maxScore]="5" [score]="rating.value" (rateChanged)="onRateChange($event)"></rating>
+    <rating [maxScore]="5" [forDisplay]="!isProfile" [score]="rating.value" (rateChanged)="onRateChange($event)"></rating>
     <div>
       <label class="label-style"> {{'Tags'| translate}}</label>
       <a *ngFor="let tag of instruction.tags" (click)="switched(tag)">

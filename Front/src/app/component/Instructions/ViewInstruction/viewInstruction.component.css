@@ -53,3 +53,10 @@ rating {
 .buttons-instruction {
   margin-top: 20px;
 }
+
+.rate-value {
+  font-size:20px;
+  margin: 20px 0 0 0;
+  font-weight: 900;
+}
+
