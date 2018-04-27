@@ -1,9 +1,9 @@
 <div class="container">
   <div class="panel panel-default">
     <div class="create-section">
-      <div class="form-group title-section">
-        <label> {{ 'SectionTitle' | translate }} </label>
+      <div class="title-section">
         <input type="text" [(ngModel)]="section.title"
+               placeholder="{{ 'SectionTitle' | translate }}"
                name="titleOfSection"
                class="form-control"
                id="title-of-section"

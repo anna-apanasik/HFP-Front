@@ -29,7 +29,7 @@ export class ProfileInstructionComponent implements OnInit{
   ngOnInit() {
     this.ratingService.getRating(this.instruction.id).subscribe(res => {
       this.rating.value = res;
-    })
+    });
     this.user = JSON.parse(localStorage.getItem("currentUser"));
   }
 
@@ -40,7 +40,6 @@ export class ProfileInstructionComponent implements OnInit{
           location.href='/profile/my-instructions';
           return;
         }
-        //this.router.navigate(['/profile']);
         location.href='/profile';
         /*TODO check router navigate*/
       });

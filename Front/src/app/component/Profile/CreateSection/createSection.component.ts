@@ -43,5 +43,10 @@ export class CreateSectionComponent implements OnInit {
   }
 
   deleteSection(section) {
+    this.sectionService
+      .deleteSection(section.id)
+      .subscribe(() => {
+        this.getAllSections();
+      })
   }
 }

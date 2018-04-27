@@ -19,10 +19,11 @@
     <div>
       <label class="label-style label-tag-title"> {{'Tags'| translate}}</label>
       <a *ngFor="let tag of instruction.tags" (click)="switched(tag)" class="tag-name">
+        &nbsp;
         <span class="glyphicon glyphicon-tag tag"></span>
         {{ tag }}
       </a>
-      <span *ngIf="!instruction.tags" class="">{{ 'MessageNoTags' | translate}}</span>
+      <span *ngIf="!instruction.tags" class="no-tags"> &nbsp; {{ 'MessageNoTags' | translate}}</span>
     </div>
   </div>
 </a>

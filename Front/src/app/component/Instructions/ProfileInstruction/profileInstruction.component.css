@@ -17,6 +17,10 @@
   margin: 2px;
 }
 
+.no-tags {
+  font-size: 16px;
+}
+
 .alert-block {
   margin-bottom: 0;
 }
